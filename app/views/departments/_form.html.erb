@@ -1,0 +1,9 @@
+<%= form_for Department.new do |form| %>
+  <div class="field">
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "ADD", class: "btn btn-success btn-sm pull-right" %>
+  </div>
+<% end %>
