@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :notices
   resources :awards
   resources :holidays
@@ -7,4 +8,8 @@ Rails.application.routes.draw do
 	resources :departments
 	root 'home#index'
 	get 'home/index'
+	namespace :admin do
+    get 'home/index'
+    root 'home#index'
+  end
 end
