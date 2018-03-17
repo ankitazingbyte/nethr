@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    resources :leaves
-  end
+
   resources :leaves
     devise_for :users
     resources :notices
@@ -20,5 +18,7 @@ Rails.application.routes.draw do
         resources :employee_roles
         resources :employees
         resources :attendances
+        resources :leaves
+
     end
 end

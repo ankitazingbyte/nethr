@@ -26,18 +26,20 @@
                             </tr>
                             </thead>
                             <tbody>
+                                <% @admin_leaves.each do |admin_leave| %>
                                 <tr>
                                     <td data-label="SL">22</td>
-                                    <td data-label="emoployeCode"><p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> 5874698</a></p></td>
-                                    <td data-label="leaveType"><p>Sick Leave</p></td>
-                                    <td data-label="LeaveFrom"><p>1st Apr 17</p></td>
-                                    <td data-label="LeaveTo"><p>3rd Apr 17</p></td>
-                                    <td data-label="Status"><p class="btn btn-warning btn-xs">Pending</p></td>
+                                    <td data-label="emoployeCode"><p><%= admin_leave.employee_id %></p></td>
+                                    <td data-label="leaveType"><p><%= admin_leave.leave_type %></p></td>
+                                    <td data-label="LeaveFrom"><p><%= admin_leave.leave_from %></p></td>
+                                    <td data-label="LeaveTo"><p><%= admin_leave.leave_to %></p></td>
+                                    <td data-label="Status"><p class="btn btn-warning btn-xs"><%= admin_leave.status %></p></td>
                                     <td data-label="Actions">
-                                        <a class="btn btn-success btn-xs" href="http://coderpixel.com/demo/advanced-hrm/leave/edit/22"><i class="fa fa-eye"></i> View</a>
-                                        <a href="#" class="btn btn-danger btn-xs cdelete" id="22"><i class="fa fa-trash"></i> Delete</a>
+                                     <%= link_to 'Edit', edit_admin_leave_path(admin_leave), class: "btn btn-success btn-xs" %>
+                                        <%= link_to 'Destroy', admin_leave, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
                                     </td>
                                 </tr>
+                                <% end %>
                             </tbody>
                         </table>
                     </div>
