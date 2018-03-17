@@ -1,9 +1,9 @@
 require "application_system_test_case"
 
-class DesignationsTest < ApplicationSystemTestCase
+class Admin::DesignationsTest < ApplicationSystemTestCase
   # test "visiting the index" do
-  #   visit designations_url
+  #   visit admin_designations_url
   #
-  #   assert_selector "h1", text: "Designation"
+  #   assert_selector "h1", text: "Admin::Designation"
   # end
 end

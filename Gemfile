@@ -57,3 +57,6 @@ gem 'jquery-rails'
 gem 'carrierwave', '~> 1.0'
 gem 'font-awesome-rails'
 gem 'ckeditor'
+gem 'devise'
+gem "rolify"
+gem 'bootstrap-select-wrapper-rails'

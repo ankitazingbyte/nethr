@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @leafe.employee_id %>
+</p>
+
+<p>
+  <strong>Leave type:</strong>
+  <%= @leafe.leave_type %>
+</p>
+
+<p>
+  <strong>Leave from:</strong>
+  <%= @leafe.leave_from %>
+</p>
+
+<p>
+  <strong>Leave to:</strong>
+  <%= @leafe.leave_to %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @leafe.status %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @leafe.reason %>
+</p>
+
+<%= link_to 'Edit', edit_leafe_path(@leafe) %> |
+<%= link_to 'Back', leaves_path %>

@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @admin_job.designation_id %>
+</p>
+
+<p>
+  <strong>Number of post:</strong>
+  <%= @admin_job.number_of_post %>
+</p>
+
+<p>
+  <strong>Job type:</strong>
+  <%= @admin_job.job_type %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @admin_job.experience %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @admin_job.age %>
+</p>
+
+<p>
+  <strong>Job location:</strong>
+  <%= @admin_job.job_location %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @admin_job.salary %>
+</p>
+
+<p>
+  <strong>Post date:</strong>
+  <%= @admin_job.post_date %>
+</p>
+
+<p>
+  <strong>Last date to apply:</strong>
+  <%= @admin_job.last_date_to_apply %>
+</p>
+
+<p>
+  <strong>Close date:</strong>
+  <%= @admin_job.close_date %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @admin_job.status %>
+</p>
+
+<p>
+  <strong>Short description:</strong>
+  <%= @admin_job.short_description %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @admin_job.description %>
+</p>
+
+<%= link_to 'Edit', edit_admin_job_path(@admin_job) %> |
+<%= link_to 'Back', admin_jobs_path %>

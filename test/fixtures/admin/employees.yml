@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  employee_code: MyString
+  admin_department_id: 1
+  admin_designation_id: 1
+  gender: MyString
+  tax_example: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  employee_code: MyString
+  admin_department_id: 1
+  admin_designation_id: 1
+  gender: MyString
+  tax_example: MyString

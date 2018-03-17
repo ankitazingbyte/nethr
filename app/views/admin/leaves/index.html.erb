@@ -1,0 +1,99 @@
+<section class="wrapper-bottom-sec">
+    <div class="p-30">
+        <h2 class="page-title">Leave Application</h2>
+    </div>
+    <div class="p-30 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Leave Application</h3>
+                        <button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#new-leave"><i class="fa fa-plus"></i> New Leave
+                        </button>
+                        <br>
+                    </div>
+                    <div class="panel-body p-none">
+                        <table class="table data-table table-hover table-ultra-responsive">
+                            <thead>
+                            <tr>
+                                <th style="width: 5%;">SL#</th>
+                                <th style="width: 10%;">Employee Code</th>
+                                <th style="width: 20%;">Leave Type</th>
+                                <th style="width: 15%;">Leave From</th>
+                                <th style="width: 15%;">Leave To</th>
+                                <th style="width: 15%;">Status</th>
+                                <th style="width: 20%;">Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="SL">22</td>
+                                    <td data-label="emoployeCode"><p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> 5874698</a></p></td>
+                                    <td data-label="leaveType"><p>Sick Leave</p></td>
+                                    <td data-label="LeaveFrom"><p>1st Apr 17</p></td>
+                                    <td data-label="LeaveTo"><p>3rd Apr 17</p></td>
+                                    <td data-label="Status"><p class="btn btn-warning btn-xs">Pending</p></td>
+                                    <td data-label="Actions">
+                                        <a class="btn btn-success btn-xs" href="http://coderpixel.com/demo/advanced-hrm/leave/edit/22"><i class="fa fa-eye"></i> View</a>
+                                        <a href="#" class="btn btn-danger btn-xs cdelete" id="22"><i class="fa fa-trash"></i> Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="new-leave" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Add New Leave</h4>
+                                </div>
+                                <form class="form-some-up" role="form" method="post" action="http://coderpixel.com/demo/advanced-hrm/leave/post-new-leave">
+
+                                    <div class="modal-body">
+
+                                        <div class="form-group">
+                                            <label>Employee</label>
+                                            <select name="employee" class="form-control selectpicker" data-live-search="true">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Leave Type</label>
+                                            <select name="leave_type" id="e20" class="form-control selectpicker" data-live-search="true">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Leave From</label>
+                                            <input type="text" class="form-control datePicker" name="leave_from" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Leave To</label>
+                                            <input type="text" class="form-control datePicker" name="leave_to" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Status</label>
+                                            <select class="selectpicker form-control" name="status">
+                                                <option value="approved">Approved</option>
+                                                <option value="pending">Pending</option>
+                                                <option value="rejected">Rejected</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Leave Reason</label>
+                                            <textarea class="form-control" rows="5" name="leave_reason"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input type="hidden" name="_token" value="ltCweRBS4Hff6nXuisVcqFkG9qL5sBYvKPXFHQgx">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Send</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

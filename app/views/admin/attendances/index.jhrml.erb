@@ -1,0 +1,1343 @@
+
+    
+    
+    <section class="wrapper-bottom-sec">
+        <div class="p-30">
+            <h2 class="page-title">Attendance</h2>
+        </div>
+        <div class="p-30 p-t-none p-b-none">
+                        <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Search Condition</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form class="" role="form" method="post" action="http://coderpixel.com/demo/advanced-hrm/attendance/post-custom-search">
+
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="el2">Date From</label>
+                                            <input type="text" id="date_from" class="form-control datePicker" required="" name="date_from" value="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="el2">Date To</label>
+                                            <input type="text" id="date_to" class="form-control datePicker" required="" name="date_to" value="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="el3">Employee</label>
+                                            <select class="selectpicker form-control" data-live-search="true" name="employee">
+                                                <option value="0">Select Employee</option>
+                                                                                                    <option value="3" >Abul Kashem Shamim (5874698)</option>
+                                                                                                    <option value="23" >ramy ramadan (1233)</option>
+                                                                                                    <option value="24" >hafsa mansuri (331)</option>
+                                                                                                    <option value="25" >Bill Jackie (BJ007)</option>
+                                                                                                    <option value="26" >Shiva Kant Mishra (1002)</option>
+                                                                                                    <option value="27" >FRFR FGR (11HTGG)</option>
+                                                                                                    <option value="28" >h1 student h1 student (10001)</option>
+                                                                                                    <option value="29" >Alvin WIjaya (45321)</option>
+                                                                                                    <option value="30" >test test (test)</option>
+                                                                                                    <option value="31" >Mr. k (666)</option>
+                                                                                                    <option value="32" >N GOLO  KEITA (90587604)</option>
+                                                                                                    <option value="33" >ankita dangi (1234)</option>
+                                                                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="el3">Department</label>
+                                            <select class="selectpicker form-control" data-live-search="true" name="department" id="department_id">
+                                                <option value="0">Select Department</option>
+                                                                                                <option value="1" > Support Department </option>
+                                                                                                <option value="24" > Marketing</option>
+                                                                                                <option value="25" > HR</option>
+                                                                                                <option value="26" > it</option>
+                                                                                                <option value="27" > Dev</option>
+                                                                                                <option value="28" > Chetwynd</option>
+                                                                                                <option value="29" > Derp Department</option>
+                                                                                                <option value="30" > Technical</option>
+                                                                                                <option value="31" > Logistqiue</option>
+                                                                                                <option value="32" > Project Management</option>
+                                                                                                <option value="33" > ABC</option>
+                                                                                                <option value="34" > Janitor</option>
+                                                                                                <option value="35" > tty</option>
+                                                                                                <option value="36" > Pastry</option>
+                                                                                                <option value="37" > Lulla</option>
+                                                                                                <option value="38" > derp</option>
+                                                                                                <option value="39" > Manisa</option>
+                                                                                                <option value="40" > Bolu</option>
+                                                                                                <option value="41" > Genel Merkez</option>
+                                                                                                <option value="42" > science</option>
+                                                                                                <option value="43" > dsdsd</option>
+                                                                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="el3">Designation</label>
+                                            <select class="selectpicker form-control" data-live-search="true"  disabled  name="designation" id="designation">
+                                                <option value="0">Select Designation</option>
+                                                                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <input type="hidden" name="_token" value="ltCweRBS4Hff6nXuisVcqFkG9qL5sBYvKPXFHQgx">
+                                <button type="submit" class="btn btn-success pull-right"><i class="fa fa-search"></i> Search</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Attendance</h3>
+                                                            <a href="http://coderpixel.com/demo/advanced-hrm/attendance/get-all-pdf-report" class="btn btn-success btn-xs pull-right"><i class="fa fa-file-pdf-o"></i> Generate PDF</a><br>
+                            
+
+                        </div>
+                        <div class="panel-body p-none">
+                            <table class="table data-table table-hover table-ultra-responsive">
+                                <thead>
+                                <tr>
+                                    <th style="width: 17%;">Employee Name</th>
+                                    <th style="width: 10%;">Date</th>
+                                    <th style="width: 10%;">Clock In</th>
+                                    <th style="width: 10%;">Clock Out</th>
+                                    <th style="width: 5%;">Late</th>
+                                    <th style="width: 5%;">Early Leaving</th>
+                                    <th style="width: 5%;">Overtime</th>
+                                    <th style="width: 10%;">Total Work</th>
+                                    <th style="width: 10%;">Status</th>
+                                    <th style="width: 5%;">Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">1st Mar 17</td>
+                                    <td data-label="Clock_In">9:02 AM</td>
+                                    <td data-label="Clock_out">8:30 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">null H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="1" data-overtime-val="null"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/1" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="1"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">2nd Mar 17</td>
+                                    <td data-label="Clock_In">9:20 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">null H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="2" data-overtime-val="null"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/2" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="2"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">4th Mar 17</td>
+                                    <td data-label="Clock_In">9:55 AM</td>
+                                    <td data-label="Clock_out">5:30 PM</td>
+                                    <td data-label="Late">0.5 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">2 H</td>
+                                    <td data-label="Total_Work">9.5 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="3" data-overtime-val="2"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/3" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="3"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">5th Mar 17</td>
+                                    <td data-label="Clock_In">9:20 AM</td>
+                                    <td data-label="Clock_out">4:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">1 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">7 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="4" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/4" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="4"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">11th Feb 18</td>
+                                    <td data-label="Clock_In">5:22 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">10 H</td>
+                                    <td data-label="Total_Work">18 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="5" data-overtime-val="10"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/5" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="5"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">12th Feb 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">11:14 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="6" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/6" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="6"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/23">ramy ramadan</a></td>
+                                            <td data-label="Date">12th Feb 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="7" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/7" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="7"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">13th Feb 18</td>
+                                    <td data-label="Clock_In">1:59 AM</td>
+                                    <td data-label="Clock_out">11:21 AM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">6.07 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">-7.42 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="8" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/8" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="8"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">14th Feb 18</td>
+                                    <td data-label="Clock_In">7:30 AM</td>
+                                    <td data-label="Clock_out">9:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">null H</td>
+                                    <td data-label="Total_Work">3.2 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="9" data-overtime-val="null"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/9" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="9"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">15th Feb 18</td>
+                                    <td data-label="Clock_In">3:59 PM</td>
+                                    <td data-label="Clock_out">8:46 PM</td>
+                                    <td data-label="Late">6.57 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">1.43 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="10" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/10" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="10"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">16th Feb 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">3:23 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">2.03 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="11" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/11" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="11"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">19th Feb 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">7:12 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="12" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/12" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="12"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">20th Feb 18</td>
+                                    <td data-label="Clock_In">10:53 AM</td>
+                                    <td data-label="Clock_out">6:02 PM</td>
+                                    <td data-label="Late">1.47 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">6.53 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="13" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/13" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="13"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/24">hafsa mansuri</a></td>
+                                            <td data-label="Date">22nd Feb 18</td>
+                                    <td data-label="Clock_In">10:25 AM</td>
+                                    <td data-label="Clock_out">4:25 PM</td>
+                                    <td data-label="Late">1 H</td>
+                                    <td data-label="Early_leaving">1 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">6 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="14" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/14" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="14"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/23">ramy ramadan</a></td>
+                                            <td data-label="Date">21st Feb 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="15" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/15" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="15"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">21st Feb 18</td>
+                                    <td data-label="Clock_In">4:05 PM</td>
+                                    <td data-label="Clock_out">7:09 PM</td>
+                                    <td data-label="Late">6.67 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">0.97 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="16" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/16" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="16"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/24">hafsa mansuri</a></td>
+                                            <td data-label="Date">21st Feb 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="17" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/17" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="17"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">22nd Feb 18</td>
+                                    <td data-label="Clock_In">11:11 AM</td>
+                                    <td data-label="Clock_out">9:09 PM</td>
+                                    <td data-label="Late">1.77 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">6.23 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="18" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/18" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="18"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/27">FRFR FGR</a></td>
+                                            <td data-label="Date">22nd Feb 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="19" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/19" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="19"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/27">FRFR FGR</a></td>
+                                            <td data-label="Date">14th Feb 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="20" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/20" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="20"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">23rd Feb 18</td>
+                                    <td data-label="Clock_In">4:01 PM</td>
+                                    <td data-label="Clock_out">4:01 PM</td>
+                                    <td data-label="Late">6.6 H</td>
+                                    <td data-label="Early_leaving">1.4 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">0 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="21" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/21" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="21"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">24th Feb 18</td>
+                                    <td data-label="Clock_In">9:30 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0.08 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">7.92 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="22" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/22" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="22"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">25th Feb 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="23" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/23" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="23"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">26th Feb 18</td>
+                                    <td data-label="Clock_In">7:10 AM</td>
+                                    <td data-label="Clock_out">4:00 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">1.42 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">6.58 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="24" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/24" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="24"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/23">ramy ramadan</a></td>
+                                            <td data-label="Date">27th Feb 18</td>
+                                    <td data-label="Clock_In">9:50 AM</td>
+                                    <td data-label="Clock_out">6:25 PM</td>
+                                    <td data-label="Late">0.42 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">7.58 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="25" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/25" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="25"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">27th Feb 18</td>
+                                    <td data-label="Clock_In">9:16 PM</td>
+                                    <td data-label="Clock_out">10:47 PM</td>
+                                    <td data-label="Late">11.85 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">-3.85 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="26" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/26" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="26"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">28th Feb 18</td>
+                                    <td data-label="Clock_In">12:29 PM</td>
+                                    <td data-label="Clock_out">7:49 PM</td>
+                                    <td data-label="Late">3.07 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">4.3 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="27" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/27" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="27"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">1st Mar 18</td>
+                                    <td data-label="Clock_In">10:34 AM</td>
+                                    <td data-label="Clock_out">4:43 PM</td>
+                                    <td data-label="Late">1.15 H</td>
+                                    <td data-label="Early_leaving">0.7 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">2 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="28" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/28" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="28"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">2nd Mar 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">8:04 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">4.9 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="29" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/29" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="29"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">3rd Mar 18</td>
+                                    <td data-label="Clock_In">7:20 PM</td>
+                                    <td data-label="Clock_out">7:43 PM</td>
+                                    <td data-label="Late">9.92 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">-1.92 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="30" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/30" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="30"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">4th Mar 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="31" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/31" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="31"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">5th Mar 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">10:44 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="32" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/32" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="32"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/25">Bill Jackie</a></td>
+                                            <td data-label="Date">5th Mar 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="33" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/33" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="33"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/31">Mr. k</a></td>
+                                            <td data-label="Date">6th Mar 18</td>
+                                    <td data-label="Clock_In">10:25 AM</td>
+                                    <td data-label="Clock_out">3:25 PM</td>
+                                    <td data-label="Late">1 H</td>
+                                    <td data-label="Early_leaving">2 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">5 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="34" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/34" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="34"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">6th Mar 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">1:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">4 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">4 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="35" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/35" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="35"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">7th Mar 18</td>
+                                    <td data-label="Clock_In">12:36 AM</td>
+                                    <td data-label="Clock_out">10:08 AM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">7.28 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">0.72 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="36" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/36" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="36"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">8th Mar 18</td>
+                                    <td data-label="Clock_In">2:42 AM</td>
+                                    <td data-label="Clock_out">2:43 AM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">14.7 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">-6.7 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="37" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/37" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="37"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/27">FRFR FGR</a></td>
+                                            <td data-label="Date">8th Mar 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="38" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/38" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="38"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">9th Mar 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">5:06 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0.32 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">5.75 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="39" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/39" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="39"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/23">ramy ramadan</a></td>
+                                            <td data-label="Date">9th Mar 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="40" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/40" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="40"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/23">ramy ramadan</a></td>
+                                            <td data-label="Date">11th Mar 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">5:25 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="41" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/41" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="41"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">11th Mar 18</td>
+                                    <td data-label="Clock_In">5:55 PM</td>
+                                    <td data-label="Clock_out">11:39 PM</td>
+                                    <td data-label="Late">8.5 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">-0.5 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="42" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/42" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="42"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">12th Mar 18</td>
+                                    <td data-label="Clock_In">12:21 PM</td>
+                                    <td data-label="Clock_out">12:21 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">5.07 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">8 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="43" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/43" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="43"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">13th Mar 18</td>
+                                    <td data-label="Clock_In">10:01 AM</td>
+                                    <td data-label="Clock_out">6:00 PM</td>
+                                    <td data-label="Late">0.6 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">7.4 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="44" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/44" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="44"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">14th Mar 18</td>
+                                    <td data-label="Clock_In">11:28 AM</td>
+                                    <td data-label="Clock_out">7:35 PM</td>
+                                    <td data-label="Late">2.05 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">5.95 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="45" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/45" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="45"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">15th Mar 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">3:02 PM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">2.38 H</td>
+                                    <td data-label="Overtime">0 H</td>
+                                    <td data-label="Total_Work">5.48 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="46" data-overtime-val="0"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/46" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="46"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">16th Mar 18</td>
+                                    <td data-label="Clock_In">9:25 AM</td>
+                                    <td data-label="Clock_out">10:59 AM</td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">6.43 H</td>
+                                    <td data-label="Overtime">null H</td>
+                                    <td data-label="Total_Work">1.57 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="47" data-overtime-val="null"  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/47" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="47"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                                                <tr>
+                                    <td data-label="employee_name"><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3">Abul Kashem Shamim</a></td>
+                                            <td data-label="Date">17th Mar 18</td>
+                                    <td data-label="Clock_In">2:18 PM</td>
+                                    <td data-label="Clock_out"></td>
+                                    <td data-label="Late">0 H</td>
+                                    <td data-label="Early_leaving">0 H</td>
+                                    <td data-label="Overtime"> H</td>
+                                    <td data-label="Total_Work">0 H</td>
+                                                                        <td data-label="Status"><p class="btn btn-success btn-xs">Present</p></td>
+                                                                        <td data-label="Actions">
+
+
+                                        <div class="btn-group btn-mini-group dropdown-default">
+                                            <a class="btn btn-success btn-sm dropdown-toggle btn-animated from-top fa fa-caret-down" data-toggle="dropdown" href="#" aria-expanded="false"><span><i class="fa fa-bars"></i></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#" class="text-complete setOvertime" id="48" data-overtime-val=""  data-toggle="tooltip" data-placement="right" title="Set Overtime"><i class="fa fa-clock-o"></i></a></li>
+                                                <li><a href="http://coderpixel.com/demo/advanced-hrm/attendance/edit/48" data-toggle="tooltip" data-placement="right" title="Edit" class="text-success"><i class="fa fa-edit"></i></a></li>
+                                                <li><a href="#" class="text-danger cdelete" data-toggle="tooltip" data-placement="right" title="Delete" id="48"><i class="fa fa-trash"></i></a></li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+

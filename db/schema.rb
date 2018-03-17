@@ -10,40 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180315130042) do
+ActiveRecord::Schema.define(version: 20180317131655) do
 
-  create_table "awards", force: :cascade do |t|
-    t.string "name"
-    t.string "gift"
-    t.integer "cash_price"
-    t.string "month"
-    t.string "year"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "departments", force: :cascade do |t|
+  create_table "admin_departments", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "designations", force: :cascade do |t|
+  create_table "admin_designations", force: :cascade do |t|
     t.string "name"
-    t.integer "department_id"
+    t.integer "admin_department_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["department_id"], name: "index_designations_on_department_id"
+    t.index ["admin_department_id"], name: "index_admin_designations_on_admin_department_id"
   end
 
-  create_table "holidays", force: :cascade do |t|
-    t.date "date"
-    t.string "occasion"
+  create_table "admin_employee_roles", force: :cascade do |t|
+    t.string "name"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "jobs", force: :cascade do |t|
+  create_table "admin_employees", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "employee_code"
+    t.integer "admin_department_id"
+    t.integer "admin_designation_id"
+    t.string "gender"
+    t.string "tax_example"
+    t.string "date_of_birth"
+    t.string "date_of_join"
+    t.string "date_of_leave"
+    t.string "present_address"
+    t.string "permanent_address"
+    t.string "phone"
+    t.string "alternative_phone"
+    t.string "status"
+    t.string "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_jobs", force: :cascade do |t|
     t.integer "designation_id"
     t.string "number_of_post"
     t.string "job_type"
@@ -59,15 +70,53 @@ ActiveRecord::Schema.define(version: 20180315130042) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["designation_id"], name: "index_jobs_on_designation_id"
   end
 
-  create_table "notices", force: :cascade do |t|
-    t.string "title"
+  create_table "admin_leaves", force: :cascade do |t|
+    t.integer "employee_id"
+    t.string "leave_type"
+    t.date "leave_from"
+    t.date "leave_to"
     t.string "status"
-    t.string "description"
+    t.string "reason"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+    t.string "resource_type"
+    t.integer "resource_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
+    t.index ["name"], name: "index_roles_on_name"
+    t.index ["resource_type", "resource_id"], name: "index_roles_on_resource_type_and_resource_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "users_roles", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+    t.index ["role_id"], name: "index_users_roles_on_role_id"
+    t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
+    t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
 end

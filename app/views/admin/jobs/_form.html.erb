@@ -1,0 +1,82 @@
+<%= form_with(model: admin_job, local: true) do |form| %>
+  <% if admin_job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_job.errors.count, "error") %> prohibited this admin_job from being saved:</h2>
+
+      <ul>
+      <% admin_job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :designation_id %>
+    <%= form.number_field :designation_id, id: :admin_job_designation_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_post %>
+    <%= form.text_field :number_of_post, id: :admin_job_number_of_post %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_type %>
+    <%= form.text_field :job_type, id: :admin_job_job_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :experience %>
+    <%= form.text_field :experience, id: :admin_job_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.text_field :age, id: :admin_job_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_location %>
+    <%= form.text_field :job_location, id: :admin_job_job_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.text_field :salary, id: :admin_job_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :post_date %>
+    <%= form.text_field :post_date, id: :admin_job_post_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_date_to_apply %>
+    <%= form.text_field :last_date_to_apply, id: :admin_job_last_date_to_apply %>
+  </div>
+
+  <div class="field">
+    <%= form.label :close_date %>
+    <%= form.text_field :close_date, id: :admin_job_close_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :admin_job_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :short_description %>
+    <%= form.text_field :short_description, id: :admin_job_short_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :admin_job_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  designation_id: 1
+  number_of_post: MyString
+  job_type: MyString
+  experience: MyString
+  age: MyString
+  job_location: MyString
+  salary: MyString
+  post_date: MyString
+  last_date_to_apply: MyString
+  close_date: MyString
+  status: MyString
+  short_description: MyString
+  description: MyString
+
+two:
+  designation_id: 1
+  number_of_post: MyString
+  job_type: MyString
+  experience: MyString
+  age: MyString
+  job_location: MyString
+  salary: MyString
+  post_date: MyString
+  last_date_to_apply: MyString
+  close_date: MyString
+  status: MyString
+  short_description: MyString
+  description: MyString
