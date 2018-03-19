@@ -1,0 +1,47 @@
+<%= form_with(model: admin_award, local: true) do |form| %>
+  <% if admin_award.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_award.errors.count, "error") %> prohibited this admin_award from being saved:</h2>
+
+      <ul>
+      <% admin_award.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :admin_award_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employee_id %>
+    <%= form.number_field :employee_id, id: :admin_award_employee_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gift_item %>
+    <%= form.text_field :gift_item, id: :admin_award_gift_item %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cash_price %>
+    <%= form.number_field :cash_price, id: :admin_award_cash_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :month %>
+    <%= form.text_field :month, id: :admin_award_month %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year, id: :admin_award_year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

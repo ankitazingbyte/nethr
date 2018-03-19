@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @admin_event.title %>
+</p>
+
+<p>
+  <strong>Starttime:</strong>
+  <%= @admin_event.starttime %>
+</p>
+
+<p>
+  <strong>All day:</strong>
+  <%= @admin_event.all_day %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @admin_event.description %>
+</p>
+
+<%= link_to 'Edit', edit_admin_event_path(@admin_event) %> |
+<%= link_to 'Back', admin_events_path %>

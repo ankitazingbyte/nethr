@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180316181552) do
+ActiveRecord::Schema.define(version: 20180319115537) do
 
-  create_table "awards", force: :cascade do |t|
+  create_table "admin_awards", force: :cascade do |t|
     t.string "name"
-    t.string "gift"
+    t.integer "employee_id"
+    t.string "gift_item"
     t.integer "cash_price"
     t.string "month"
     t.string "year"
@@ -22,28 +23,80 @@ ActiveRecord::Schema.define(version: 20180316181552) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "departments", force: :cascade do |t|
+  create_table "admin_departments", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "designations", force: :cascade do |t|
+  create_table "admin_designations", force: :cascade do |t|
     t.string "name"
-    t.integer "department_id"
+    t.integer "admin_department_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["department_id"], name: "index_designations_on_department_id"
+    t.index ["admin_department_id"], name: "index_admin_designations_on_admin_department_id"
   end
 
-  create_table "holidays", force: :cascade do |t|
-    t.date "date"
-    t.string "occasion"
+  create_table "admin_employee_roles", force: :cascade do |t|
+    t.string "name"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "jobs", force: :cascade do |t|
+  create_table "admin_employees", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "employee_code"
+    t.integer "admin_department_id"
+    t.integer "admin_designation_id"
+    t.string "gender"
+    t.string "tax_example"
+    t.string "date_of_birth"
+    t.string "date_of_join"
+    t.string "date_of_leave"
+    t.string "present_address"
+    t.string "permanent_address"
+    t.string "phone"
+    t.string "alternative_phone"
+    t.string "status"
+    t.string "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_event_series", force: :cascade do |t|
+    t.integer "frequency", default: 1
+    t.string "period", default: "monthly"
+    t.datetime "starttime"
+    t.datetime "endtime"
+    t.boolean "all_day", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_events", force: :cascade do |t|
+    t.string "title"
+    t.datetime "starttime"
+    t.datetime "endtime"
+    t.boolean "all_day"
+    t.string "description"
+    t.integer "admin_event_series_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_expenses", force: :cascade do |t|
+    t.string "item_name"
+    t.string "purchase_from"
+    t.string "purchase_date"
+    t.integer "amount"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_jobs", force: :cascade do |t|
     t.integer "designation_id"
     t.string "number_of_post"
     t.string "job_type"
@@ -59,10 +112,20 @@ ActiveRecord::Schema.define(version: 20180316181552) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["designation_id"], name: "index_jobs_on_designation_id"
   end
 
-  create_table "notices", force: :cascade do |t|
+  create_table "admin_leaves", force: :cascade do |t|
+    t.integer "employee_id"
+    t.string "leave_type"
+    t.date "leave_from"
+    t.date "leave_to"
+    t.string "status"
+    t.string "reason"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_notices", force: :cascade do |t|
     t.string "title"
     t.string "status"
     t.string "description"

@@ -1,0 +1,47 @@
+<%= form_with(model: admin_leave, local: true) do |form| %>
+  <% if admin_leafe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_leave.errors.count, "error") %> prohibited this admin_leave from being saved:</h2>
+
+      <ul>
+      <% admin_leave.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :employee_id %>
+    <%= form.number_field :employee_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :leave_type %>
+    <%= form.text_field :leave_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :leave_from %>
+    <%= form.date_select :leave_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :leave_to %>
+    <%= form.date_select :leave_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reason %>
+    <%= form.text_field :reason %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

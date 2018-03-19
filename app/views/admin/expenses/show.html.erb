@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item name:</strong>
+  <%= @admin_expense.item_name %>
+</p>
+
+<p>
+  <strong>Purchase from:</strong>
+  <%= @admin_expense.purchase_from %>
+</p>
+
+<p>
+  <strong>Purchase date:</strong>
+  <%= @admin_expense.purchase_date %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @admin_expense.amount %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @admin_expense.status %>
+</p>
+
+<%= link_to 'Edit', edit_admin_expense_path(@admin_expense) %> |
+<%= link_to 'Back', admin_expenses_path %>

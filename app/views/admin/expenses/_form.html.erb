@@ -1,0 +1,42 @@
+<%= form_with(model: admin_expense, local: true) do |form| %>
+  <% if admin_expense.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_expense.errors.count, "error") %> prohibited this admin_expense from being saved:</h2>
+
+      <ul>
+      <% admin_expense.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :item_name %>
+    <%= form.text_field :item_name, id: :admin_expense_item_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :purchase_from %>
+    <%= form.text_field :purchase_from, id: :admin_expense_purchase_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :purchase_date %>
+    <%= form.text_field :purchase_date, id: :admin_expense_purchase_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount, id: :admin_expense_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :admin_expense_status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

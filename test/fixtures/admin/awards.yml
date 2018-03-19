@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  employee_id: 1
+  gift_item: MyString
+  cash_price: 1
+  month: MyString
+  year: MyString
+
+two:
+  name: MyString
+  employee_id: 1
+  gift_item: MyString
+  cash_price: 1
+  month: MyString
+  year: MyString

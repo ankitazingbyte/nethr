@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_name: MyString
+  purchase_from: MyString
+  purchase_date: MyString
+  amount: 1
+  status: MyString
+
+two:
+  item_name: MyString
+  purchase_from: MyString
+  purchase_date: MyString
+  amount: 1
+  status: MyString

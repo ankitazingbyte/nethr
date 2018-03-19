@@ -1,0 +1,51 @@
+<%= form_for Admin::Event.new, :html => { :id => 'event_form' } do |form| %>
+  <% if admin_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_event.errors.count, "error") %> prohibited this admin_event from being saved:</h2>
+
+      <ul>
+      <% admin_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %><br/>
+    <%= form.text_field :title, id: :admin_event_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :starttime, 'Start Time' %><br/>
+    <%= form.datetime_select :starttime, id: :admin_event_starttime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endtime, 'End Time' %><br/>
+    <%= form.datetime_select :endtime, id: :admin_event_starttime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :all_day %>
+    <%= form.check_box :all_day %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :admin_event_description %>
+  </div>
+
+  <p>
+  <%=form.label :period, "Repeats" %>
+  <%=form.select :period, Event::REPEATS,{}, :onchange => "showPeriodAndFrequency(this.value);" %>
+</p>
+<p id = "frequency" style = "display:none;">
+  <%=form.label :frequency, "Repeat every" %>
+  <%=form.select :frequency, (1..30).to_a %> <span id = "period"></span>
+</p>
+  <%=form.hidden_field :id, :value => @event.id %>
+  <div class="actions">
+    <%= form.submit 'Create' %> <span id = "creating_events" class="spinner" style = "display:none;">Creating, Please wait...</span>
+  </div>
+<% end %>
