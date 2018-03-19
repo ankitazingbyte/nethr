@@ -1,23 +1,5 @@
 Rails.application.routes.draw do
-
-  namespace :admin do
-    resources :expenses
-  end
-  namespace :admin do
-    resources :notices
-  end
-  namespace :admin do
-    resources :awards
-  end
-  namespace :admin do
-    resources :events do 
-        collection do 
-          get :get_events
-          post :move
-          post :resize
-        end
-    end
-  end
+ 
     root 'home#index'
     get 'home/index'
     devise_for :users
@@ -31,6 +13,15 @@ Rails.application.routes.draw do
         resources :employees
         resources :attendances
         resources :leaves
-
+        resources :events do 
+          collection do 
+            get :get_events
+            post :move
+            post :resize
+          end
+        end
+        resources :awards
+        resources :notices
+        resources :expenses
     end
 end
