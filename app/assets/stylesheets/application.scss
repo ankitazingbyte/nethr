@@ -11,16 +11,14 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
- *= require bootstrap.min
- *= require bootstrap-extension
  *= require sidebar-nav.min
  *= require jquery.toast
- *= require morris
  *= require animate
  *= require style
  *= require default
  *=require bootstrap-select
  *= require font-awesome
+ *= require fullcalendar
  */
 @import "bootstrap";
 

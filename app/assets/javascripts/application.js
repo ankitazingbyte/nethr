@@ -12,24 +12,14 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require bootstrap-sprockets
-//= require jquery.min
-//= require tether.min
-//= require bootstrap.min
-//= require bootstrap-extension.min
 //= require sidebar-nav.min
-//= require jquery.slimscroll
 //= require waves
 //= require jquery.waypoints
 //= require jquery.counterup.min
-//= require raphael-min
-//= require morris
-//= require custom.min
-//= require jquery.sparkline.min
-//= require jquery.charts-sparkline
-//= require dashboard1
 //= require jQuery.style.switcher
 //= require bootstrap-select
+//= require moment.min
+//= require fullcalendar
 
 function moveEvent(event, dayDelta, minuteDelta, allDay){
     jQuery.ajax({
