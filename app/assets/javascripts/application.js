@@ -19,8 +19,6 @@
 //= require moment.min
 //= require fullcalendar
 //= require ckeditor/init
- //= require bootstrap-datepicker
-
 function moveEvent(event, dayDelta, minuteDelta, allDay){
     jQuery.ajax({
         data: 'id=' + event.id + '&title=' + event.title + '&day_delta=' + dayDelta + '&minute_delta=' + minuteDelta + '&all_day=' + allDay + '&authenticity_token=' + authenticity_token,
