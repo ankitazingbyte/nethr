@@ -25,13 +25,13 @@
                             <tbody>
                               <% @admin_notices.each do |admin_notice| %>
                                 <tr>
-                                      <td data-label="SL">1</td>
-                                      <td data-label="Title"><p><%= admin_notice.title %></p></td>
-                                      <td data-label="Status"><p class="btn btn-success btn-xs"><%= admin_notice.status %></p></td>
-                                      <td data-label="Actions">
-                                          <%= link_to 'Edit', edit_admin_notice_path(admin_notice), class: "btn btn-danger btn-xs" %>
-                                          <%= link_to 'Destroy', admin_notice, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
-                                      </td>
+                                    <td data-label="SL">1</td>
+                                    <td data-label="Title"><p><%= admin_notice.title %></p></td>
+                                    <td data-label="Status"><p class="btn btn-success btn-xs"><%= admin_notice.status %></p></td>
+                                    <td data-label="Actions">
+                                        <%= link_to 'Edit', edit_admin_notice_path(admin_notice), class: "btn btn-danger btn-xs" %>
+                                        <%= link_to 'Destroy', admin_notice, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+                                    </td>
                                 </tr>
                               <% end %>
                             </tbody>
@@ -48,36 +48,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">Add New Notice</h4>
                     </div>
-                    <form class="form-some-up" role="form" method="post" action="http://coderpixel.com/demo/advanced-hrm/notice-board/post-new-notice">
-                        <div class="modal-body">
-
-                            <div class="form-group">
-                                <label>Notice Title</label>
-                                <input type="text" class="form-control" required="" name="notice_title">
-                            </div>
-
-                            <div class="form-group m-none">
-                                <label for="e20">Notice Status</label>
-                                <select name="status" class="form-control selectpicker">
-                                    <option value="Published">Published</option>
-                                    <option value="Unpublished">Unpublished</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Description</label>
-                                <textarea class="textarea-wysihtml5 form-control" name="description"></textarea>
-                            </div>
-
-
-
-                        </div>
-                        <div class="modal-footer">
-                            <input type="hidden" name="_token" value="LypliyuC3SOSDwNkDSb5qXWJI2ZXxaLb0KeBm20u">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Add</button>
-                        </div>
-                    </form>
+                    <%=  render "admin/notices/form" %>
                 </div>
             </div>
         </div>

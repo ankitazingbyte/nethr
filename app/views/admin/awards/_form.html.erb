@@ -1,47 +1,39 @@
-<%= form_with(model: admin_award, local: true) do |form| %>
-  <% if admin_award.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(admin_award.errors.count, "error") %> prohibited this admin_award from being saved:</h2>
+<%= form_for Admin::Award.new do |form| %>
+    <div class="modal-body">
+        <div class="form-group">
+            <label>Award Name</label>
+            <%= form.text_field :name, class: "form-control" %>
+        </div>
 
-      <ul>
-      <% admin_award.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <div class="form-group">
+            <label>Employee Name</label>
+            <%= form.select :admin_employee_id, Admin::Employee.all.map{|d| [d.first_name, d.id]}, class: "form-control selectpicker" %>
+        </div>
+
+        <div class="form-group">
+            <label>Gift Item</label>
+            <%= form.text_field :gift_item, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+            <label>Cash Price</label>
+            <%= form.text_field :cash_price, class: "form-control" %>
+        </div>
+
+        <div class="form-group m-none">
+            <label for="e20">Month</label>
+            <%= form.select :month, 1..12 %>
+        </div>
+
+        <div class="form-group">
+            <label>Year</label>
+            <%= form.select :year, Date.today.year..8.years.from_now.year %>
+
+        </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :admin_award_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :employee_id %>
-    <%= form.number_field :employee_id, id: :admin_award_employee_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :gift_item %>
-    <%= form.text_field :gift_item, id: :admin_award_gift_item %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cash_price %>
-    <%= form.number_field :cash_price, id: :admin_award_cash_price %>
-  </div>
-
-  <div class="field">
-    <%= form.label :month %>
-    <%= form.text_field :month, id: :admin_award_month %>
-  </div>
-
-  <div class="field">
-    <%= form.label :year %>
-    <%= form.text_field :year, id: :admin_award_year %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="modal-footer">
+        <input type="hidden" name="_token" value="s1zUCeyCUdsq23eTVvA2c1XIb4O84T8355FMtOBu">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= form.submit "Add", class: "btn btn-primary" %>
+    </div>
 <% end %>

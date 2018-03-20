@@ -27,7 +27,7 @@
                           <% @admin_awards.each do |admin_award| %>
                             <tr>
                                 <td data-label="SL"><%= admin_award.id %></td>
-                                <td data-label="emoployeCode"><p><%= admin_award.employee_id %></p></td>
+                                <td data-label="emoployeCode"><p><%= admin_award.admin_employee_id %></p></td>
                                 <td data-label="Award"><p><%= admin_award.name %></p></td>
                                 <td data-label="gift"><p><%= admin_award.gift_item %></p></td>
                                 <td data-label="month"><p><%= admin_award.month %> <%= admin_award.year %></p></td>
@@ -41,6 +41,17 @@
                       </table>
                   </div>
               </div>
+          </div>
+      </div>
+    </div>
+    <div class="modal fade" id="add-new-award" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Add New Award</h4>
+              </div>
+              <%= render "admin/awards/form" %>
           </div>
       </div>
     </div>

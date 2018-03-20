@@ -14,13 +14,12 @@
  *= require bootstrap.min
  *= require bootstrap-extension
  *= require sidebar-nav.min
- *= require jquery.toast
- *= require morris
- *= require animate
  *= require style
  *= require default
- *=require bootstrap-select
+ *= require bootstrap-select
  *= require font-awesome
+ *= require fullcalendar
+ *= require bootstrap-datepicker
  */
 @import "bootstrap";
 
@@ -187,3 +186,8 @@ body,html{
   section{
     padding-left: 15px;
   }
+
+  #fc-toolbar {
+    text-align: center;
+    margin-bottom: -815px;
+}

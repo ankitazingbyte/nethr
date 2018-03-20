@@ -2,7 +2,7 @@
 
 <p>
   <strong>Designation:</strong>
-  <%= @admin_job.designation_id %>
+  <%= @admin_job.admin_designation_id %>
 </p>
 
 <p>
@@ -62,7 +62,7 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @admin_job.description %>
+  <%= @admin_job.description.html_safe %>
 </p>
 
 <%= link_to 'Edit', edit_admin_job_path(@admin_job) %> |

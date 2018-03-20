@@ -1,378 +1,434 @@
-
-    <section class="wrapper-bottom-sec">
-        <div class="p-30"></div>
-        <div class="p-15 p-t-none p-b-none m-l-10 m-r-10"></div>
+<section class="wrapper-bottom-sec">
+    <div class="p-30"></div>
+    <div class="p-15 p-t-none p-b-none m-l-10 m-r-10"></div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel-body">
+                <div class="row text-center">
+                    <div class="col-sm-3 m-b-15">
+                        <div class="z-shad-1">
+                            <div class="bg-success text-white p-15 clearfix">
+                                <span class="pull-left font-45 m-l-10"><i class="fa fa-users"></i></span>
+                                <div class="pull-right text-right m-t-15">
+                                    <span class="small m-b-5 font-15">11 Employees</span>
+                                    <br>
+                                    <a href="http://coderpixel.com/demo/advanced-hrm/employees/add" class="btn btn-complete btn-xs text-uppercase">Add New</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 m-b-15">
+                        <div class="z-shad-1">
+                            <div class="bg-complete text-white p-15 clearfix">
+                                <span class="pull-left font-45 m-l-10"><i class="fa fa-bed"></i></span>
+                                <div class="pull-right text-right m-t-15">
+                                    <span class="small m-b-5 font-15">8 Leave Application</span>
+                                    <br>
+                                    <a href="http://coderpixel.com/demo/advanced-hrm/leave" class="btn btn-success btn-xs text-uppercase">View All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 m-b-15">
+                        <div class="z-shad-1">
+                            <div class="bg-primary text-white p-15 clearfix">
+                                <span class="pull-left font-45 m-l-10"><i class="fa fa-bar-chart"></i></span>
+                                <div class="pull-right text-right m-t-15">
+                                    <span class="small m-b-5 font-15">2 Expense Request</span>
+                                    <br>
+                                    <a href="http://coderpixel.com/demo/advanced-hrm/expense" class="btn btn-complete btn-xs text-uppercase">View All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 m-b-15">
+                        <div class="z-shad-1">
+                            <div class="bg-complete-darker text-white p-15 clearfix">
+                                <span class="pull-left font-45 m-l-10"><i class="fa fa-envelope"></i></span>
+                                <div class="pull-right text-right m-t-15">
+                                    <span class="small m-b-5 font-15">0 Support Tickets</span>
+                                    <br>
+                                    <a href="http://coderpixel.com/demo/advanced-hrm/support-tickets/all"
+                                       class="btn btn-success btn-xs text-uppercase">View All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-15 p-t-none p-b-none">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-6">
                 <div class="panel-body">
-                    <div class="row text-center">
-                        <div class="col-sm-3 m-b-15">
-                            <div class="z-shad-1">
-                                <div class="bg-success text-white p-15 clearfix">
-                                    <span class="pull-left font-45 m-l-10"><i class="fa fa-users"></i></span>
-                                    <div class="pull-right text-right m-t-15">
-                                        <span class="small m-b-5 font-15">11 Employees</span>
-                                        <br>
-                                        <a href="http://coderpixel.com/demo/advanced-hrm/employees/add" class="btn btn-complete btn-xs text-uppercase">Add New</a>
-                                    </div>
-                                </div>
+                    <div class="row">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Support Tickets</h3>
+                            </div>
+                            <div class="panel-body p-none">
+                                <div id="supportTickets" style="width:100%; height:400px;"></div>
                             </div>
                         </div>
-                        <div class="col-sm-3 m-b-15">
-                            <div class="z-shad-1">
-                                <div class="bg-complete text-white p-15 clearfix">
-                                    <span class="pull-left font-45 m-l-10"><i class="fa fa-bed"></i></span>
-                                    <div class="pull-right text-right m-t-15">
-                                        <span class="small m-b-5 font-15">8 Leave Application</span>
-                                        <br>
-                                        <a href="http://coderpixel.com/demo/advanced-hrm/leave" class="btn btn-success btn-xs text-uppercase">View All</a>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Expense</h3>
                             </div>
-                        </div>
-                        <div class="col-sm-3 m-b-15">
-                            <div class="z-shad-1">
-                                <div class="bg-primary text-white p-15 clearfix">
-                                    <span class="pull-left font-45 m-l-10"><i class="fa fa-bar-chart"></i></span>
-                                    <div class="pull-right text-right m-t-15">
-                                        <span class="small m-b-5 font-15">2 Expense Request</span>
-                                        <br>
-                                        <a href="http://coderpixel.com/demo/advanced-hrm/expense" class="btn btn-complete btn-xs text-uppercase">View All</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 m-b-15">
-                            <div class="z-shad-1">
-                                <div class="bg-complete-darker text-white p-15 clearfix">
-                                    <span class="pull-left font-45 m-l-10"><i class="fa fa-envelope"></i></span>
-                                    <div class="pull-right text-right m-t-15">
-                                        <span class="small m-b-5 font-15">0 Support Tickets</span>
-                                        <br>
-                                        <a href="http://coderpixel.com/demo/advanced-hrm/support-tickets/all"
-                                           class="btn btn-success btn-xs text-uppercase">View All</a>
-                                    </div>
-                                </div>
+                            <div class="panel-body p-none">
+                                <div id="expense" style="width:100%; height:400px;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="p-15 p-t-none p-b-none">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Support Tickets</h3>
-                                </div>
-                                <div class="panel-body p-none">
-                                    <div id="supportTickets" style="width:100%; height:400px;"></div>
-                                </div>
+    </div>
+    <div class="p-15 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Recent Leave Application</h3>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Expense</h3>
-                                </div>
-                                <div class="panel-body p-none">
-                                    <div id="expense" style="width:100%; height:400px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="p-15 p-t-none p-b-none">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Recent Leave Application</h3>
-                                </div>
-                                <div class="panel-body p-none">
-                                    <table class="table table-hover table-ultra-responsive">
-                                        <thead>
-	                                        <tr>
-	                                            <th style="width: 10px;">SL#</th>
-	                                            <th style="width: 30px;">Employee</th>
-	                                            <th style="width: 30px;">Leave Type</th>
-	                                            <th style="width: 15px;">Leave From</th>
-	                                            <th style="width: 15px;">Leave To</th>
-	                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td data-label="SL">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/49">49</a></p>
-                                                </td>
-                                                <td data-label="employee">
-                                                    <p> <a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
-                                                </td>
-                                                <td data-label="leave type">
-                                                    <p>Causal Leave</p>
-                                                </td>
-                                                <td data-label="leave from">
-                                                    <p>15th Mar 18</p>
-                                                </td>
-                                                <td data-label="leave to">
-                                                    <p>16th Mar 18</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="SL">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/48">48</a></p>
-                                                </td>
-                                                <td data-label="employee">
-                                                    <p>
-                                                        <a href="http://coderpixel.com/demo/advanced-hrm/employees/view/28"> h1 student h1 student</a>
-                                                    </p>
-                                                </td>
-                                                <td data-label="leave type">
-                                                    <p>Causal Leave</p>
-                                                </td>
-                                                <td data-label="leave from">
-                                                    <p>13th Mar 18</p>
-                                                </td>
-                                                <td data-label="leave to">
-                                                    <p>13th Mar 18</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="SL">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/47">47</a></p>
-                                                </td>
-                                                <td data-label="employee">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
-                                                </td>
-                                                <td data-label="leave type">
-                                                    <p>Sick Leave</p>
-                                                </td>
-                                                <td data-label="leave from">
-                                                    <p>13th Mar 18</p>
-                                                </td>
-                                                <td data-label="leave to">
-                                                    <p>13th Mar 18</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="SL">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/38">38</a></p>
-                                                </td>
-                                                <td data-label="employee">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
-                                                </td>
-                                                <td data-label="leave type">
-                                                    <p>Causal Leave</p>
-                                                </td>
-                                                <td data-label="leave from">
-                                                    <p>20th Mar 18</p>
-                                                </td>
-                                                <td data-label="leave to">
-                                                    <p>6th Mar 18</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="SL">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/37">37</a></p>
-                                                </td>
-                                                <td data-label="employee">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
-                                                </td>
-                                                <td data-label="leave type">
-                                                    <p>Causal Leave</p>
-                                                </td>
-                                                <td data-label="leave from">
-                                                    <p>7th Mar 18</p>
-                                                </td>
-                                                <td data-label="leave to">
-                                                    <p>7th Mar 18</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="SL">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/33">33</a></p>
-                                                </td>
-                                                <td data-label="employee">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
-                                                </td>
-                                                <td data-label="leave type">
-                                                    <p>Causal Leave</p>
-                                                </td>
-                                                <td data-label="leave from">
-                                                    <p>22nd Feb 18</p>
-                                                </td>
-                                                <td data-label="leave to">
-                                                    <p>22nd Feb 18</p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Recent Expense Request</h3>
-                                </div>
-                                <div class="panel-body p-none">
-                                    <table class="table table-hover table-ultra-responsive">
-                                        <thead>
+                            <div class="panel-body p-none">
+                                <table class="table table-hover table-ultra-responsive">
+                                    <thead>
                                         <tr>
-                                            <th style="width: 30px;">Item Name</th>
-                                            <th style="width: 30px;">Purchase By</th>
-                                            <th style="width: 20px;">Purchase Date</th>
-                                            <th style="width: 20px;">Amount</th>
+                                            <th style="width: 10px;">SL#</th>
+                                            <th style="width: 30px;">Employee</th>
+                                            <th style="width: 30px;">Leave Type</th>
+                                            <th style="width: 15px;">Leave From</th>
+                                            <th style="width: 15px;">Leave To</th>
                                         </tr>
-                                        </thead>
-                                        <tbody>
-                                        	<tr>
-                                                <td data-label="item name">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/expense/edit/3"> vv</a></p>
-                                                </td>
-                                                <td data-label="purchase by">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/31"> Mr. k</a></p>
-                                                </td>
-                                                <td data-label="purchase date">
-                                                    <p>6th Mar 18</p>
-                                                </td>
-                                                <td data-label="amount">
-                                                    <p>USD 10.00</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="item name">
-                                                    <p>
-                                                        <a href="http://coderpixel.com/demo/advanced-hrm/expense/edit/2"> Computer Monitor</a>
-                                                    </p>
-                                                </td>
-                                                <td data-label="purchase by">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
-                                                </td>
-                                                <td data-label="purchase date">
-                                                    <p>23rd Feb 17</p>
-                                                </td>
-                                                <td data-label="amount">
-                                                    <p>USD 500.00</p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="SL">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/49">49</a></p>
+                                            </td>
+                                            <td data-label="employee">
+                                                <p> <a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
+                                            </td>
+                                            <td data-label="leave type">
+                                                <p>Causal Leave</p>
+                                            </td>
+                                            <td data-label="leave from">
+                                                <p>15th Mar 18</p>
+                                            </td>
+                                            <td data-label="leave to">
+                                                <p>16th Mar 18</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="SL">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/48">48</a></p>
+                                            </td>
+                                            <td data-label="employee">
+                                                <p>
+                                                    <a href="http://coderpixel.com/demo/advanced-hrm/employees/view/28"> h1 student h1 student</a>
+                                                </p>
+                                            </td>
+                                            <td data-label="leave type">
+                                                <p>Causal Leave</p>
+                                            </td>
+                                            <td data-label="leave from">
+                                                <p>13th Mar 18</p>
+                                            </td>
+                                            <td data-label="leave to">
+                                                <p>13th Mar 18</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="SL">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/47">47</a></p>
+                                            </td>
+                                            <td data-label="employee">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
+                                            </td>
+                                            <td data-label="leave type">
+                                                <p>Sick Leave</p>
+                                            </td>
+                                            <td data-label="leave from">
+                                                <p>13th Mar 18</p>
+                                            </td>
+                                            <td data-label="leave to">
+                                                <p>13th Mar 18</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="SL">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/38">38</a></p>
+                                            </td>
+                                            <td data-label="employee">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
+                                            </td>
+                                            <td data-label="leave type">
+                                                <p>Causal Leave</p>
+                                            </td>
+                                            <td data-label="leave from">
+                                                <p>20th Mar 18</p>
+                                            </td>
+                                            <td data-label="leave to">
+                                                <p>6th Mar 18</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="SL">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/37">37</a></p>
+                                            </td>
+                                            <td data-label="employee">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
+                                            </td>
+                                            <td data-label="leave type">
+                                                <p>Causal Leave</p>
+                                            </td>
+                                            <td data-label="leave from">
+                                                <p>7th Mar 18</p>
+                                            </td>
+                                            <td data-label="leave to">
+                                                <p>7th Mar 18</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="SL">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/33">33</a></p>
+                                            </td>
+                                            <td data-label="employee">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
+                                            </td>
+                                            <td data-label="leave type">
+                                                <p>Causal Leave</p>
+                                            </td>
+                                            <td data-label="leave from">
+                                                <p>22nd Feb 18</p>
+                                            </td>
+                                            <td data-label="leave to">
+                                                <p>22nd Feb 18</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Recent Expense Request</h3>
+                            </div>
+                            <div class="panel-body p-none">
+                                <table class="table table-hover table-ultra-responsive">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 30px;">Item Name</th>
+                                        <th style="width: 30px;">Purchase By</th>
+                                        <th style="width: 20px;">Purchase Date</th>
+                                        <th style="width: 20px;">Amount</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    	<tr>
+                                            <td data-label="item name">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/expense/edit/3"> vv</a></p>
+                                            </td>
+                                            <td data-label="purchase by">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/31"> Mr. k</a></p>
+                                            </td>
+                                            <td data-label="purchase date">
+                                                <p>6th Mar 18</p>
+                                            </td>
+                                            <td data-label="amount">
+                                                <p>USD 10.00</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="item name">
+                                                <p>
+                                                    <a href="http://coderpixel.com/demo/advanced-hrm/expense/edit/2"> Computer Monitor</a>
+                                                </p>
+                                            </td>
+                                            <td data-label="purchase by">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
+                                            </td>
+                                            <td data-label="purchase date">
+                                                <p>23rd Feb 17</p>
+                                            </td>
+                                            <td data-label="amount">
+                                                <p>USD 500.00</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="p-15 p-t-none p-b-none">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Recent Tasks</h3>
-                                </div>
-                                <div class="panel-body p-none">
-                                    <table class="table table-hover table-ultra-responsive">
-                                        <thead>
+    </div>
+    <div class="p-15 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Recent Tasks</h3>
+                            </div>
+                            <div class="panel-body p-none">
+                                <table class="table table-hover table-ultra-responsive">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 45px;">Task</th>
+                                        <th style="width: 20px;">Created Date</th>
+                                        <th style="width: 20px;">Due Date</th>
+                                        <th style="width: 15px;">Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
                                         <tr>
-                                            <th style="width: 45px;">Task</th>
-                                            <th style="width: 20px;">Created Date</th>
-                                            <th style="width: 20px;">Due Date</th>
-                                            <th style="width: 15px;">Status</th>
+                                            <td data-label="task">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/5"> K1106 </a></p>
+                                            </td>
+                                            <td data-label="CreatedDate"><p>7th Mar 18</p>
+                                            </td>
+                                            <td data-label="DueDate"><p>7th Mar 18</p></td>
+                                            </td>
                                         </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td data-label="task">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/5"> K1106 </a></p>
-                                                </td>
-                                                <td data-label="CreatedDate"><p>7th Mar 18</p>
-                                                </td>
-                                                <td data-label="DueDate"><p>7th Mar 18</p></td>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="task">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/4"> yyy </a></p>
-                                                </td>
-                                                <td data-label="CreatedDate"><p>6th Mar 18</p>
-                                                </td>
-                                                <td data-label="DueDate"><p>6th Mar 18</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="task">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/3"> sdfd </a></p>
-                                                </td>
-                                                <td data-label="CreatedDate"><p>1st Jan 70</p>
-                                                </td>
-                                                <td data-label="DueDate"><p>1st Jan 70</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="task">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/2"> TEST 1  </a></p>
-                                                </td>
-                                                <td data-label="CreatedDate"><p>12th Feb 18</p>
-                                                </td>
-                                                <td data-label="DueDate"><p>14th Feb 18</p></td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="task">
-                                                    <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/1"> HR Project</a></p>
-                                                </td>
-                                                <td data-label="CreatedDate"><p>1st Apr 17</p>
-                                                </td>
-                                                <td data-label="DueDate"><p>22nd Apr 17</p></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                        <tr>
+                                            <td data-label="task">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/4"> yyy </a></p>
+                                            </td>
+                                            <td data-label="CreatedDate"><p>6th Mar 18</p>
+                                            </td>
+                                            <td data-label="DueDate"><p>6th Mar 18</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="task">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/3"> sdfd </a></p>
+                                            </td>
+                                            <td data-label="CreatedDate"><p>1st Jan 70</p>
+                                            </td>
+                                            <td data-label="DueDate"><p>1st Jan 70</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="task">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/2"> TEST 1  </a></p>
+                                            </td>
+                                            <td data-label="CreatedDate"><p>12th Feb 18</p>
+                                            </td>
+                                            <td data-label="DueDate"><p>14th Feb 18</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="task">
+                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/1"> HR Project</a></p>
+                                            </td>
+                                            <td data-label="CreatedDate"><p>1st Apr 17</p>
+                                            </td>
+                                            <td data-label="DueDate"><p>22nd Apr 17</p></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="panel">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Recent Support Tickets</h3>
-                                </div>
-                                <div class="panel-body p-none">
-                                    <table class="table table-hover table-ultra-responsive">
-                                        <thead>
-	                                        <tr>
-	                                            <th style="width: 30px;">Email</th>
-	                                            <th style="width: 50px;">Subject</th>
-	                                            <th style="width: 20px;">Date</th>
-	                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        </tbody>
-                                    </table>
-                                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Recent Support Tickets</h3>
+                            </div>
+                            <div class="panel-body p-none">
+                                <table class="table table-hover table-ultra-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 30px;">Email</th>
+                                            <th style="width: 50px;">Subject</th>
+                                            <th style="width: 20px;">Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-            </div>
         </div>
-    </section>
+    </div>
+</section>
+<script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/moment.min.js'></script>
+<script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery.min.js'></script>
+<script src="http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery-ui.custom.min.js"></script>
+<script src='http://fullcalendar.io/js/fullcalendar-2.1.1/fullcalendar.min.js'></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            defaultDate: '2014-06-12',
+            defaultView: 'month',
+            editable: true,
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2014-06-01'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2014-06-07',
+                    end: '2014-06-10'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2014-06-09T16:00:00'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2014-06-16T16:00:00'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2014-06-12T10:30:00',
+                    end: '2014-06-12T12:30:00'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2014-06-12T12:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2014-06-13T07:00:00'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2014-06-28'
+                }
+            ]
+        });
+    });
+</script>

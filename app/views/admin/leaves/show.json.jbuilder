@@ -1,1 +1,1 @@
-json.partial! "admin_leaves/admin_leafe", admin_leafe: @admin_leafe
+json.partial! "admin_leaves/admin_leave", admin_leafe: @admin_leave

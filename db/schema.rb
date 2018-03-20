@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180319115537) do
+ActiveRecord::Schema.define(version: 20180320145943) do
 
   create_table "admin_awards", force: :cascade do |t|
     t.string "name"
-    t.integer "employee_id"
+    t.integer "admin_employee_id"
     t.string "gift_item"
     t.integer "cash_price"
     t.string "month"
@@ -96,8 +96,15 @@ ActiveRecord::Schema.define(version: 20180319115537) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "admin_holidays", force: :cascade do |t|
+    t.string "date"
+    t.string "occasion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "admin_jobs", force: :cascade do |t|
-    t.integer "designation_id"
+    t.integer "admin_designation_id"
     t.string "number_of_post"
     t.string "job_type"
     t.string "experience"
@@ -115,10 +122,10 @@ ActiveRecord::Schema.define(version: 20180319115537) do
   end
 
   create_table "admin_leaves", force: :cascade do |t|
-    t.integer "employee_id"
+    t.integer "admin_employee_id"
     t.string "leave_type"
-    t.date "leave_from"
-    t.date "leave_to"
+    t.string "leave_from"
+    t.string "leave_to"
     t.string "status"
     t.string "reason"
     t.datetime "created_at", null: false
@@ -131,6 +138,18 @@ ActiveRecord::Schema.define(version: 20180319115537) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string "data_file_name", null: false
+    t.string "data_content_type"
+    t.integer "data_file_size"
+    t.string "type", limit: 30
+    t.integer "width"
+    t.integer "height"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
   create_table "roles", force: :cascade do |t|

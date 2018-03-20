@@ -34,8 +34,8 @@
                                         <td data-label="amount"><p><%= admin_expense.amount %></p></td>
                                         <td data-label="Status"><p class="btn btn-success btn-xs"><%= admin_expense.status %></p></td>
                                         <td data-label="Actions" class="text-right">
-                                            <%= link_to 'Edit', edit_admin_expense_path(admin_expense) %>
-                                            <%= link_to 'Destroy', admin_expense, method: :delete, data: { confirm: 'Are you sure?' } %>
+                                            <%= link_to 'Edit', edit_admin_expense_path(admin_expense), class: "btn btn-success" %>
+                                            <%= link_to 'Destroy', admin_expense, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
                                         </td>
                                     </tr>
                                 <% end %>
@@ -53,78 +53,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">Add New Expense</h4>
                     </div>
-                    <form class="form-some-up" role="form" method="post" action="http://coderpixel.com/demo/advanced-hrm/expense/post-new-expense" enctype="multipart/form-data">
-                        <div class="modal-body">
-
-
-                            <div class="form-group">
-                                <label>Item Name</label>
-                                <input type="text" class="form-control" required="" name="item_name">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Purchase From</label>
-                                <input type="text" class="form-control" required="" name="purchase_from">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Purchase By</label>
-                                <select name="emp_name" class="form-control selectpicker" data-live-search="true">
-                                                                                <option value="3">Abul Kashem Shamim (5874698)</option>
-                                                                                <option value="23">ramy ramadan (1233)</option>
-                                                                                <option value="24">hafsa mansuri (331)</option>
-                                                                                <option value="25">Bill Jackie (BJ007)</option>
-                                                                                <option value="26">Shiva Kant Mishra (1002)</option>
-                                                                                <option value="27">FRFR FGR (11HTGG)</option>
-                                                                                <option value="28">h1 student h1 student (10001)</option>
-                                                                                <option value="29">Alvin WIjaya (45321)</option>
-                                                                                <option value="30">test test (test)</option>
-                                                                                <option value="31">Mr. k (666)</option>
-                                                                                <option value="32">N GOLO  KEITA (90587604)</option>
-                                                                                <option value="33">ankita dangi (1234)</option>
-                                                                        </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Purchase Date</label>
-                                <input type="text" class="form-control datePicker" required="" name="purchase_date">
-                            </div>
-
-
-                            <div class="form-group">
-                                <label>Amount</label>
-                                <input type="text" class="form-control" name="amount">
-                            </div>
-
-                            <div class="form-group m-none">
-                                <label for="e20">Status</label>
-                                <select name="status" class="form-control selectpicker">
-                                    <option value="Pending">Pending</option>
-                                    <option value="Approved">Approved</option>
-                                    <option value="Cancel">Cancel</option>
-                                </select>
-                            </div>
-
-
-                            <div class="form-group">
-                                <label>Select Document</label>
-                                <div class="input-group input-group-file">
-                                    <span class="input-group-btn">
-                                        <span class="btn btn-primary btn-file">
-                                            Browse <input type="file" class="form-control" name="bill_copy">
-                                        </span>
-                                    </span>
-                                    <input type="text" class="form-control" readonly="">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal-footer">
-                            <input type="hidden" name="_token" value="LypliyuC3SOSDwNkDSb5qXWJI2ZXxaLb0KeBm20u">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Add</button>
-                        </div>
-                    </form>
+                   <%= render "admin/expenses/new" %>
                 </div>
             </div>
         </div>

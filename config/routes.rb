@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  mount Ckeditor::Engine => '/ckeditor'
     root 'home#index'
     get 'home/index'
     devise_for :users
@@ -23,5 +24,6 @@ Rails.application.routes.draw do
         resources :awards
         resources :notices
         resources :expenses
+        resources :holidays
     end
 end

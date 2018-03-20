@@ -30,15 +30,15 @@
                     <div class="form-group">
                         <label>Email</label>
                         <span class="help">e.g. "coderpixel@gmail.com" (Unique For every User)</span>
-                        <%= user.email_field :email %>
+                        <%= user.email_field :email, class: "form-control" %>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <%= user.password_field :password %>
+                        <%= user.password_field :password, class: "form-control" %>
                     </div>
                     <div class="form-group">
                         <label>Confirm Password</label>
-                        <%= user.password_field :password_confirmation %>
+                        <%= user.password_field :password_confirmation, class: "form-control" %>
                     </div>
                     <% end %>
                     <div class="form-group">
@@ -56,11 +56,7 @@
                     </div>
                     <div class="form-group">
                         <label>Tax Template</label>
-                        <select class="selectpicker form-control" name="tax" data-live-search="true">
-                            <option value="1">Tax Rule 1</option>
-                            <option value="2">15000</option>
-                            <option value="3">PPn</option>
-                        </select>
+                        <%= form.select :tax_example, %w{TaxRule1 15000 PPn}, :prompt => 'Select', required: true, placeholder: 'Tax', class: 'form-control' %>
                     </div>
                     <div class="form-group">
                         <label>User Role</label>
