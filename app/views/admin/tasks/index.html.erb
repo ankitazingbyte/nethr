@@ -1,0 +1,60 @@
+<section class="wrapper-bottom-sec">
+    <div class="p-30">
+        <h2 class="page-title">Task List</h2>
+    </div>
+    <div class="p-30 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Task List</h3>
+                        <button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#add-new-task"><i class="fa fa-plus"></i> Add New Task</button>
+                        <br>
+                    </div>
+                    <div class="panel-body p-none">
+                        <table class="table data-table table-hover table-ultra-responsive">
+                            <thead>
+                            <tr>
+                                <th style="width: 5%;">SL#</th>
+                                <th style="width: 25%;">Task</th>
+                                <th style="width: 15%;">Created Date</th>
+                                <th style="width: 15%;">Due Date</th>
+                                <th style="width: 15%;">Status</th>
+                                <th style="width: 25%;" class="text-right">Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <% @admin_tasks.each do |admin_task| %>
+                                    <tr>
+                                        <td data-label="SL"><%= admin_task.id %></td>
+                                        <td data-label="task"><p><%= admin_task.title %></p></td>
+                                        <td data-label="CreatedDate"><p><%= admin_task.start_date %></p></td>
+                                        <td data-label="DueDate"><p><%= admin_task.due_date %></p></td>
+                                        <td data-label="Status"><p class="btn btn-success btn-xs"><%= admin_task.status %></p></td>
+                                        <td data-label="Actions" class="text-right">
+                                            <%= link_to admin_task, class: "btn btn-complete btn-xs" do %><i class="fa fa-eye">View</i><% end %>
+                                            <%= link_to edit_admin_task_path(admin_task), class: "btn btn-success btn-xs" do %><i class="fa fa-edit"></i> Edit<% end %>
+                                            <%= link_to 'Destroy', admin_task, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+                                        </td>
+                                    </tr>
+                                <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="add-new-task" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add New Task</h4>
+                    </div>
+                    <%= render "admin/tasks/new" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

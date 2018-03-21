@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
  
+  namespace :admin do
+    resources :trainings
+  end
+  namespace :admin do
+    resources :trainers
+  end
+  namespace :admin do
+    resources :tasks
+  end
   mount Ckeditor::Engine => '/ckeditor'
     root 'home#index'
     get 'home/index'

@@ -1,57 +1,66 @@
-
-    <section class="wrapper-bottom-sec">
-        <div class="p-30">
-            <h2 class="page-title">Designation</h2>
-        </div>
-        <div class="p-30 p-t-none p-b-none">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="panel">
-                        <div class="panel-body">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Add Designation</h3>
-                            </div>
-                            <div class="form-group">
-                                <label>Designation Name</label>
-                                <span class="help">e.g."Account Designation"</span>
-                                <%= render "admin/designations/form" %>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="panel">
+<section class="wrapper-bottom-sec">    
+    <div class="p-30">
+        <h2 class="page-title">Designation</h2>
+    </div>
+    <div class="p-30 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel">
+                    <div class="panel-body">
                         <div class="panel-heading">
-                            <h3 class="panel-title">All Designations</h3>
+                            <h3 class="panel-title">Add Designation</h3>
                         </div>
-                        <div class="panel-body p-none">
-                            <table class="table data-table table-hover table-ultra-responsive">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 10%;">SL#</th>
-                                        <th style="width: 30%;">Designation Name</th>
-                                        <th style="width: 30%;">Department Name</th>
-                                        <th style="width: 35%;">Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <% @admin_designations.each do |admin_designation| %>
-                                        <tr>
-                                            <td><%= admin_designation.id %></td>
-                                            <td><%= admin_designation.name %></td>
-                                            <td><%= admin_designation.admin_department %></td>
-                                            <td>
-                                                <%= link_to 'Edit', edit_admin_designation_path(admin_designation), class: "btn btn-success btn-xs" %>
-                                                <%= link_to 'Destroy', admin_designation, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger btn-xs" %>
-                                            </td>
-                                        </tr>
-                                    <% end %>
-                                </tbody>
-                            </table>
+                        <div class="form-group">
+                            <label>Designation Name</label>
+                            <span class="help">e.g."Account Designation"</span>
+                            <%= render "admin/designations/new" %>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-8">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">All Designations</h3>
+                    </div>
+                    <div class="panel-body p-none">
+                        <table class="table data-table table-hover table-ultra-responsive">
+                            <thead>
+                                <tr>
+                                    <th style="width: 10%;">SL#</th>
+                                    <th style="width: 30%;">Designation Name</th>
+                                    <th style="width: 30%;">Department Name</th>
+                                    <th style="width: 35%;">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% @admin_designations.each do |admin_designation| %>
+                                    <tr>
+                                        <td><%= admin_designation.id %></td>
+                                        <td><%= admin_designation.name %></td>
+                                        <td><%= admin_designation.admin_department %></td>
+                                        <td>
+                                            <%= link_to 'Edit', edit_admin_designation_path(admin_designation), class: "btn btn-success btn-xs bottom", remote: true %>
+                                            <%= link_to 'Destroy', admin_designation, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger btn-xs" %>
+                                        </td>
+                                    </tr>
+                                <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+    <!-- EDIT MODAL  -->
+    <div id="status-modal" tabindex="-1" role="dialog" class="modal fade"></div>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      $('.bottom').click(function() {
+        $('#status-modal').modal("show");
+      });
+    });
+    </script>
+    <!-- END -->
+</section>
 

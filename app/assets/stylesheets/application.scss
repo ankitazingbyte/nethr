@@ -24,8 +24,7 @@
 
 .navbar-header {
     width: 100%;
-    height: 50px;
-    background-color: #b3adad;
+    height: 60px;
 }
 
 .wrapper {
@@ -129,13 +128,15 @@ body,html{
 
     /*gives sidebar width/height*/
     nav.sidebar{
-      width: 200px;
-      height: 100%;
+      width: 225px;
+      height: 160%;
       margin-left: -160px;
       float: left;
       z-index: 8000;
-      margin-top: -130px;
-      background-color: #9e9292
+      margin-top: -132px;
+      background-color: black;
+          margin-bottom: 15px;
+    border: 0px solid transparent;
     }
 
     /*give sidebar 100% width;*/
@@ -189,4 +190,10 @@ body,html{
   #fc-toolbar {
     text-align: center;
     margin-bottom: -815px;
+}
+
+.nav-top-sec{
+  background-color: #eff0f5;
+      padding: 4px;
+
 }

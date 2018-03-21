@@ -1,0 +1,47 @@
+<%= form_with(model: admin_training, local: true) do |form| %>
+  <% if admin_training.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_training.errors.count, "error") %> prohibited this admin_training from being saved:</h2>
+
+      <ul>
+      <% admin_training.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :admin_employee_id %>
+    <%= form.select :admin_employee_id, Admin::Employee.all.map{|e| [e.name, e.id]}, class: "btn dropdown-toggle btn-default" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :training_type %>
+    <%= form.text_field :training_type, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :training_subject %>
+    <%= form.text_field :training_subject, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nature "NATURE OF TRAINING" %>
+    <%= form.text_field :nature, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :admin_trainer_id %>
+    <%= form.select :admin_trainer_id, Admin::Trainer.all.map{|e| [e.name, e.id]}, class: "btn dropdown-toggle btn-default" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

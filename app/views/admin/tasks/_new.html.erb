@@ -1,0 +1,49 @@
+<%= form_for Admin::Task.new do |form| %>
+
+  <div class="modal-body">
+      <div class="form-group">
+          <label>Task Title</label>
+          <%= form.text_field :title, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+          <label>Assign To</label>
+          <%= form.text_field :assign_to, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+          <label>Start Date</label>
+          <%= form.text_field :start_date, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+          <label>Due Date</label>
+          <%= form.text_field :due_date, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+          <label>Estimated Hour</label>
+          <%= form.text_field :estimated_hour, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+          <label>Progress</label>
+          <%= form.text_field :progress, class: "form-control" %>
+      </div>
+
+      <div class="form-group m-none">
+          <label for="e20">Status</label>
+              <%= form.text_field :status, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+          <label>Description</label>
+          <%= form.cktext_area :description, class: "form-control" %>
+      </div>
+  </div>
+  <div class="modal-footer">
+      <input type="hidden" name="_token" value="iDagcZBRhIoGlecLnwH8hlhihh6XILWCmZWpbR5i">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <%= form.submit "Add", class: "btn btn-primary" %>
+  </div>
+<% end %>

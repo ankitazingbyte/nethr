@@ -1,0 +1,69 @@
+<%= form_for Admin::Training.new do |form| %>
+    <div class="modal-body">
+        <div class="form-group">
+            <label>Employee</label>
+            <%= form.select :admin_employee_id, Admin::Employee.all.map{|e| [e.first_name, e.id]}, class: "btn dropdown-toggle btn-default" %>
+        </div>
+
+        <div class="form-group">
+            <label>Training Type</label>
+            <%= form.text_field :training_type, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+            <label>Training Subject</label>
+            <%= form.text_field :training_subject, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+            <label>Nature Of Training</label>
+            <%= form.text_field :nature, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+            <label>Training Title</label>
+            <%= form.text_field :title, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+            <label>Trainer</label>
+            <%= form.select :admin_trainer_id, Admin::Trainer.all.map{|e| [e.name, e.id]}, class: "btn dropdown-toggle btn-default" %>
+        </div>
+
+        <div class="form-group">
+            <label>Training Location</label>
+            <%= form.text_field :location, class: "form-control" %>
+        </div>
+
+
+        <div class="form-group">
+            <label>Sponsored By</label>
+            <%= form.text_field :sponsored_by, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+            <label>Organized By</label>
+            <%= form.text_field :organized_by, class: "form-control" %>        
+        </div>
+
+        <div class="form-group">
+            <label>Training From</label>
+            <%= form.text_field :training_from, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+            <label>Training To</label>
+            <%= form.text_field :training_to, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+            <label>Training Description</label>
+            <%= form.text_field :description, class: "form-control" %>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <input type="hidden" name="_token" value="iDagcZBRhIoGlecLnwH8hlhihh6XILWCmZWpbR5i">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= form.submit "Add", class: "btn btn-primary" %>
+    </div>
+<% end %>

@@ -1,0 +1,144 @@
+<section class="wrapper-bottom-sec">
+    <div class="p-30">
+        <h2 class="page-title">Manage Task</h2>
+    </div>
+    <div class="p-30 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Task Basic Info</h3>
+                    </div>
+                    <div class="panel-body">
+                        <%= render 'form', admin_task: @admin_task %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Task Management</h3>
+                    </div>
+
+                    <div class="p-30 p-t-none p-b-none">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#task_details" aria-controls="home" role="tab" data-toggle="tab">Task Details</a></li>
+                                    <li role="presentation"><a href="#task_discussion" aria-controls="profile" role="tab" data-toggle="tab">Task Discussion</a></li>
+                                    <li role="presentation"><a href="#task_files" aria-controls="messages" role="tab" data-toggle="tab">Task Files</a></li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content p-20">
+                                    <div role="tabpanel" class="tab-pane active" id="task_details">
+                                        <div class="form-group">
+                                            <label>Task Title</label>
+                                            <p> <%= @admin_task.title %> </p>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Task Description</label>
+                                            <p><p><%= @admin_task.description.html_safe %><br></p></p>
+                                        </div>
+
+                                        <h3>Task Members:</h3>
+                                        <hr>
+                                            <a href="http://coderpixel.com/demo/advanced-hrm/employees/view/1" class="label label-success">Coder Pixel</a><br>
+                                            <a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3" class="label label-success">Abul Kashem Shamim</a><br>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="task_discussion">
+                                        <form role="form" method="post" action="http://coderpixel.com/demo/advanced-hrm/task/post-task-comments">
+
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label>Leave Comment</label>
+                                                    <textarea class="textarea-wysihtml5 form-control" rows="7" name="comment"></textarea>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="_token" value="iDagcZBRhIoGlecLnwH8hlhihh6XILWCmZWpbR5i">
+                                                    <input type="hidden" value="1" name="cmd">
+                                                    <input type="submit" value="Reply" class="btn btn-success pull-right">
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <br>
+                                        <hr>
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th style="width: 25%;">Member</th>
+                                                <th style="width: 55%;">Comment</th>
+                                                <th style="width: 20%;">Last Update</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td data-label="Member"><p>Coder</p></td>
+                                                <td data-label="Comment"><p>&lt;p&gt;Test One&lt;/p&gt;</p></td>
+                                                <td data-label="Last Update"><p>1st Apr 17</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Member"><p>Abul Kashem</p></td>
+                                                <td data-label="Comment"><p>&lt;p&gt;Another Reply&lt;br&gt;&lt;/p&gt;</p></td>
+                                                <td data-label="Last Update"><p>1st Apr 17</p></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="task_files">
+                                        <form role="form" method="post" action="http://coderpixel.com/demo/advanced-hrm/task/post-task-files" enctype="multipart/form-data">
+
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label>File Title</label>
+                                                    <input type="text" name="file_title" class="form-control">
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    <label>Select File</label>
+                                                    <div class="input-group input-group-file">
+                                                        <span class="input-group-btn">
+                                                            <span class="btn btn-primary btn-file">
+                                                                Browse <input type="file" class="form-control" name="file">
+                                                            </span>
+                                                        </span>
+                                                        <input type="text" class="form-control" readonly="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="_token" value="iDagcZBRhIoGlecLnwH8hlhihh6XILWCmZWpbR5i">
+                                                    <input type="hidden" value="1" name="cmd">
+                                                    <input type="submit" value="Upload" class="btn btn-success pull-right">
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <br>
+                                        <hr>
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th style="width: 20%;">Files</th>
+                                                <th style="width: 20%;">Size</th>
+                                                <th style="width: 20%;">Date</th>
+                                                <th style="width: 20%;">Upload By</th>
+                                                <th style="width: 20%;">Actions</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

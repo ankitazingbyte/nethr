@@ -1,0 +1,77 @@
+<%= form_with(model: admin_trainer, local: true) do |form| %>
+  <% if admin_trainer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_trainer.errors.count, "error") %> prohibited this admin_trainer from being saved:</h2>
+
+      <ul>
+      <% admin_trainer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :admin_trainer_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastname %>
+    <%= form.text_field :lastname, id: :admin_trainer_lastname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :designation %>
+    <%= form.text_field :designation, id: :admin_trainer_designation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :organization %>
+    <%= form.text_field :organization, id: :admin_trainer_organization %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :admin_trainer_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :admin_trainer_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :admin_trainer_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip_code %>
+    <%= form.number_field :zip_code, id: :admin_trainer_zip_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country, id: :admin_trainer_country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :admin_trainer_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone, id: :admin_trainer_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trainer_expertise %>
+    <%= form.text_field :trainer_expertise, id: :admin_trainer_trainer_expertise %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

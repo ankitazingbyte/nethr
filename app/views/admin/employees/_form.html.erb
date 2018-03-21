@@ -62,7 +62,7 @@
                         <label>User Role</label>
                         <%= select_tag 'role', options_for_select( Role.all.reject{|u| u.name == "admin"}.collect{|u|[u.name]})%> 
                     </div>
-                    <%= form.submit  "ADD", class: "btn btn-success btn-sm pull-right" %>
+                    <%= form.submit  "Update", class: "btn btn-success btn-sm pull-right" %>
                 <% end %>
             </div>
         </div>

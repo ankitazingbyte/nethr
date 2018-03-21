@@ -1,0 +1,60 @@
+<section class="wrapper-bottom-sec">
+    <div class="p-30">
+        <h2 class="page-title">Employee Training</h2>
+    </div>
+    <div class="p-30 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Employee Training</h3>
+                        <button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#add-new-training"><i class="fa fa-plus"></i> Add New Training</button>
+                        <br>
+                    </div>
+                    <div class="panel-body p-none">
+                        <table class="table data-table table-hover table-ultra-responsive">
+                            <thead>
+                            <tr>
+                                <th style="width: 15%;">Training Type</th>
+                                <th style="width: 20%;">Training Subject</th>
+                                <th style="width: 20%;">Title</th>
+                                <th style="width: 10%;">Training From</th>
+                                <th style="width: 10%;">Training To</th>
+                                <th style="width: 25%;" class="text-right">Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <% @admin_trainings.each do |admin_training| %>
+                                    <tr>
+                                        <td data-label="Training Type"><p><%= admin_training.training_type %></p></td>
+                                        <td data-label="Training Subject"><p><%= admin_training.training_subject %></p></td>
+                                        <td data-label="Title"><p><%= admin_training.title %></p></td>
+                                        <td data-label="Training From"><p><%= admin_training.training_from %></p></td>
+                                        <td data-label="Training To"><p><%= admin_training.training_to %></p></td>
+                                        <td data-label="Actions" class="text-right">
+                                        <%= link_to edit_admin_training_path(admin_training), class: "btn btn-success btn-xs"  do %><i class="fa fa-edit"></i> Edit <% end %>
+                                        <%= link_to admin_training ,class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } do%><i class="fa fa-trash"></i> Delete<% end %>
+                                        </td>
+                                    </tr>
+                                <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="add-new-training" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add New Training</h4>
+                    </div>
+                    <%= render "admin/trainings/new" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

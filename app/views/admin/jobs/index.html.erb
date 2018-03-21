@@ -26,17 +26,17 @@
                             </tr>
                             </thead>
                             <tbody>
-                                    <% @admin_jobs.each do |admin_job| %>
-                                      <tr>
-                                        <td><%= admin_job.id %></td>
-                                        <td><%= admin_job.admin_designation_id %></td>
-                                        <td><%= admin_job.post_date %></td>
-                                        <td><%= admin_job.last_date_to_apply %></td>
-                                        <td><%= admin_job.close_date %></td>
-                                        <td class= "btn btn-primary btn-sm" ><%= admin_job.status %></td>
-                                        <td><%= link_to 'Edit', edit_admin_job_path(admin_job), class: "btn btn-success" %><%= link_to 'Destroy', admin_job, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
-                                      </tr>
-                                    <% end %>
+                                <% @admin_jobs.each do |admin_job| %>
+                                  <tr>
+                                    <td><%= admin_job.id %></td>
+                                    <td><%= admin_job.admin_designation_id %></td>
+                                    <td><%= admin_job.post_date %></td>
+                                    <td><%= admin_job.last_date_to_apply %></td>
+                                    <td><%= admin_job.close_date %></td>
+                                    <td class= "btn btn-primary btn-sm" ><%= admin_job.status %></td>
+                                    <td><%= link_to 'Edit', edit_admin_job_path(admin_job), class: "btn btn-success" %><%= link_to 'Destroy', admin_job, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+                                  </tr>
+                                <% end %>
                             </tbody>
                         </table>
                     </div>
@@ -51,7 +51,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">Add New Job</h4>
                     </div>
-                    <%= render "admin/jobs/form" %>
+                    <%= render "admin/jobs/new" %>
                 </div>
             </div>
         </div>

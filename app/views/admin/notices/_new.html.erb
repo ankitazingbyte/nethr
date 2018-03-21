@@ -1,0 +1,21 @@
+<%= form_for Admin::Notice.new do |form| %>
+    <div class="modal-body">
+        <div class="form-group">
+            <label>Notice Title</label>
+            <%= form.text_field :title, class: "form-control" %> 
+        </div>
+        <div class="form-group m-none">
+            <label for="e20">Notice Status</label>
+            <%= form.text_field :status, class: "form-control" %>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <%= form.cktext_area :description, class: "ckeditor" %>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <input type="hidden" name="_token" value="LypliyuC3SOSDwNkDSb5qXWJI2ZXxaLb0KeBm20u">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= form.submit "Add", class: "btn btn-primary" %>
+    </div>
+<% end %>

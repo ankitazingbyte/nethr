@@ -34,8 +34,8 @@
                                     <td data-label="LeaveTo"><p><%= admin_leave.leave_to %></p></td>
                                     <td data-label="Status"><p class="btn btn-warning btn-xs"><%= admin_leave.status %></p></td>
                                     <td data-label="Actions">
-                                     <%#= link_to 'Edit', edit_admin_leave_path, class: "btn btn-success btn-xs" %>
-                                        <%#= link_to 'Destroy', admin_leave, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+                                     <%= link_to 'Edit', edit_admin_leafe_path(admin_leave), class: "btn btn-success btn-xs" %>
+                                        <%= link_to 'Destroy', admin_leave, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
                                     </td>
                                 </tr>
                                 <% end %>
@@ -50,7 +50,7 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title" id="myModalLabel">Add New Leave</h4>
                                 </div>
-                                <%= render "admin/leaves/form" %>
+                                <%= render "admin/leaves/new" %>
                             </div>
                         </div>
                     </div>

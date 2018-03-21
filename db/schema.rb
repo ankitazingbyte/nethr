@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180320145943) do
+ActiveRecord::Schema.define(version: 20180321122410) do
 
   create_table "admin_awards", force: :cascade do |t|
     t.string "name"
@@ -136,6 +136,53 @@ ActiveRecord::Schema.define(version: 20180320145943) do
     t.string "title"
     t.string "status"
     t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_tasks", force: :cascade do |t|
+    t.string "title"
+    t.string "assign_to"
+    t.string "start_date"
+    t.string "due_date"
+    t.string "estimated_hour"
+    t.string "progress"
+    t.string "status"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_trainers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "lastname"
+    t.string "designation"
+    t.string "organization"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.integer "zip_code"
+    t.string "country"
+    t.string "email"
+    t.integer "phone"
+    t.string "trainer_expertise"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_trainings", force: :cascade do |t|
+    t.integer "admin_employee_id"
+    t.string "training_type"
+    t.string "training_subject"
+    t.string "nature"
+    t.string "title"
+    t.integer "admin_trainer_id"
+    t.string "training_from"
+    t.string "training_to"
+    t.string "location"
+    t.string "description"
+    t.string "sponsored_by"
+    t.string "organized_by"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

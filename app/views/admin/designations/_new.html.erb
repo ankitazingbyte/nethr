@@ -1,0 +1,16 @@
+<%= form_for Admin::Designation.new do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control"  %>
+  </div>
+
+  <div class="field">
+    <label class="control-label">Select Department</label>
+    <%= form.select :admin_department_id, Admin::Department.all.map{|d| [d.name, d.id]}, class: "btn dropdown-toggle btn-default" %>
+  </div><br>
+
+  <div class="actions">
+    <%= form.submit "ADD", class: "btn btn-success btn-sm pull-right" %>
+  </div>
+<% end %>
+

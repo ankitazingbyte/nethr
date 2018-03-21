@@ -1,54 +1,66 @@
-
-    <section class="wrapper-bottom-sec">
-        <div class="p-30">
-            <h2 class="page-title">Department</h2>
-        </div>
-        <div class="p-30 p-t-none p-b-none">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="panel">
-                        <div class="panel-body">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Add Department</h3>
-                            </div>
-                            <div class="form-group">
-                                <label>Department Name</label>
-                                <span class="help">e.g. "Account Department"</span>
-                                <%= render "admin/departments/form" %>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="panel">
+<section class="wrapper-bottom-sec">
+    <div class="p-30">
+        <h2 class="page-title">Department</h2>
+    </div>
+    <div class="p-30 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel">
+                    <div class="panel-body">
                         <div class="panel-heading">
-                            <h3 class="panel-title">All Departments</h3>
+                            <h3 class="panel-title">Add Department</h3>
                         </div>
-                        <div class="panel-body p-none">
-                            <table class="table data-table table-hover table-ultra-responsive">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 10%;">SL#</th>
-                                        <th style="width: 55%;">Department Name</th>
-                                        <th style="width: 35%;">Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <% @admin_departments.each do |admin_department| %>
-                                        <tr>
-                                            <td><%= admin_department.id %></td>
-                                            <td><%= admin_department.name %></td>
-                                            <td>
-                                                <%= link_to 'Edit', edit_admin_department_path(admin_department), class: "btn btn-success btn-xs" %>
-                                                <%= link_to 'Destroy', admin_department, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger btn-xs" %>
-                                            </td>
-                                        </tr>
-                                    <% end %>
-                                </tbody>
-                            </table>
+                        <div class="form-group">
+                            <label>Department Name</label>
+                            <span class="help">e.g. "Account Department"</span>
+                            <%= render "admin/departments/new" %>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-8">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">All Departments</h3>
+                    </div>
+                    <div class="panel-body p-none">
+                        <table class="table data-table table-hover table-ultra-responsive">
+                            <thead>
+                                <tr>
+                                    <th style="width: 10%;">SL#</th>
+                                    <th style="width: 55%;">Department Name</th>
+                                    <th style="width: 35%;">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% @admin_departments.each do |admin_department| %>
+                                    <tr>
+                                        <td><%= admin_department.id %></td>
+                                        <td><%= admin_department.name %></td>
+                                        <td>
+                                            <%= link_to 'Edit', edit_admin_department_path(admin_department), class: "btn btn-success btn-xs bottom", remote: true %>
+                                              <!-- <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal">Edit</button> -->
+
+                                            <%= link_to 'Destroy', admin_department, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger btn-xs" %>
+                                        </td>
+                                    </tr>
+                                <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+    <!-- EDIT MODAL  -->
+    <div id="status-modal" tabindex="-1" role="dialog" class="modal fade"></div>
+    <script type="text/javascript">
+    $(document).ready(function () {
+
+      $('.bottom').click(function() {
+        $('#status-modal').modal("show");
+      });
+    });
+    </script>
+    <!-- END -->
+</section>
