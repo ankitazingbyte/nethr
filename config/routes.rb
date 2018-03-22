@@ -1,6 +1,21 @@
 Rails.application.routes.draw do
  
   namespace :admin do
+    resources :support_departments
+  end
+  namespace :admin do
+    resources :tickets
+  end
+  namespace :admin do
+    resources :evaluations
+  end
+  namespace :admin do
+    resources :training_events
+  end
+  namespace :admin do
+    resources :assessments
+  end
+  namespace :admin do
     resources :trainings
   end
   namespace :admin do

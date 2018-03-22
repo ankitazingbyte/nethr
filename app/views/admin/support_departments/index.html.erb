@@ -1,0 +1,51 @@
+<section class="wrapper-bottom-sec">
+    <div class="p-30">
+        <h2 class="page-title">Department</h2>
+    </div>
+    <div class="p-30 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel">
+                    <div class="panel-body">
+                        <%= render "admin/support_departments/new" %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Support Department</h3>
+                    </div>
+                    <div class="panel-body p-none">
+                        <table class="table data-table table-hover table-ultra-responsive">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Department Name</th>
+                                <th>Email</th>
+                                <th>Show in Client</th>
+                                <th class="text-right" width="25%">Manage</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <% @admin_support_departments.each do |admin_support_department| %>
+                                    <tr>
+                                        <td><a href="http://coderpixel.com/demo/advanced-hrm/support-tickets/view-department/1">1</a> </td>
+                                        <td><%= admin_support_department.name %></td>
+                                        <td><%= admin_support_department.email %></td>
+                                        <td><%= admin_support_department.show_in_client %></td>
+                                        <td class="text-right">
+                                            <%= link_to edit_admin_support_department_path(admin_support_department),class: "btn btn-success btn-xs" do %><i class="fa fa-eye"></i> View<% end %>
+                                            <%= link_to admin_support_department, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } do %><i class="fa fa-trash"></i> Delete<% end %>
+                                        </td>
+                                    </tr>
+                                <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

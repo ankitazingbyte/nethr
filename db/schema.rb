@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180321122410) do
+ActiveRecord::Schema.define(version: 20180322120155) do
+
+  create_table "admin_assessments", force: :cascade do |t|
+    t.integer "admin_department_id"
+    t.string "training_type"
+    t.string "training_subject"
+    t.string "nature_of_training"
+    t.string "training_title"
+    t.integer "admin_employee_id"
+    t.string "training_reason"
+    t.integer "admin_trainer_id"
+    t.string "location"
+    t.string "start_date"
+    t.string "end_date"
+    t.string "training_cost"
+    t.string "travel_cost"
+    t.string "status"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "admin_awards", force: :cascade do |t|
     t.string "name"
@@ -61,6 +81,13 @@ ActiveRecord::Schema.define(version: 20180321122410) do
     t.string "alternative_phone"
     t.string "status"
     t.string "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_evaluations", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -140,6 +167,14 @@ ActiveRecord::Schema.define(version: 20180321122410) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "admin_support_departments", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "show_in_client"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "admin_tasks", force: :cascade do |t|
     t.string "title"
     t.string "assign_to"
@@ -149,6 +184,16 @@ ActiveRecord::Schema.define(version: 20180321122410) do
     t.string "progress"
     t.string "status"
     t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_tickets", force: :cascade do |t|
+    t.integer "admin_employee_id"
+    t.string "subject"
+    t.string "message"
+    t.string "status"
+    t.integer "admin_department_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -166,6 +211,25 @@ ActiveRecord::Schema.define(version: 20180321122410) do
     t.string "email"
     t.integer "phone"
     t.string "trainer_expertise"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_training_events", force: :cascade do |t|
+    t.string "training_type"
+    t.string "subject"
+    t.string "nature_of_training"
+    t.string "title"
+    t.string "location"
+    t.string "sponsored_by"
+    t.string "organized_by"
+    t.string "training_from"
+    t.string "training_to"
+    t.integer "admin_employee_id"
+    t.integer "admin_trainer_id"
+    t.string "status"
+    t.string "external"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

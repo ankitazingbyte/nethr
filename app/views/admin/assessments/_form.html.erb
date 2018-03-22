@@ -1,0 +1,80 @@
+<%= form_for @admin_assessment, remote: true do |form| %>
+    <div class="form-group">
+      <label>Department</label>
+      <%= form.select :admin_department_id, Admin::Department.all.map{|d| [d.name, d.id]}, class: "btn dropdown-toggle btn-default" %>
+    </div>
+
+    <div class="form-group">
+      <label>Training Type</label>
+      <%= form.text_field :training_type, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <label>Training Subject</label>
+      <%= form.text_field :training_subject, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <label>Nature Of Training</label>
+        <%= form.text_field :nature_of_training, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <label>Training Title</label>
+        <%= form.text_field :training_title, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <label>Training Employee</label>
+        <%= form.number_field :admin_employee_id, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <label>Training Reason</label>
+        <%= form.text_field :training_reason, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <label>Preferred Trainer</label>
+        <%= form.number_field :admin_trainer_id, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <label>Preferred  Training Location</label>
+        <%= form.text_field :location, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <label>Preferred  Start Date</label>
+        <%= form.text_field :start_date, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <label>Preferred End Date</label>
+        <%= form.text_field :end_date, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <label>Preferred  Training Cost</label>
+        <%= form.text_field :training_cost, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <label>Preferred  Travel Cost</label>
+        <%= form.text_field :travel_cost, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <label>Status</label>
+        <%= form.text_field :status, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <label>Training Description</label>
+        <%= form.text_field :description, class: "form-control" %>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <%= form.submit "update", class: "btn btn-primary" %>
+  </div>
+<% end %>

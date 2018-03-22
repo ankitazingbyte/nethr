@@ -1,0 +1,77 @@
+<%= form_for @admin_training_event do |form| %>
+  <% if admin_training_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_training_event.errors.count, "error") %> prohibited this admin_training_event from being saved:</h2>
+
+      <ul>
+      <% admin_training_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :training_type %>
+    <%= form.text_field :training_type, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subject %>
+    <%= form.text_field :subject, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nature_of_training %>
+    <%= form.text_field :nature_of_training, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sponsored_by %>
+    <%= form.text_field :sponsored_by, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :organized_by %>
+    <%= form.text_field :organized_by, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :training_from %>
+    <%= form.text_field :training_from, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :training_to %>
+    <%= form.text_field :training_to, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :admin_employee_id %>
+    <%= form.number_field :admin_employee_id, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :admin_trainer_id %>
+    <%= form.number_field :admin_trainer_id, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, class: "form-control" %>
+  </div><br>
+
+  <div class="field">
+    <%= form.submit "Update", class: "btn btn-primary"%>
+  </div>
+<% end %>

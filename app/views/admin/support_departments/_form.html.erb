@@ -1,0 +1,30 @@
+<%= form_for @admin_support_department do |form| %>
+<% if admin_support_department.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(admin_support_department.errors.count, "error") %> prohibited this admin_support_department from being saved:</h2>
+
+<ul>
+<% admin_support_department.errors.full_messages.each do |message| %>
+<li><%= message %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+<div class="form-group">
+<label for="dname">Department Name</label>
+<%= form.text_field :name,class: "form-control" %>                 
+</div>
+
+<div class="form-group">
+<label for="email">Department Email</label>
+<%= form.text_field :email, class: "form-control" %>
+</div>
+
+<div class="form-group">
+<label for="show">Show in Client</label>
+<%= form.text_field :show_in_client, class: "form-control" %>
+</div>
+
+<%= form.submit "Update", class: "btn btn-success" %>
+<% end %>
+                    

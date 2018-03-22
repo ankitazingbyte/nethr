@@ -1,6 +1,22 @@
-<h1>Editing Admin Notice</h1>
-
-<%= render 'form', admin_notice: @admin_notice %>
+<section class="wrapper-bottom-sec">
+    <div class="p-30">
+        <h2 class="page-title">Edit Notice</h2>
+    </div>
+    <div class="p-30 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Edit Notice</h3>
+                    </div>
+                    <div class="panel-body">
+						<%= render 'form', admin_notice: @admin_notice %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <%= link_to 'Show', @admin_notice %> |
 <%= link_to 'Back', admin_notices_path %>

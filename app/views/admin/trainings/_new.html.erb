@@ -27,7 +27,7 @@
 
         <div class="form-group">
             <label>Trainer</label>
-            <%= form.select :admin_trainer_id, Admin::Trainer.all.map{|e| [e.name, e.id]}, class: "btn dropdown-toggle btn-default" %>
+            <%= form.select :admin_trainer_id, Admin::Trainer.all.map{|e| [e.first_name, e.id]}, class: "btn dropdown-toggle btn-default" %>
         </div>
 
         <div class="form-group">

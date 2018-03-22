@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Training type:</strong>
+  <%= @admin_training_event.training_type %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @admin_training_event.subject %>
+</p>
+
+<p>
+  <strong>Nature of training:</strong>
+  <%= @admin_training_event.nature_of_training %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @admin_training_event.title %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @admin_training_event.location %>
+</p>
+
+<p>
+  <strong>Sponsored by:</strong>
+  <%= @admin_training_event.sponsored_by %>
+</p>
+
+<p>
+  <strong>Organized by:</strong>
+  <%= @admin_training_event.organized_by %>
+</p>
+
+<p>
+  <strong>Training from:</strong>
+  <%= @admin_training_event.training_from %>
+</p>
+
+<p>
+  <strong>Training to:</strong>
+  <%= @admin_training_event.training_to %>
+</p>
+
+<p>
+  <strong>Admin employee:</strong>
+  <%= @admin_training_event.admin_employee_id %>
+</p>
+
+<p>
+  <strong>Admin trainer:</strong>
+  <%= @admin_training_event.admin_trainer_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @admin_training_event.status %>
+</p>
+
+<%= link_to 'Edit', edit_admin_training_event_path(@admin_training_event) %> |
+<%= link_to 'Back', admin_training_events_path %>

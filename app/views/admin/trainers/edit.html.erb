@@ -1,6 +1,21 @@
-<h1>Editing Admin Trainer</h1>
-
-<%= render 'form', admin_trainer: @admin_trainer %>
-
+<section class="wrapper-bottom-sec">
+  <div class="p-30">
+      <h2 class="page-title">VIEW TRAINER INFO</h2>
+  </div>
+	<div class="p-30 p-t-none p-b-none">
+	    <div class="row">
+	      	<div class="col-lg-7">
+	          	<div class="panel">
+              		<div class="panel-heading">
+				        <h3 class="panel-title"> View Trainer Info</h3>
+				    </div>
+	              	<div class="panel-body">
+						<%= render 'form', admin_trainer: @admin_trainer %>
+					</div>
+	          	</div>
+	      	</div>
+	    </div>
+	</div>
+</section>
 <%= link_to 'Show', @admin_trainer %> |
 <%= link_to 'Back', admin_trainers_path %>

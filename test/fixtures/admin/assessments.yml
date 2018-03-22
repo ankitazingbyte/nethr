@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  admin_department_id: 1
+  training_type: MyString
+  training_subject: MyString
+  nature_of_training: MyString
+  training_title: MyString
+  admin_employee_id: 1
+  training_reason: MyString
+  admin_trainer_id: 1
+  location: MyString
+  start_date: MyString
+  end_date: MyString
+  training_cost: MyString
+  travel_cost: MyString
+  status: MyString
+  description: MyString
+
+two:
+  admin_department_id: 1
+  training_type: MyString
+  training_subject: MyString
+  nature_of_training: MyString
+  training_title: MyString
+  admin_employee_id: 1
+  training_reason: MyString
+  admin_trainer_id: 1
+  location: MyString
+  start_date: MyString
+  end_date: MyString
+  training_cost: MyString
+  travel_cost: MyString
+  status: MyString
+  description: MyString

@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+<section class="wrapper-bottom-sec">
+  <div class="p-30">
+      <h2 class="page-title">Training Evaluations</h2>
+  </div>
+  <div class="p-30 p-t-none p-b-none">
+    <div class="row">
+      <div class="col-lg-4">
+          <div class="panel">
+            <div class="panel-heading">
+              <h3 class="panel-title"> Training Evaluations</h3>
+            </div>
+            <div class="panel-body">
+                <%= render "admin/evaluations/new" %>  
+            </div>
+          </div>
+      </div>
+          <div class="col-lg-8">
+              <div class="panel">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">Training Evaluations</h3>
+                  </div>
+                  <div class="panel-body p-none">
+                      <table class="table data-table table-hover table-ultra-responsive">
+                          <thead>
+                          <tr>
+                              <th style="width: 10%;">SL#</th>
+                              <th style="width: 55%;">Title</th>
+                              <th style="width: 35%;">Actions</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                            <% @admin_evaluations.each do |admin_evaluation| %>
+                            <tr>
+                              <td data-label="SL">1</td>
+                              <td data-label="Title"><p><%= admin_evaluation.title %></p></td>
+                              <td>
+                                  <%= link_to edit_admin_evaluation_path(admin_evaluation), class: "btn btn-success btn-xs evaluation", remote: true do %><i class="fa fa-edit"></i>Edit<% end %>
+                                  <%= link_to admin_evaluation, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" do %><i class="fa fa-trash"></i>Delete <% end %>
+                              </td>
+                            </tr>
+                            <% end %>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+<!-- EDIT MODAL  -->
+    <div id="status-modal" tabindex="-1" role="dialog" class="modal fade"></div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.evaluation').click(function() {
+          $('#status-modal').modal("show");
+        });
+      });
+    </script>
+<!-- END -->
+</section>

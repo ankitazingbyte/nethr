@@ -1,8 +1,7 @@
-<%= form_with(model: admin_training, local: true) do |form| %>
+<%= form_for @admin_training do |form| %>
   <% if admin_training.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(admin_training.errors.count, "error") %> prohibited this admin_training from being saved:</h2>
-
       <ul>
       <% admin_training.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -13,7 +12,7 @@
 
   <div class="field">
     <%= form.label :admin_employee_id %>
-    <%= form.select :admin_employee_id, Admin::Employee.all.map{|e| [e.name, e.id]}, class: "btn dropdown-toggle btn-default" %>
+    <%= form.select :admin_employee_id, Admin::Employee.all.map{|e| [e.first_name, e.id]}, class: "btn dropdown-toggle btn-default" %>
   </div>
 
   <div class="field">
@@ -27,7 +26,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :nature "NATURE OF TRAINING" %>
+    <%= form.label :nature %>
     <%= form.text_field :nature, class: "form-control" %>
   </div>
 
@@ -38,10 +37,10 @@
 
   <div class="field">
     <%= form.label :admin_trainer_id %>
-    <%= form.select :admin_trainer_id, Admin::Trainer.all.map{|e| [e.name, e.id]}, class: "btn dropdown-toggle btn-default" %>
-  </div>
+    <%= form.select :admin_trainer_id, Admin::Trainer.all.map{|e| [e.first_name, e.id]}, class: "btn dropdown-toggle btn-default" %>
+  </div><br>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="field">
+    <%= form.submit "update", class: "btn btn-primary" %>
   </div>
 <% end %>

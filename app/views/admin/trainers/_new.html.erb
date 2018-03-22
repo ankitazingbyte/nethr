@@ -1,0 +1,68 @@
+<%= form_for Admin::Trainer.new do |form| %>
+	<div class="modal-body">
+	    <div class="form-group">
+	        <label>First Name</label>
+			<%= form.text_field :first_name, class: "form-control" %>	    
+		</div>
+
+	    <div class="form-group">
+	        <label>Last Name</label>
+            <%= form.text_field :lastname, class: "form-control" %> 
+	    </div>
+
+	    <div class="form-group">
+	        <label>Designation</label>
+            <%= form.text_field :designation, class: "form-control" %>
+	    </div>
+
+	    <div class="form-group">
+	        <label>Organization</label>
+            <%= form.text_field :organization, class: "form-control" %>
+	    </div>
+
+	    <div class="form-group">
+	        <label>Address</label>
+            <%= form.text_field :address, class: "form-control" %>
+	    </div>
+
+	    <div class="form-group">
+	        <label>City</label>
+            <%= form.text_field :city, class: "form-control" %>
+	    </div>
+
+	    <div class="form-group">
+	        <label>State</label>
+            <%= form.text_field :state, class: "form-control" %>
+	    </div>
+
+	    <div class="form-group">
+	        <label>Zip Code</label>
+            <%= form.number_field :zip_code, class: "form-control" %>
+	    </div>
+
+	    <div class="form-group">
+	        <label for="Country">Country</label>
+            <%= form.text_field :country, class: "form-control" %>
+	    </div>
+
+	    <div class="form-group">
+	        <label>Email</label>
+            <%= form.text_field :email, class: "form-control" %>
+	    </div>
+
+	    <div class="form-group">
+	        <label>Phone</label>
+            <%= form.number_field :phone, class: "form-control" %>
+	    </div>
+
+	    <div class="form-group">
+	        <label>Trainer Expertise</label>
+            <%= form.text_field :trainer_expertise, class: "form-control" %>
+	    </div>
+	</div>
+	<div class="modal-footer">
+	    <input type="hidden" name="_token" value="CagNIg6L3NAkhODzZFA8kLrjpqxjaeYJDdQMe5so">
+	    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	    <%= form.submit "Add", class: "btn btn-success btn-sm pull-right"%>
+	</div>
+<% end %>
