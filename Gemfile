@@ -59,7 +59,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'carrierwave', '~> 1.0'
 gem 'font-awesome-rails'
-gem 'ckeditor'
+# gem 'ckeditor'
 gem 'devise'
 gem "rolify"
 gem "font-awesome-rails"
