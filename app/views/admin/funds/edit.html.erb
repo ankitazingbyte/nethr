@@ -1,0 +1,22 @@
+<section class="wrapper-bottom-sec">
+	<div class="p-30">
+	    <h2 class="page-title">Edit Provident Fund</h2>
+	</div>
+	<div class="p-30 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Edit Provident Fund</h3>
+                    </div>
+                    <div class="panel-body">
+						<%= render 'form', admin_fund: @admin_fund %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<%= link_to 'Show', @admin_fund %> |
+<%= link_to 'Back', admin_funds_path %>

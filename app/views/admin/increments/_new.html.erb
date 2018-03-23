@@ -1,0 +1,28 @@
+<%= form_for Admin::Increment.new do |form| %>
+	<div class="modal-body">
+        <div class="form-group">
+            <label>Employee</label>
+            <%= form.select :admin_employee_id, Admin::Employee.all.map{|d| [d.first_name, d.id]}, class: "form-control selectpicker" %>
+        </div>
+
+        <div class="form-group">
+            <label>Designaion</label>
+            <%= form.select :admin_designation_id, Admin::Designation.all.map{|d| [d.name, d.id]}, class: "form-control selectpicker" %>
+        </div>
+
+        <div class="form-group">
+            <label>Current Salary</label>
+            <%= form.text_field :current_salary, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+            <label>Increment Salary</label>
+            <%= form.text_field :increment_salary, class: "form-control" %>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <input type="hidden" name="_token" value="s1zUCeyCUdsq23eTVvA2c1XIb4O84T8355FMtOBu">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= form.submit "Add", class: "btn btn-primary" %>
+    </div>
+<% end %>

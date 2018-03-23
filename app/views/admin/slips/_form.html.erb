@@ -1,0 +1,58 @@
+  <%= form_for Admin::Slip.new do |form| %>
+  <div class="modal-body">
+    <div class="field">
+      <%= form.label :admin_employee_id %>
+      <%= form.number_field :admin_employee_id, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :admin_department_id %>
+      <%= form.number_field :admin_department_id, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :admin_designation_id %>
+      <%= form.number_field :admin_designation_id, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :basic_salary %>
+      <%= form.text_field :basic_salary, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :payment_by %>
+      <%= form.text_field :payment_by, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :tax %>
+      <%= form.text_field :tax, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :provident_fund %>
+      <%= form.text_field :provident_fund, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :loan %>
+      <%= form.text_field :loan, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :Leave_deduction %>
+      <%= form.text_field :Leave_deduction, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :grand_total %>
+      <%= form.text_field :grand_total, class: "form-control" %>
+    </div>
+  </div>
+  <div class="modal-footer">
+        <input type="hidden" name="_token" value="LypliyuC3SOSDwNkDSb5qXWJI2ZXxaLb0KeBm20u">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= form.submit "Add", class: "btn btn-primary" %>
+    </div>
+<% end %>

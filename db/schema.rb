@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180322120155) do
+ActiveRecord::Schema.define(version: 20180323105712) do
 
   create_table "admin_assessments", force: :cascade do |t|
     t.integer "admin_department_id"
@@ -123,9 +123,29 @@ ActiveRecord::Schema.define(version: 20180322120155) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "admin_funds", force: :cascade do |t|
+    t.integer "admin_employee_id"
+    t.string "fund_type"
+    t.string "employee_share"
+    t.string "organization_share"
+    t.string "description"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "admin_holidays", force: :cascade do |t|
     t.string "date"
     t.string "occasion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_increments", force: :cascade do |t|
+    t.integer "admin_employee_id"
+    t.integer "admin_designation_id"
+    t.string "current_salary"
+    t.string "increment_salary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -159,10 +179,38 @@ ActiveRecord::Schema.define(version: 20180322120155) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "admin_loans", force: :cascade do |t|
+    t.integer "admin_employee_id"
+    t.string "title"
+    t.string "loan_date"
+    t.string "loan_amount"
+    t.string "monthly_payement"
+    t.string "repayment_start_date"
+    t.string "status"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "admin_notices", force: :cascade do |t|
     t.string "title"
     t.string "status"
     t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_slips", force: :cascade do |t|
+    t.integer "admin_employee_id"
+    t.integer "admin_department_id"
+    t.integer "admin_designation_id"
+    t.string "basic_salary"
+    t.string "payment_by"
+    t.string "tax"
+    t.string "provident_fund"
+    t.string "loan"
+    t.string "Leave_deduction"
+    t.string "grand_total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

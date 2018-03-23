@@ -1,0 +1,59 @@
+<section class="wrapper-bottom-sec">
+    <div class="p-30">
+        <h2 class="page-title">Salary Slip List</h2>
+    </div>
+    <div class="p-30 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Salary Slip List</h3>
+                        <button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#add-new-expense"><i class="fa fa-plus"></i>Add Salary Slip</button>
+                        <br>
+                    </div>
+                    <div class="panel-body p-none">
+                        <table class="table data-table table-hover table-ultra-responsive">
+                            <thead>
+                            <tr>
+                                <th style="width: 5%;">SL#</th>
+                                <th style="width: 10%;">Name</th>
+                                <th style="width: 10%;">Payment type</th>
+                                <th style="width: 10%;">Payment Amount</th>
+                                <th style="width: 10%;">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <% @admin_slips.each do |admin_slip| %>
+                                    <tr>
+                                        <td data-label="SL">1</td>
+                                        <td><%= admin_slip.admin_employee_id %></td>
+                                        <td><%= admin_slip.payment_by %></td>
+                                        <td><%= admin_slip.basic_salary %></td>
+                                        <td data-label="Actions" class="text-right">
+                                          <%= link_to 'View', admin_slip, class: "btn btn-primary " %>
+                                            <%= link_to 'Edit', edit_admin_slip_path(admin_slip), class: "btn btn-success" %>
+                                            <%= link_to 'Destroy', admin_slip, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+                                        </td>
+                                    </tr>
+                                <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="add-new-expense" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add New Salary Slip</h4>
+                    </div>
+                   <%= render "admin/slips/new" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

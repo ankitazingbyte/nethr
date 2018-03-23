@@ -1,0 +1,97 @@
+<section class="wrapper-bottom-sec">
+  <div class="p-30">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2 class="page-title p-b-15">Payment Salary Details</h2>
+      </div>
+      <div class="col-sm-4 text-right">
+        <a href="http://coderpixel.com/demo/advanced-hrm/payroll/print-payslip/8" target="_blank" class="btn btn-primary btn-animated from-left fa fa-print">
+          <span>Print Payslip</span>
+        </a>
+        <a href="http://coderpixel.com/demo/advanced-hrm/payroll/download-pdf/8" target="_blank" class="btn btn-success btn-animated from-left fa fa-file-pdf-o">
+          <span>Generate PDF</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="p-30 p-t-none p-b-none">
+    <div class="panel">
+      <div class="panel-heading p-b-none">
+        <h3>Payslip<br><small>Salary Month: February, 2018</small></h3>
+      </div>
+      <div class="panel-body p-none m-b-10">
+        <table class="table table-no-border table-condensed">
+          <tbody>
+            <tr>
+              <td><strong class="help-split">Employee ID:</strong><%= @admin_slip.admin_employee_id %></td>
+              <td><strong class="help-split">Employee Name:</strong><%= @admin_slip.admin_employee_id %></td>
+              <td><strong class="help-split">Payslip NO:</strong><%= @admin_slip.id %></td>
+            </tr>
+            <tr>
+              <td><strong class="help-split">Phone:</strong></td>
+              <td><strong class="help-split">Joining Date:</strong></td>
+              <td><strong class="help-split">Payment By:</strong><%= @admin_slip.payment_by %></td>
+            </tr>
+            <tr>
+              <td><strong class="help-split">Department:</strong><%= @admin_slip.admin_department_id %></td>
+              <td><strong class="help-split">Designation:</strong><%= @admin_slip.admin_designation_id %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel">
+          <div class="panel-heading p-b-none">
+            <h4 class="m-b-10"><strong>Payment Details</strong></h4>
+          </div>
+          <div class="panel-body p-none">
+            <table class="table table-condensed">
+              <tbody>
+                <tr>
+                  <td><strong>Basic Salary:</strong> <span class="pull-right">USD 50000</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Overtime Salary:</strong> <span class="pull-right">USD 0 (Hourly)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel">
+          <div class="panel-heading p-b-none">
+            <h4 class="m-b-10"><strong>Earning</strong></h4>
+          </div>
+          <div class="panel-body p-none">
+            <table class="table table-condensed">
+              <tbody>
+                <tr>
+                  <td><strong>Net Salary:</strong> <span class="pull-right">USD 50000</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Overtime Amount:</strong> <span class="pull-right">USD 0</span></td>
+                </tr>
+                <tr>
+                  <td><strong>TAX:</strong> <span class="pull-right">USD 1500</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Provident Fund:</strong> <span class="pull-right">USD 0</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Loan:</strong> <span class="pull-right">USD 0</span></td>
+                </tr>
+                <tr>
+                  <td class="td-highlighted"><strong>Grand Total:</strong> <span class="pull-right"><strong>USD 48500</strong></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

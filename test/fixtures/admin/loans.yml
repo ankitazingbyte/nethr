@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  admin_employee_id: 1
+  title: MyString
+  loan_date: MyString
+  loan_amount: MyString
+  monthly_payement: MyString
+  repayment_start_date: MyString
+  status: MyString
+  description: MyString
+
+two:
+  admin_employee_id: 1
+  title: MyString
+  loan_date: MyString
+  loan_amount: MyString
+  monthly_payement: MyString
+  repayment_start_date: MyString
+  status: MyString
+  description: MyString

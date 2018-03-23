@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  admin_employee_id: 1
+  admin_department_id: 1
+  admin_designation_id: 1
+  payment_by: 
+  tax: MyString
+  provident_fund: MyString
+  loan: MyString
+  Leave_deduction: MyString
+  grand_total: MyString
+
+two:
+  admin_employee_id: 1
+  admin_department_id: 1
+  admin_designation_id: 1
+  payment_by: 
+  tax: MyString
+  provident_fund: MyString
+  loan: MyString
+  Leave_deduction: MyString
+  grand_total: MyString

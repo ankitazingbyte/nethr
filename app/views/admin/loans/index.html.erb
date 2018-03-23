@@ -1,0 +1,63 @@
+<section class="wrapper-bottom-sec">
+        <div class="p-30">
+            <h2 class="page-title">Loan</h2>
+        </div>
+        <div class="p-30 p-t-none p-b-none">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Loan</h3>
+                            <button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#add-load"><i class="fa fa-plus"></i> Add Loan</button>
+                            <br>
+                        </div>
+                        <div class="panel-body p-none">
+                            <table class="table data-table table-hover table-ultra-responsive">
+                                <thead>
+                                <tr>
+                                    <th style="width: 15%;">Title</th>
+                                    <th style="width: 15%;">Employee Name</th>
+                                    <th style="width: 10%;">Loan Date</th>
+                                    <th style="width: 10%;">Repayment Start Date</th>
+                                    <th style="width: 10%;">Amount</th>
+                                    <th style="width: 10%;">Remaining Amount</th>
+                                    <th style="width: 10%;">Status</th>
+                                    <th style="width: 20%;">Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <% @admin_loans.each do |admin_loan| %>
+                                        <tr>
+                                            <td data-label="Title"><%= admin_loan.title %></td>
+                                            <td data-label="Employee Name"><%= admin_loan.admin_employee_id %></td>
+                                            <td data-label="Loan Date"><p><%= admin_loan.loan_date %></p></td>
+                                            <td data-label="Repayment Start Date"><%= admin_loan.repayment_start_date %></td>
+                                            <td data-label="Amount">$ 50000.00</td>
+                                            <td data-label="Remaining Amount">$ 41800.00</td>
+                                            <td data-label="Status"><p class="btn btn-success btn-xs"><%= admin_loan.status %> </p></td>
+                                            <td data-label="Actions">
+                                                <%= link_to edit_admin_loan_path(admin_loan), class: "btn btn-success btn-xs" do %><i class="fa fa-edit"></i> Edit<% end %>
+                                                <%= link_to admin_loan, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger btn-xs" do %><i class="fa fa-trash"></i> Delete<% end %>
+                                            </td>
+                                        </tr>
+                                    <% end %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="add-load" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Add Loan</h4>
+                        </div>
+                        <%= render "admin/loans/new" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+</select>

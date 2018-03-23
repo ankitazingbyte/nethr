@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
  
   namespace :admin do
+    resources :slips
+  end
+  namespace :admin do
+    resources :funds
+  end
+  namespace :admin do
+    resources :loans
+  end
+  namespace :admin do
+    resources :increments
+  end
+  namespace :admin do
     resources :support_departments
   end
   namespace :admin do

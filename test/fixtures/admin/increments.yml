@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  admin_employee_id: 1
+  admin_designation_id: 1
+  current_salary: MyString
+  increment_salary: MyString
+
+two:
+  admin_employee_id: 1
+  admin_designation_id: 1
+  current_salary: MyString
+  increment_salary: MyString

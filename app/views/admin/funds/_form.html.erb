@@ -1,0 +1,46 @@
+<%= form_for @admin_fund do |form| %>
+  <% if admin_fund.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_fund.errors.count, "error") %> prohibited this admin_fund from being saved:</h2>
+
+      <ul>
+      <% admin_fund.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <label>Employee Name</label>
+    <%= form.number_field :admin_employee_id, class: "form-control" %>
+  </div>
+
+  <div class="form-group m-none">
+    <label for="e20">Provident Fund Type</label>
+    <%= form.text_field :fund_type, class: "form-control" %>
+  </div>
+
+  <div class="show-fixed-amount">
+    <div class="form-group">
+      <label for="Employee Share">Employee Share</label>
+      <%= form.text_field :employee_share, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <label for="Organization Share">Organization Share</label>
+      <%= form.text_field :organization_share, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Description</label>
+    <%= form.cktext_area :description, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Update", class: "btn btn-success btn-sm pull-right" %>
+  </div>
+<% end %>
+ 
+
+                         

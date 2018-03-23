@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Admin employee:</strong>
+  <%= @admin_loan.admin_employee_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @admin_loan.title %>
+</p>
+
+<p>
+  <strong>Loan date:</strong>
+  <%= @admin_loan.loan_date %>
+</p>
+
+<p>
+  <strong>Loan amount:</strong>
+  <%= @admin_loan.loan_amount %>
+</p>
+
+<p>
+  <strong>Monthly payement:</strong>
+  <%= @admin_loan.monthly_payement %>
+</p>
+
+<p>
+  <strong>Repayment start date:</strong>
+  <%= @admin_loan.repayment_start_date %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @admin_loan.status %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @admin_loan.description %>
+</p>
+
+<%= link_to 'Edit', edit_admin_loan_path(@admin_loan) %> |
+<%= link_to 'Back', admin_loans_path %>
