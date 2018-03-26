@@ -1,15 +1,17 @@
 <nav class="navbar navbar" style="background-color: #eff0f5; border-bottom-color: #eae2e2;">
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <img class="user-image" src="http://coderpixel.com/demo/advanced-hrm/assets/employee_pic/myAvatar.png" alt="Coder Pixel" style="height: 30px;">
         <% if user_signed_in? %>
             <%= current_user.email %>
         <% end %><span class="caret"></span></a>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu" style="background-color: #eff0f5;min-width: 250px;" >
             <% if current_user.nil? %>
                 <li><%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %></li>
             <% else %>
-                    <%#= link_to dashboard_index_path, class: 'login-button' do %>Go to App<%# end %>
-                <li><%= link_to destroy_user_session_path, method: :delete do %>Log Out<% end %></li>
+                <li><%= link_to edit_user_registration_path, class: 'login-button' do %><i class="fa fa-edit"></i> Profile Update <% end %></li>
+                <li><%= link_to destroy_user_session_path, method: :delete do %>Log Out
+                <span class="pull-right"><i class="fa fa-power-off"></i></span><% end %></li>
             <% end %>
         </ul>
       </li>
@@ -22,7 +24,7 @@
         <div class="app-logo">
             <img src="http://coderpixel.com/demo/advanced-hrm/assets/img/logo.png" alt="logo" class="bar-logo">
         </div>
-        <a href="#"><i class="pull-right hidden-xs showopacity fa fa-bars" style="font-size:24px; margin: -18px 8px; "></i></a>
+        <a href="#"><i class="pull-right hidden-xs fa fa-bars" style="font-size:24px; color:black; margin: -21px 14px; "></i></a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="navbar-inverse collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
@@ -61,8 +63,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pay Roll<span class="caret"></span><span style="font-size:20px;" class="pull-right hidden-xs showopacity fa fa-dollar "></span></a>
                 <ul class="dropdown-menu forAnimate" role="menu">
                     <li><%= link_to "Employees Salary List", admin_increments_path %></li>
-                    <li><%= link_to "Salary Increment", new_admin_employee_path %></li>
-                    <li><%= link_to "Make Payment", admin_employee_roles_path %></li>
+                    <li><%= link_to "Make Payment" %></li>
                     <li><%= link_to "Generate Payslip", admin_slips_path %></li>
                     <li><%= link_to "Provident Fund", admin_funds_path %></li>
                     <li><%= link_to "Loan", admin_loans_path %></li>
@@ -78,7 +79,7 @@
                     <li><%= link_to "Training Evaluation", admin_evaluations_path %></li>
                 </ul>
             </li>
-            <li ><%#= link_to admin_tasks_path do %>Task<span style="font-size:20px;" class="pull-right hidden-xs showopacity fa fa-list"></span><%#end %></li>
+            <li ><%= link_to admin_tasks_path do %>Task<span style="font-size:20px;" class="pull-right hidden-xs showopacity fa fa-list"></span><% end %></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Support Tickets<span class="caret"></span><span style="font-size:20px;" class="pull-right hidden-xs showopacity fa fa-envelope"></span></a>
                 <ul class="dropdown-menu forAnimate" role="menu">

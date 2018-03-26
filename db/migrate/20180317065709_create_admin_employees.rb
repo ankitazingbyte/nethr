@@ -3,9 +3,11 @@ class CreateAdminEmployees < ActiveRecord::Migration[5.1]
     create_table :admin_employees do |t|
       t.string :first_name
       t.string :last_name
+      t.string :user_name
       t.string :employee_code
       t.integer :admin_department_id
       t.integer :admin_designation_id
+      t.integer :admin_employee_role_id
       t.string :gender
       t.string :tax_example
       t.string :date_of_birth

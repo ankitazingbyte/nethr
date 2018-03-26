@@ -67,9 +67,11 @@ ActiveRecord::Schema.define(version: 20180323105712) do
   create_table "admin_employees", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.string "user_name"
     t.string "employee_code"
     t.integer "admin_department_id"
     t.integer "admin_designation_id"
+    t.integer "admin_employee_role_id"
     t.string "gender"
     t.string "tax_example"
     t.string "date_of_birth"
@@ -119,6 +121,7 @@ ActiveRecord::Schema.define(version: 20180323105712) do
     t.string "purchase_date"
     t.integer "amount"
     t.string "status"
+    t.integer "admin_employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,62 +1,131 @@
 <%= form_for @admin_employee do |form| %>
-<div class="form-group">
-    <label>First Name</label>
-    <span class="help">e.g. "Jhon"</span>
-    <%= form.text_field :first_name,class: "form-control" %>
-</div>
-<div class="form-group">
-    <label>Last Name</label>
-    <span class="help">e.g. "Doe"</span>
-    <%= form.text_field :last_name, class: "form-control" %>
-</div>
-<div class="form-group">
-    <label>Employee Code</label>
-    <span class="help">e.g. "546814" (Unique For every User)</span>
-    <%= form.text_field :employee_code, class: "form-control" %>
-</div>
-<div class="form-group">
-    <label>Username</label>
-    <span class="help">e.g. "employee" (Unique For every User)</span>
-    <input type="text" class="form-control" required name="username">
-</div>
-<%= form.fields_for :user do |user|%>
-<div class="form-group">
-    <label>Email</label>
-    <span class="help">e.g. "coderpixel@gmail.com" (Unique For every User)</span>
-    <%= user.email_field :email, class: "form-control" %>
-</div>
-<div class="form-group">
-    <label>Password</label>
-    <%= user.password_field :password, class: "form-control" %>
-</div>
-<div class="form-group">
-    <label>Confirm Password</label>
-    <%= user.password_field :password_confirmation, class: "form-control" %>
-</div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>First Name</label>
+                <%= form.text_field :first_name,class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <label>Last Name</label>
+                <%= form.text_field :last_name, class: "form-control" %>
+            </div>
+
+
+            <div class="form-group">
+                <label>Employee Code</label>
+                <span class="help">e.g. "546814" (Unique For every User)</span>
+                <%= form.text_field :employee_code, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <label>Username</label>
+                <span class="help">e.g. "employee" (Unique For every User)</span>
+                <%= form.text_field :user_name, class: "form-control" %>
+            </div>
+            <%= form.fields_for :user do |user|%>
+                <div class="form-group">
+                    <label>Email</label>
+                    <span class="help">e.g. "coderpixel@gmail.com" (Unique For every User)</span>
+                    <%= user.email_field :email, class: "form-control" %>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <span class="help">Leave blank if you no need to change password</span>
+                    <%= user.password_field :password, class: "form-control" %>
+                </div>
+
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <span class="help">Leave blank if you no need to change password</span>
+                    <%= user.password_field :password_confirmation, class: "form-control" %>
+                </div>
+            <% end %>
+            <div class="form-group">
+                <label>Tax Template</label>
+                 <%= form.select :tax_example, %w{TaxRule1 15000 PPn}, :prompt => 'Select', required: true, placeholder: 'Tax', class: 'form-control' %>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="el3">Department</label>
+                <%= form.select :admin_department_id, Admin::Department.all.map{|d| [d.name, d.id]}, class: "btn dropdown-toggle btn-default" %>
+            </div>
+
+            <div class="form-group">
+                <label for="el3">Designation</label>
+                <%= form.select :admin_designation_id, Admin::Designation.all.map{|d| [d.name, d.id]}, class: "btn dropdown-toggle btn-default" %>
+            </div>
+
+            <div class="form-group">
+                <label>User Role</label>
+                <%= select_tag 'role', options_for_select( Role.all.reject{|u| u.name == "admin"}.collect{|u|[u.name]})%> 
+            </div>
+
+            <div class="form-group">
+                <label>Date Of Join</label>
+                <%= form.text_field :date_of_join, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <label>Date Of Leave</label>
+                <%= form.text_field :date_of_leave, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <%= form.text_field :phone, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <label>Alternative Phone</label>
+                <%= form.text_field :alternative_phone, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <label>Status</label>
+                <%= form.text_field :status, class: "form-control" %>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Father Name</label>
+                <input type="text" class="form-control"  value="" name="father_name">
+            </div>
+
+            <div class="form-group">
+                <label>Mother Name</label>
+                <input type="text" class="form-control"  value="" name="mother_name">
+            </div>
+
+            <div class="form-group">
+                <label>Date Of Birth</label>
+                <%= form.text_field :date_of_birth, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <%= form.select :gender, %w{male Female}, :prompt => 'Select', required: true, placeholder: 'Gender', class: 'form-control' %>
+            </div>
+
+            <div class="form-group">
+                <label>Present Address</label>
+                <%= form.text_field :present_address, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <label>Permanent Address</label>
+                <%= form.text_field :permanent_address, class: "form-control" %>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <%= form.submit  "submit", class: "btn btn-success pull-right" %>
+        </div>
+    </div>
 <% end %>
-<div class="form-group">
-    <label for="el3">Department</label>
-    <%= form.select :admin_department_id, Admin::Department.all.map{|d| [d.name, d.id]}, class: "btn dropdown-toggle btn-default" %>
-    </select>
-</div>
-<div class="form-group">
-    <label for="el3">Designation</label>
-    <%= form.select :admin_designation_id, Admin::Designation.all.map{|d| [d.name, d.id]}, class: "btn dropdown-toggle btn-default" %>
-</div>
-<div class="form-group">
-    <label>Gender</label>
-    <%= form.select :gender, %w{male Female}, :prompt => 'Select', required: true, placeholder: 'Gender', class: 'form-control' %>
-</div>
-<div class="form-group">
-    <label>Tax Template</label>
-    <%= form.select :tax_example, %w{TaxRule1 15000 PPn}, :prompt => 'Select', required: true, placeholder: 'Tax', class: 'form-control' %>
-</div>
-<div class="form-group">
-    <label>User Role</label>
-    <%= select_tag 'role', options_for_select( Role.all.reject{|u| u.name == "admin"}.collect{|u|[u.name]})%> 
-</div>
-<%= form.submit  "Add", class: "btn btn-success btn-sm pull-right" %>
-<% end %>
+   
 
-
-
+    

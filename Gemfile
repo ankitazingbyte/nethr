@@ -9,10 +9,10 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
-group :production do
-   gem 'pg','~> 0.18'
-end
+gem 'sqlite3'
+# group :production do
+#    gem 'pg','~> 0.18'
+# end
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -59,7 +59,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'carrierwave', '~> 1.0'
 gem 'font-awesome-rails'
-# gem 'ckeditor'
+gem 'ckeditor'
 gem 'devise'
 gem "rolify"
 gem "font-awesome-rails"

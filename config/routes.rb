@@ -1,48 +1,11 @@
 Rails.application.routes.draw do
- 
-  namespace :admin do
-    resources :slips
-  end
-  namespace :admin do
-    resources :funds
-  end
-  namespace :admin do
-    resources :loans
-  end
-  namespace :admin do
-    resources :increments
-  end
-  namespace :admin do
-    resources :support_departments
-  end
-  namespace :admin do
-    resources :tickets
-  end
-  namespace :admin do
-    resources :evaluations
-  end
-  namespace :admin do
-    resources :training_events
-  end
-  namespace :admin do
-    resources :assessments
-  end
-  namespace :admin do
-    resources :trainings
-  end
-  namespace :admin do
-    resources :trainers
-  end
-  namespace :admin do
-    resources :tasks
-  end
-  mount Ckeditor::Engine => '/ckeditor'
     root 'home#index'
     get 'home/index'
     devise_for :users
     namespace :admin do
 	    root 'home#index'
 		  get 'home/index'
+          get 'home/profile'
         resources :departments
         resources :designations
         resources :jobs
@@ -50,6 +13,22 @@ Rails.application.routes.draw do
         resources :employees
         resources :attendances
         resources :leaves
+        resources :tasks
+        resources :trainers
+        resources :trainings
+        resources :assessments
+        resources :training_events
+        resources :evaluations
+        resources :tickets
+        resources :support_departments
+        resources :funds
+        resources :loans
+        resources :increments
+        resources :slips
+        resources :awards
+        resources :notices
+        resources :expenses
+        resources :holidays
         resources :events do 
           collection do 
             get :get_events
@@ -57,9 +36,5 @@ Rails.application.routes.draw do
             post :resize
           end
         end
-        resources :awards
-        resources :notices
-        resources :expenses
-        resources :holidays
     end
 end

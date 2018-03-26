@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require rails-ujs
+//= require ckeditor/init
 //= require bootstrap-sprockets
 //= require sidebar-nav.min
 //= require jQuery.style.switcher
