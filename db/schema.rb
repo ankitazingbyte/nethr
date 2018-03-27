@@ -149,6 +149,8 @@ ActiveRecord::Schema.define(version: 20180323105712) do
     t.integer "admin_designation_id"
     t.string "current_salary"
     t.string "increment_salary"
+    t.string "date_from"
+    t.string "date_to"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

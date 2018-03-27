@@ -5,6 +5,8 @@ class CreateAdminIncrements < ActiveRecord::Migration[5.1]
       t.integer :admin_designation_id
       t.string :current_salary
       t.string :increment_salary
+      t.string :date_from
+      t.string :date_to
 
       t.timestamps
     end

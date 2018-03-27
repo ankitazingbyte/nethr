@@ -29,7 +29,7 @@
                                 <% @admin_jobs.each do |admin_job| %>
                                   <tr>
                                     <td><%= admin_job.id %></td>
-                                    <td><%= admin_job.admin_designation_id %></td>
+                                    <td><%= admin_job.admin_designation.name %></td>
                                     <td><%= admin_job.post_date %></td>
                                     <td><%= admin_job.last_date_to_apply %></td>
                                     <td><%= admin_job.close_date %></td>

@@ -1,1 +1,44 @@
-<%= render 'form', admin_ticket: @admin_ticket %>
+<section class="wrapper-bottom-sec">
+  <div class="p-30">
+      <h2 class="page-title">Create New Ticket</h2>
+  </div>
+  <div class="p-30 p-t-none p-b-none">
+      <div class="row">
+          <div class="col-lg-7">
+              <div class="panel">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">Create New Ticket</h3>
+                  </div>
+                  <div class="panel-body">
+                    <%= form_for @admin_ticket do |form| %>
+                      <div class="form-group">
+                          <label for="cid">Ticket For Client</label>
+                          <%= form.select :admin_employee_id, Admin::Employee.all.map{|e| [e.user_name, e.id]}, class: "form-control selectpicker" %>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="subject">Subject</label>
+                          <%= form.text_field :subject, class: "form-control" %>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="message">Message</label>
+                          <%= form.cktext_area :message, class: "form-control" %>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="did">Department</label>
+                          <%= form.select :admin_department_id, Admin::Department.all.map{|d| [d.name, d.id]}, class: "form-control selectpicker" %>
+                      </div>
+                      <%= form.submit "Create Ticket", class: "btn btn-success" %>
+                    <% end %>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+                                

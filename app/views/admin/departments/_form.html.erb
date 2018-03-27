@@ -4,14 +4,13 @@
       <button type="button" class="close" data-dismiss="modal">×</button>
       <h3 class="modal-title">Edit Department</h3>
     </div>
-	<%= form_for @admin_department, remote: true do |form| %>      
-		<div class="modal-body form-group form-admin">
+	  <%= form_for @admin_department, remote: true do |form| %>      
+		  <div class="modal-body form-group form-admin">
         <ul class="errors alert-danger"></ul>
-
         <div class="field">
-		    <%= form.label :name %>
-		    <%= form.text_field :name, class: "form-control"  %>
-		</div>
+  		    <%= form.label :name %>
+  		    <%= form.text_field :name, class: "form-control"  %>
+		    </div>
 	        <%= form.submit "Update", class: "btn btn-success btn-sm pull-right" %>
 	        <%= link_to "Cancel", "#", class: "btn", data: { dismiss: "modal" } %>
       </div>

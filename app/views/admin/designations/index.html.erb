@@ -38,7 +38,7 @@
                                     <tr>
                                         <td><%= admin_designation.id %></td>
                                         <td><%= admin_designation.name %></td>
-                                        <td><%= admin_designation.admin_department %></td>
+                                        <td><%= admin_designation.admin_department.name %></td>
                                         <td>
                                             <%= link_to 'Edit', edit_admin_designation_path(admin_designation), class: "btn btn-success btn-xs bottom", remote: true %>
                                             <%= link_to 'Destroy', admin_designation, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger btn-xs" %>

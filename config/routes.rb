@@ -4,8 +4,10 @@ Rails.application.routes.draw do
     devise_for :users
     namespace :admin do
 	    root 'home#index'
-		  get 'home/index'
-          get 'home/profile'
+		get 'home/index'
+        get 'home/profile'
+        get 'home/payroll_summery'
+        get 'home/salary_statement'
         resources :departments
         resources :designations
         resources :jobs

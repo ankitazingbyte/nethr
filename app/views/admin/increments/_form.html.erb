@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :admin_employee_id %>
-    <%= form.number_field :admin_employee_id, class: "form-control" %>
+    <%= form.select :admin_employee_id, Admin::Employee.all.map{|e| [e.user_name, e.id]}, class: "btn dropdown-toggle btn-default" %>
   </div>
 
   <div class="field">
     <%= form.label :admin_designation_id %>
-    <%= form.number_field :admin_designation_id, class: "form-control" %>
+    <%= form.select :admin_designation_id, Admin::Designation.all.map{|d| [d.name, d.id]}, class: "btn dropdown-toggle btn-default" %>
   </div>
 
   <div class="field">

@@ -45,6 +45,6 @@ class Admin::JobsController < Admin::AdminController
     end
 
     def admin_job_params
-      params.require(:admin_job).permit(:designation_id, :number_of_post, :job_type, :experience, :age, :job_location, :salary, :post_date, :last_date_to_apply, :close_date, :status, :short_description, :description)
+      params.require(:admin_job).permit(:admin_designation_id, :number_of_post, :job_type, :experience, :age, :job_location, :salary, :post_date, :last_date_to_apply, :close_date, :status, :short_description, :description)
     end
 end

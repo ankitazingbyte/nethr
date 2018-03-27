@@ -44,6 +44,6 @@ class Admin::LeavesController < Admin::AdminController
     end
 
     def admin_leave_params
-      params.require(:admin_leave).permit(:employee_id, :leave_type, :leave_from, :leave_to, :status, :reason)
+      params.require(:admin_leave).permit(:admin_employee_id, :leave_type, :leave_from, :leave_to, :status, :reason)
     end
 end

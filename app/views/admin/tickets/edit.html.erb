@@ -10,28 +10,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">Change Basic Info</h3>
                         </div>
-                        <form class="" role="form" action="http://coderpixel.com/demo/advanced-hrm/support-ticket/basic-info-post" method="post">
-                            <div class="form-group m-none">
-                                <label for="e20">Change Department</label>
-                                <select name="department" class="form-control selectpicker">
-                                    <option value="1" >Support</option>
-                                    <option value="2"  selected >rt</option>
-                                </select>
-                            </div>
-                            <div class="form-group m-none">
-                                <label for="e20">Status</label>
-                                <select name="status" class="form-control selectpicker">
-                                    <option value="Pending" >Pending</option>
-                                    <option value="Answered"  selected >Answered</option>
-                                    <option value="Customer Reply"  >Customer Reply</option>
-                                    <option value="Closed"  >Closed</option>
-                                </select>
-                            </div>
-                            <br>
-                            <input type="hidden" name="_token" value="CagNIg6L3NAkhODzZFA8kLrjpqxjaeYJDdQMe5so">
-                            <input type="hidden" value="1" name="cmd">
-                            <button type="submit" class="btn btn-success btn-sm pull-right"><i class="fa fa-edit"></i> Update</button>
-                        </form>
+                        <%= render "form", admin_ticket: @admin_ticket %>
                     </div>
                 </div>
             </div>

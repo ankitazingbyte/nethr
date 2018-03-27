@@ -28,7 +28,7 @@
                                 <% @admin_leaves.each do |admin_leave| %>
                                 <tr>
                                     <td data-label="SL"><%= admin_leave.id %></td>
-                                    <td data-label="emoployeCode"><p><%= admin_leave.admin_employee_id %></p></td>
+                                    <td data-label="emoployeCode"><p><%= admin_leave.admin_employee.first_name%></p></td>
                                     <td data-label="leaveType"><p><%= admin_leave.leave_type %></p></td>
                                     <td data-label="LeaveFrom"><p><%= admin_leave.leave_from %></p></td>
                                     <td data-label="LeaveTo"><p><%= admin_leave.leave_to %></p></td>

@@ -17,20 +17,7 @@
 
         <div class="form-group">
             <label>Purchase By</label>
-            <select name="emp_name" class="form-control selectpicker" data-live-search="true">
-                <option value="3">Abul Kashem Shamim (5874698)</option>
-                <option value="23">ramy ramadan (1233)</option>
-                <option value="24">hafsa mansuri (331)</option>
-                <option value="25">Bill Jackie (BJ007)</option>
-                <option value="26">Shiva Kant Mishra (1002)</option>
-                <option value="27">FRFR FGR (11HTGG)</option>
-                <option value="28">h1 student h1 student (10001)</option>
-                <option value="29">Alvin WIjaya (45321)</option>
-                <option value="30">test test (test)</option>
-                <option value="31">Mr. k (666)</option>
-                <option value="32">N GOLO  KEITA (90587604)</option>
-                <option value="33">ankita dangi (1234)</option>
-            </select>
+           <%= form.select :admin_employee_id, Admin::Employee.all.map{|e| [e.user_name, e.id]}, class: "btn dropdown-toggle btn-default" %>
         </div>
 
         <div class="form-group">
