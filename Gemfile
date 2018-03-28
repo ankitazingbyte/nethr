@@ -64,4 +64,5 @@ gem 'devise'
 gem "rolify"
 gem "font-awesome-rails"
 gem 'bootstrap-select-wrapper-rails'
-gem 'ckeditor'
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'

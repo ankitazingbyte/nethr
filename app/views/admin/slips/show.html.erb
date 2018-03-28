@@ -4,12 +4,13 @@
       <div class="col-sm-8">
         <h2 class="page-title p-b-15">Payment Salary Details</h2>
       </div>
-      <div class="col-sm-4 text-right">
-        <a href="http://coderpixel.com/demo/advanced-hrm/payroll/print-payslip/8" target="_blank" class="btn btn-primary btn-animated from-left fa fa-print">
-          <span>Print Payslip</span>
-        </a>
-        <a href="http://coderpixel.com/demo/advanced-hrm/payroll/download-pdf/8" target="_blank" class="btn btn-success btn-animated from-left fa fa-file-pdf-o">
-          <span>Generate PDF</span>
+      <div class="text-right">
+        <div class="col-sm-2 text-right">
+          <%= link_to 'Print Payslip', 'your_link_here', :onclick => 'window.print();return false;', class: "btn btn-primary btn-animated from-left fa fa-print" %>
+        </div>
+        <div class="col-sm-2 text-right">
+          <p id="pdf_link"><%= link_to "Generate PDF", admin_slip_path(@admin_slip, :format => "pdf"), class: "btn btn-success btn-animated from-left fa fa-file-pdf-o" %></p>
+        </div>
         </a>
       </div>
     </div>
@@ -50,7 +51,7 @@
             <table class="table table-condensed">
               <tbody>
                 <tr>
-                  <td><strong>Basic Salary:</strong> <span class="pull-right">USD 50000</span></td>
+                  <td><strong>Basic Salary:</strong> <span class="pull-right"><%= @admin_slip.basic_salary %></span></td>
                 </tr>
                 <tr>
                   <td><strong>Overtime Salary:</strong> <span class="pull-right">USD 0 (Hourly)</span></td>
@@ -69,22 +70,19 @@
             <table class="table table-condensed">
               <tbody>
                 <tr>
-                  <td><strong>Net Salary:</strong> <span class="pull-right">USD 50000</span></td>
+                  <td><strong>Net Salary:</strong> <span class="pull-right">USD 0</span></td>
                 </tr>
                 <tr>
-                  <td><strong>Overtime Amount:</strong> <span class="pull-right">USD 0</span></td>
+                  <td><strong>TAX:</strong> <span class="pull-right"><%= @admin_slip.tax %></span></td>
                 </tr>
                 <tr>
-                  <td><strong>TAX:</strong> <span class="pull-right">USD 1500</span></td>
+                  <td><strong>Provident Fund:</strong> <span class="pull-right"><%= @admin_slip.provident_fund %></span></td>
                 </tr>
                 <tr>
-                  <td><strong>Provident Fund:</strong> <span class="pull-right">USD 0</span></td>
+                  <td><strong>Loan:</strong> <span class="pull-right"><%= @admin_slip.loan %></span></td>
                 </tr>
                 <tr>
-                  <td><strong>Loan:</strong> <span class="pull-right">USD 0</span></td>
-                </tr>
-                <tr>
-                  <td class="td-highlighted"><strong>Grand Total:</strong> <span class="pull-right"><strong>USD 48500</strong></span></td>
+                  <td class="td-highlighted"><strong>Grand Total:</strong> <span class="pull-right"><strong><%= @admin_slip.grand_total %></strong></span></td>
                 </tr>
               </tbody>
             </table>

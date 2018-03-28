@@ -5,7 +5,7 @@
     </div>
     <div class="form-group m-none">
         <label for="e20">Notice Status</label>
-        <%= form.text_field :status, class: "form-control" %>
+        <%= form.select :status, %w{Published Unpublished}, :prompt => 'Select', required: true, class: 'form-control' %>
     </div>
     <div class="form-group">
         <label>Description</label>

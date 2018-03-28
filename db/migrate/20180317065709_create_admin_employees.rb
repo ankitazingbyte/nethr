@@ -19,6 +19,9 @@ class CreateAdminEmployees < ActiveRecord::Migration[5.1]
       t.string :alternative_phone
       t.string :status
       t.string :user_id
+      t.string :image
+      t.string :mother
+      t.string :father
 
       t.timestamps
     end

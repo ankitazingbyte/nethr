@@ -29,11 +29,11 @@
                                 <% @admin_jobs.each do |admin_job| %>
                                   <tr>
                                     <td><%= admin_job.id %></td>
-                                    <td><%= admin_job.admin_designation.name %></td>
+                                    <td><%#= admin_job.admin_designation.name %></td>
                                     <td><%= admin_job.post_date %></td>
                                     <td><%= admin_job.last_date_to_apply %></td>
                                     <td><%= admin_job.close_date %></td>
-                                    <td class= "btn btn-primary btn-sm" ><%= admin_job.status %></td>
+                                    <td class= "btn btn-primary btn-xs" ><%= admin_job.status %></td>
                                     <td><%= link_to 'Edit', edit_admin_job_path(admin_job), class: "btn btn-success" %><%= link_to 'Destroy', admin_job, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
                                   </tr>
                                 <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180323105712) do
+ActiveRecord::Schema.define(version: 20180328072946) do
 
   create_table "admin_assessments", force: :cascade do |t|
     t.integer "admin_department_id"
@@ -43,6 +43,17 @@ ActiveRecord::Schema.define(version: 20180323105712) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "admin_banks", force: :cascade do |t|
+    t.string "name"
+    t.string "branch_name"
+    t.string "account_name"
+    t.string "ifsc_code"
+    t.string "pan_number"
+    t.string "account_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "admin_departments", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -55,6 +66,13 @@ ActiveRecord::Schema.define(version: 20180323105712) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["admin_department_id"], name: "index_admin_designations_on_admin_department_id"
+  end
+
+  create_table "admin_documents", force: :cascade do |t|
+    t.string "name"
+    t.string "attachment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "admin_employee_roles", force: :cascade do |t|
@@ -83,6 +101,9 @@ ActiveRecord::Schema.define(version: 20180323105712) do
     t.string "alternative_phone"
     t.string "status"
     t.string "user_id"
+    t.string "image"
+    t.string "mother"
+    t.string "father"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -122,6 +143,7 @@ ActiveRecord::Schema.define(version: 20180323105712) do
     t.integer "amount"
     t.string "status"
     t.integer "admin_employee_id"
+    t.string "attachment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -209,6 +231,7 @@ ActiveRecord::Schema.define(version: 20180323105712) do
     t.integer "admin_employee_id"
     t.integer "admin_department_id"
     t.integer "admin_designation_id"
+    t.string "admin_increment_id"
     t.string "basic_salary"
     t.string "payment_by"
     t.string "tax"
@@ -338,6 +361,7 @@ ActiveRecord::Schema.define(version: 20180323105712) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

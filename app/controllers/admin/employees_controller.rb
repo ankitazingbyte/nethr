@@ -16,6 +16,8 @@ class Admin::EmployeesController < Admin::AdminController
   end
 
   def edit
+    @admin_banks = Admin::Bank.all
+    @admin_documents = Admin::Document.all
   end
 
   def create
@@ -47,6 +49,6 @@ class Admin::EmployeesController < Admin::AdminController
     end
 
     def admin_employee_params
-      params.require(:admin_employee).permit(:first_name, :last_name, :employee_code, :user_name, :date_0f_join, :date_of_leave, :date_of_birth, :phone, :alternavtive_phone, :status, :persent_address, :permanent_address, :admin_department_id, :admin_designation_id, :gender, :tax_example, user_attributes: [:email, :password, :password_confirmation])
+      params.require(:admin_employee).permit(:image, :first_name, :last_name, :mother, :father, :employee_code, :user_name, :date_of_join, :date_of_leave, :date_of_birth, :phone, :alternative_phone, :status, :present_address, :permanent_address, :admin_department_id, :admin_designation_id, :gender, :tax_example, user_attributes: [:email, :password, :password_confirmation])
     end
 end

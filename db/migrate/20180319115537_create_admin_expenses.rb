@@ -7,6 +7,7 @@ class CreateAdminExpenses < ActiveRecord::Migration[5.1]
       t.integer :amount
       t.string :status
       t.integer :admin_employee_id
+      t.string :attachment
 
       t.timestamps
     end

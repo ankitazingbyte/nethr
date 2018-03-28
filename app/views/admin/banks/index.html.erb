@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Banks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Branch name</th>
+      <th>Account name</th>
+      <th>Ifsc code</th>
+      <th>Pan number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_banks.each do |admin_bank| %>
+      <tr>
+        <td><%= admin_bank.name %></td>
+        <td><%= admin_bank.branch_name %></td>
+        <td><%= admin_bank.account_name %></td>
+        <td><%= admin_bank.ifsc_code %></td>
+        <td><%= admin_bank.pan_number %></td>
+        <td><%= link_to 'Show', admin_bank %></td>
+        <td><%= link_to 'Edit', edit_admin_bank_path(admin_bank) %></td>
+        <td><%= link_to 'Destroy', admin_bank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Bank', new_admin_bank_path %>
+

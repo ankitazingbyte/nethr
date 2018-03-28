@@ -4,6 +4,7 @@ class CreateAdminSlips < ActiveRecord::Migration[5.1]
       t.integer :admin_employee_id
       t.integer :admin_department_id
       t.integer :admin_designation_id
+      t.string :admin_increment_id
       t.string :basic_salary 
       t.string :payment_by
       t.string :tax

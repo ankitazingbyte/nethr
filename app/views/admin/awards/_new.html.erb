@@ -2,7 +2,7 @@
     <div class="modal-body">
         <div class="form-group">
             <label>Award Name</label>
-            <%= form.text_field :name, class: "form-control" %>
+            <%= form.select :name, %w{Best-Employee Employee-Of-The-Year Employee-Of-The-Month}, :prompt => 'Select', required: true, placeholder: 'Job Type', class: 'form-control' %>
         </div>
 
         <div class="form-group">

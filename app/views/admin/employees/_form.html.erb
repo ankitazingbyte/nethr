@@ -22,6 +22,10 @@
                 <span class="help">e.g. "employee" (Unique For every User)</span>
                 <%= form.text_field :user_name, class: "form-control" %>
             </div>
+            <div class="form-group">
+                <label>Picture</label>
+                <%= form.file_field :image, class: "form-control" %>
+            </div>
             <%= form.fields_for :user do |user|%>
                 <div class="form-group">
                     <label>Email</label>
@@ -45,10 +49,6 @@
                     <%= select_tag 'role', options_for_select( Role.all.reject{|u| u.name == "admin"}.collect{|u|[u.name]})%> 
                 </div>
             <% end %>
-            <div class="form-group">
-                <label>Tax Template</label>
-                <%= form.select :tax_example, %w{TaxRule1 15000 PPn}, :prompt => 'Select', required: true, placeholder: 'Tax', class: 'form-control' %>
-            </div>
         </div>
 
         <div class="col-md-4">
@@ -60,6 +60,11 @@
             <div class="form-group">
                 <label for="el3">Designation</label>
                 <%= form.select :admin_designation_id, Admin::Designation.all.map{|d| [d.name, d.id]}, class: "btn dropdown-toggle btn-default" %>
+            </div>
+
+            <div class="form-group">
+                <label>Tax Template</label>
+                <%= form.select :tax_example, %w{TaxRule1 15000 PPn}, :prompt => 'Select', required: true, placeholder: 'Tax', class: 'form-control' %>
             </div>
 
             <div class="form-group">
@@ -84,18 +89,18 @@
 
             <div class="form-group">
                 <label>Status</label>
-                <%= form.select :status, %w{Active Inactive}, :prompt => 'Select', required: true, placeholder: 'Gender', class: 'form-control' %>
+                <%#= form.select :status, %w{Active Inactive}, :prompt => 'Select', required: true, placeholder: 'Gender', class: 'form-control' %>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label>Father Name</label>
-                <input type="text" class="form-control"  value="" name="father_name">
+                <%= form.text_field :mother, class: "form-control" %>
             </div>
 
             <div class="form-group">
                 <label>Mother Name</label>
-                <input type="text" class="form-control"  value="" name="mother_name">
+                <%= form.text_field :father, class: "form-control" %>
             </div>
 
             <div class="form-group">
@@ -110,12 +115,12 @@
 
             <div class="form-group">
                 <label>Present Address</label>
-                <%= form.text_field :present_address, class: "form-control" %>
+                <%= form.text_area :present_address, class: "form-control" %>
             </div>
 
             <div class="form-group">
                 <label>Permanent Address</label>
-                <%= form.text_field :permanent_address, class: "form-control" %>
+                <%= form.text_area :permanent_address, class: "form-control" %>
             </div>
         </div>
 

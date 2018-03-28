@@ -198,3 +198,31 @@ body,html{
     padding: 6px 1px 15px 8px;
     margin: -10px 0px -4px -2px;
 }
+
+@media print {
+  body {
+    background-color: #FFF;
+  }
+
+  #container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  #line_items {
+    page-break-before: always;
+  }
+  
+  #pdf_link {
+    display: none;
+  }
+}
+
+/*This css will only works when you print*/
+@media print {
+  body {
+    background: #FFF;
+ }
+}

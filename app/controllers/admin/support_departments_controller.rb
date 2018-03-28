@@ -18,7 +18,7 @@ class Admin::SupportDepartmentsController < ApplicationController
   def create
     @admin_support_department = Admin::SupportDepartment.new(admin_support_department_params)
       if @admin_support_department.save
-        redirect_to @admin_support_department
+        redirect_to action: "index"
       else
         render 'new'
       end
@@ -26,7 +26,7 @@ class Admin::SupportDepartmentsController < ApplicationController
 
   def update
       if @admin_support_department.update(admin_support_department_params)
-        redirect_to @admin_support_department
+        redirect_to action: "index"
       else
         render 'edit'
       end

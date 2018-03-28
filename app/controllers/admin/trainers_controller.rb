@@ -19,7 +19,7 @@ class Admin::TrainersController < ApplicationController
     @admin_trainer = Admin::Trainer.new(admin_trainer_params)
 
       if @admin_trainer.save
-        redirect_to @admin_trainer
+        redirect_to action: "index"
       else
         render 'new'
       end
@@ -27,7 +27,7 @@ class Admin::TrainersController < ApplicationController
 
   def update
       if @admin_trainer.update(admin_trainer_params)
-        redirect_to @admin_trainer
+        redirect_to action: "index"
       else
         render 'edit'
       end

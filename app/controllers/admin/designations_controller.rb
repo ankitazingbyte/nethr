@@ -17,7 +17,6 @@ class Admin::DesignationsController < Admin::AdminController
   end
 
   def create
-    debugger
     @admin_designation = Admin::Designation.new(admin_designation_params)
 
     if @admin_designation.save

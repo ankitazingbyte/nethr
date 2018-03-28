@@ -19,25 +19,23 @@ class Admin::TrainingEventsController < ApplicationController
     @admin_training_event = Admin::TrainingEvent.new(admin_training_event_params)
 
       if @admin_training_event.save
-        @admin_training_event
+        redirect_to action: "index"
       else
         render 'new'
-    end
+      end
   end
 
   def update
       if @admin_training_event.update(admin_training_event_params)
-        redirect_to @admin_training_event
+        redirect_to action: "index"
       else
         render :edit
       end
-    end
   end
 
   def destroy
     @admin_training_event.destroy
       redirect_to admin_training_events_url
-    end
   end
 
   private

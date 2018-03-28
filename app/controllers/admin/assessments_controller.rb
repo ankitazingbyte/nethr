@@ -19,7 +19,7 @@ class Admin::AssessmentsController < ApplicationController
     @admin_assessment = Admin::Assessment.new(admin_assessment_params)
 
       if @admin_assessment.save
-        redirect_to @admin_assessment
+        redirect_to action: "index"
       else
         render 'new'
       end
@@ -27,7 +27,7 @@ class Admin::AssessmentsController < ApplicationController
 
   def updatet
       if @admin_assessment.update(admin_assessment_params)
-        redirect_to @admin_assessment
+        redirect_to action: "index"
       else
         render 'edit'
       end

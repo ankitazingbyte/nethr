@@ -10,14 +10,14 @@
                         <div class="clearfix">
                             <div class="pull-left m-r-30">
                                 <div class="thumbnail m-b-none">
-                                    <img src="http://coderpixel.com/demo/advanced-hrm/assets/employee_pic/user.png" alt="Profile Page" width="200px" height="200px">
+                                    <%= image_tag @admin_employee.image.url, width: "200px", height: "200px"%>
                                 </div>
                             </div>
                             <div class="pull-left">
-                                <h3 class="bold font-color-1">h1 student h1 student</h3>
+                                <h3 class="bold font-color-1"><%= @admin_employee.first_name %></h3>
                                 <ul class="info-list">
                                     <li><span class="info-list-title">Email</span><span class="info-list-des">h1student@deneme.com</span></li>
-                                    <li><span class="info-list-title">Username</span><span class="info-list-des">h1 student</span></li>
+                                    <li><span class="info-list-title"><%= @admin_employee.user_name %></li>
                                 </ul>
                             </div>
                         </div>
@@ -45,50 +45,11 @@
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="panel">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"> Add Bank Account</h3>
+                                    </div>
                                     <div class="panel-body">
-                                        <form class="" role="form" method="post" action="http://coderpixel.com/demo/advanced-hrm/employee/add-bank-account">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title"> Add Bank Account</h3>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Bank Name</label>
-                                                <span class="help">e.g. "United State Bank"</span>
-                                                <input type="text" class="form-control" required name="bank_name">
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Branch Name</label>
-                                                <span class="help">e.g. "Washington Branch"</span>
-                                                <input type="text" class="form-control" required name="branch_name">
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Account Name</label>
-                                                <span class="help">e.g. "Abul Kashem Shamim"</span>
-                                                <input type="text" class="form-control" required name="account_name">
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Account Number</label>
-                                                <span class="help">e.g. "1015463115661214"</span>
-                                                <input type="text" class="form-control" required name="account_number">
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>IFSC Code</label>
-                                                <input type="text" class="form-control" name="ifsc_code">
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>PAN Number</label>
-                                                <input type="text" class="form-control" name="pan_number">
-                                            </div>
-
-                                            <input type="hidden" name="_token" value="pBMHGiNmnECsLu725vngfmhFjQNCd6pE83DHcDO4">
-                                            <input type="hidden" value="28" name="cmd">
-                                            <button type="submit" class="btn btn-success btn-sm pull-right"><i class="fa fa-plus"></i> Add </button>
-                                        </form>
+                                        <%=  render "admin/banks/new", admin_bank: @admin_bank %>
                                     </div>
                                 </div>
                             </div>
@@ -102,9 +63,9 @@
                                         <table class="table data-table table-hover table-ultra-responsive">
                                             <thead>
                                             <tr>
-                                                <th style="width: 25%;">Bank Name</th>
-                                                <th style="width: 20%;">Branch</th>
-                                                <th style="width: 20%;">Account Name</th>
+                                                <th style="width: 10%;">Bank Name</th>
+                                                <th style="width: 10%;">Branch</th>
+                                                <th style="width: 10%;">Account Name</th>
                                                 <th style="width: 10%;">Account No</th>
                                                 <th style="width: 10%;">IFSC Code</th>
                                                 <th style="width: 10%;">PAN No</th>
@@ -112,6 +73,19 @@
                                             </tr>
                                             </thead>
                                             <tbody>
+                                                <% @admin_banks.each do |admin_bank| %>
+                                                    <tr>
+                                                        <td data-label="Bank Name"><p><%= admin_bank.name %></p></td>
+                                                        <td data-label="Branch Name"><p><%= admin_bank.branch_name %></p></td>
+                                                        <td data-label="Account Name"><p><%= admin_bank.account_name %></p></td>
+                                                        <td data-label="Account No"><p><%= admin_bank.account_number %></p></td>
+                                                        <td data-label="IFSC Code"><p><%= admin_bank.ifsc_code %></p></td>
+                                                        <td data-label="PAN No"><p><%= admin_bank.pan_number %></p></td>
+                                                        <td class="text-right">
+                                                           <%= link_to admin_bank, class: "btn btn-danger btn-xs deleteBankAccount", method: :delete, data: { confirm: 'Are you sure?' } do %><i class="fa fa-trash"></i><% end %>
+                                                        </td>
+                                                    </tr>
+                                                <% end %>
                                         	</tbody>
                                         </table>
                                     </div>
@@ -124,34 +98,11 @@
                         <div class="row">
                             <div class="col-lg-3">
                                 <div class="panel">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"> Add Document</h3>
+                                    </div>
                                     <div class="panel-body">
-                                        <form class="" role="form" method="post" action="http://coderpixel.com/demo/advanced-hrm/employee/add-document" enctype="multipart/form-data">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title"> Add Document</h3>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Document Name</label>
-                                                <span class="help">e.g. "Resume, Joining Letter etc"</span>
-                                                <input type="text" class="form-control" required name="document_name">
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Select Document</label>
-                                                <div class="input-group input-group-file">
-                                                        <span class="input-group-btn">
-                                                            <span class="btn btn-primary btn-file">
-                                                                Browse <input type="file" class="form-control" name="file">
-                                                            </span>
-                                                        </span>
-                                                    <input type="text" class="form-control" readonly="">
-                                                </div>
-                                            </div>
-
-                                            <input type="hidden" name="_token" value="pBMHGiNmnECsLu725vngfmhFjQNCd6pE83DHcDO4">
-                                            <input type="hidden" value="28" name="cmd">
-                                            <button type="submit" class="btn btn-success btn-sm pull-right"><i class="fa fa-plus"></i> Add </button>
-                                        </form>
+                                        <%=  render "admin/documents/new", admin_document: @admin_document %>
                                     </div>
                                 </div>
                             </div>
@@ -170,13 +121,15 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td data-label="Document Name">test</td>
-                                                    <td class="text-right">
-                                                        <a href="http://coderpixel.com/demo/advanced-hrm/employee/download-employee-document/10" class="btn btn-success btn-xs"><i class="fa fa-download"></i> Download</a>
-                                                        <a href="#" class="btn btn-danger btn-xs deleteEmployeeDoc" id="10"><i class="fa fa-trash"></i> Delete</a>
-                                                    </td>
-                                                </tr>
+                                                <% @admin_documents.each do |admin_document| %>
+                                                    <tr>
+                                                        <td data-label="Document Name"><%= admin_document.name %></td>
+                                                        <td class="text-right">
+                                                            <%= link_to admin_document.attachment_url,class: "btn btn-success btn-xs" do %><i class="fa fa-download"></i> Download<% end %>
+                                                           <%= link_to admin_document,class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } do %><i class="fa fa-trash"></i> Delete<% end %>
+                                                        </td>
+                                                    </tr>
+                                                <% end %>
                                             </tbody>
                                         </table>
                                     </div>

@@ -18,7 +18,7 @@ class Admin::TasksController < ApplicationController
   def create
     @admin_task = Admin::Task.new(admin_task_params)
       if @admin_task.save
-        redirect_to @admin_task 
+        redirect_to action: "index"
       else
         render 'new'
       end
@@ -26,7 +26,7 @@ class Admin::TasksController < ApplicationController
 
   def update
       if @admin_task.update(admin_task_params)
-        redirect_to @admin_task
+        redirect_to action: "index"
       else
         render 'edit'
       end

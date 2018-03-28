@@ -17,7 +17,7 @@
 
         <div class="form-group">
             <label>Nature Of Training</label>
-            <%= form.text_field :nature, class: "form-control" %>
+            <%= form.select :nature_of_training, %w{Internal External}, :prompt => 'Select', required: true, class: 'form-control' %>
         </div>
 
         <div class="form-group">

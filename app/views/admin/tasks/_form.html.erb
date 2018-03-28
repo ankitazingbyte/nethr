@@ -33,7 +33,7 @@
 
       <div class="form-group m-none">
           <label for="e20">Status</label>
-              <%= form.text_field :status, class: "form-control" %>
+             <%= form.select :status, %w{Pending Started Complete}, :prompt => 'Select', required: true, class: 'form-control' %>
       </div>
 
       <div class="form-group">

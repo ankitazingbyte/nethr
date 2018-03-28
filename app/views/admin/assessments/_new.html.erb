@@ -7,17 +7,17 @@
 
     <div class="form-group">
       <label>Training Type</label>
-      <%= form.text_field :training_type, class: "form-control" %>
+      <%= form.select :training_type, %w{Online Seminar Workshop}, :prompt => 'Select', required: true, class: 'form-control' %>
     </div>
 
     <div class="form-group">
       <label>Training Subject</label>
-      <%= form.text_field :training_subject, class: "form-control" %>
+      <%= form.select :training_subject, %w{Employee-Development IT-Training Finance-Training}, :prompt => 'Select', required: true, class: 'form-control' %>
     </div>
 
     <div class="form-group">
         <label>Nature Of Training</label>
-        <%= form.text_field :nature_of_training, class: "form-control" %>
+        <%= form.select :nature_of_training, %w{Internal External}, :prompt => 'Select', required: true, class: 'form-control' %>
     </div>
 
     <div class="form-group">
@@ -27,17 +27,17 @@
 
     <div class="form-group">
         <label>Training Employee</label>
-        <%= form.number_field :admin_employee_id, class: "form-control" %>
+        <%= form.select :admin_employee_id, Admin::Employee.all.map{|d| [d.first_name, d.id]}, class: "btn dropdown-toggle btn-default" %>
     </div>
 
     <div class="form-group">
         <label>Training Reason</label>
-        <%= form.text_field :training_reason, class: "form-control" %>
+        <%= form.cktext_area :training_reason, class: "form-control" %>
     </div>
 
     <div class="form-group">
         <label>Preferred Trainer</label>
-        <%= form.number_field :admin_trainer_id, class: "form-control" %>
+        <%= form.select :admin_trainer_id, Admin::Trainer.all.map{|d| [d.first_name, d.id]}, class: "btn dropdown-toggle btn-default" %>
     </div>
 
     <div class="form-group">
@@ -67,12 +67,12 @@
 
     <div class="form-group">
         <label>Status</label>
-        <%= form.text_field :status, class: "form-control" %>
+        <%= form.select :status, %w{Pending Aproved Rejected Completed}, :prompt => 'Select', required: true, class: 'form-control' %>
     </div>
 
     <div class="form-group">
         <label>Training Description</label>
-        <%= form.text_field :description, class: "form-control" %>
+        <%= form.cktext_area :description, class: "form-control" %>
     </div>
   </div>
   <div class="modal-footer">

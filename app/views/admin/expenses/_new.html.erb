@@ -41,11 +41,8 @@
             <label>Select Document</label>
             <div class="input-group input-group-file">
                 <span class="input-group-btn">
-                    <span class="btn btn-primary btn-file">
-                        Browse <input type="file" class="form-control" name="bill_copy">
-                    </span>
+                    <%= form.file_field :attachment,class: "btn btn-primary btn-file" %>
                 </span>
-                <input type="text" class="form-control" readonly="">
             </div>
         </div>
     </div>

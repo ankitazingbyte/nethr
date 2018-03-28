@@ -19,7 +19,7 @@ class Admin::TicketsController < ApplicationController
     @admin_ticket = Admin::Ticket.new(admin_ticket_params)
 
       if @admin_ticket.save
-        redirect_to @admin_ticket
+        redirect_to action: "index"
       else
         render 'new'
       end
@@ -27,7 +27,7 @@ class Admin::TicketsController < ApplicationController
 
   def update
       if @admin_ticket.update(admin_ticket_params)
-        redirect_to @admin_ticket
+        redirect_to action: "index"
       else
         render :edit 
       end

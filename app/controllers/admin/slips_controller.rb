@@ -46,6 +46,6 @@ class Admin::SlipsController < ApplicationController
     end
 
     def admin_slip_params
-      params.require(:admin_slip).permit(:admin_employee_id, :admin_department_id, :admin_designation_id, :basic_salary, :payment_by, :tax, :provident_fund, :loan, :Leave_deduction, :grand_total)
+      params.require(:admin_slip).permit(:admin_employee_id, :admin_increment_id,:admin_department_id, :admin_designation_id, :basic_salary, :payment_by, :tax, :provident_fund, :loan, :Leave_deduction, :grand_total)
     end
 end

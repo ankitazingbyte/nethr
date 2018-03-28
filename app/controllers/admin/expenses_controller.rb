@@ -44,6 +44,6 @@ class Admin::ExpensesController < ApplicationController
     end
 
     def admin_expense_params
-      params.require(:admin_expense).permit(:item_name, :purchase_from, :purchase_date, :amount, :status)
+      params.require(:admin_expense).permit(:item_name, :purchase_from, :purchase_date, :amount, :status, :attachment)
     end
 end

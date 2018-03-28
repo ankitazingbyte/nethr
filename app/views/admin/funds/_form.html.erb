@@ -13,12 +13,13 @@
 
   <div class="form-group">
     <label>Employee Name</label>
-    <%= form.number_field :admin_employee_id, class: "form-control" %>
+    <%= form.select :admin_employee_id, Admin::Employee.all.map{|e| [e.user_name, e.id]}, class: "btn dropdown-toggle btn-default" %>
   </div>
 
   <div class="form-group m-none">
     <label for="e20">Provident Fund Type</label>
     <%= form.text_field :fund_type, class: "form-control" %>
+    <%= form.select :status, %w{Fix-Amount percentage-of-Basic-Salary}, :prompt => 'Select', required: true, placeholder: 'status', class: 'form-control' %>
   </div>
 
   <div class="show-fixed-amount">

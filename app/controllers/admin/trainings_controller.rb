@@ -19,7 +19,7 @@ class Admin::TrainingsController < ApplicationController
     @admin_training = Admin::Training.new(admin_training_params)
 
       if @admin_training.save
-        redirect_to @admin_training
+        redirect_to action: "index"
       else
         render 'new'
       end
@@ -27,14 +27,12 @@ class Admin::TrainingsController < ApplicationController
 
   def update
       if @admin_training.update(admin_training_params)
-       redirect_to @admin_training
+       redirect_to action: "index"
       else
        render 'edit '
       end
   end
 
-  # DELETE /admin/trainings/1
-  # DELETE /admin/trainings/1.json
   def destroy
     @admin_training.destroy
      redirect_to admin_trainings_url

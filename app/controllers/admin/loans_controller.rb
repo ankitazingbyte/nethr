@@ -36,7 +36,6 @@ class Admin::LoansController < ApplicationController
   def destroy
     @admin_loan.destroy
       redirect_to admin_loans_url
-    end
   end
 
   private
