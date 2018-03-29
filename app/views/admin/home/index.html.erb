@@ -1,55 +1,47 @@
 <section class="wrapper-bottom-sec">
     <div class="p-30"></div>
-    <div class="p-15 p-t-none p-b-none m-l-10 m-r-10"></div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel-body">
-                <div class="row text-center">
-                    <div class="col-sm-3 m-b-15">
-                        <div class="z-shad-1">
-                            <div class="bg-success text-white p-15 clearfix">
-                                <span class="pull-left font-45 m-l-10"><i class="fa fa-users"></i></span>
-                                <div class="pull-right text-right m-t-15">
-                                    <span class="small m-b-5 font-15">11 Employees</span>
+    <div class="p-15 p-t-none p-b-none">    
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel-body">
+                    <div class="row text-center">
+                        <div class="col-sm-3 m-b-15">
+                            <div class="bg-success text-white" style="height: 100px;">
+                                <span class="pull-left" style="font-size: x-large;"><i class="fa fa-users"></i></span>
+                                <div class="pull-right text-right" style="font-size: 15px;">
+                                    <span class="small"> Employees</span>
                                     <br>
-                                    <a href="http://coderpixel.com/demo/advanced-hrm/employees/add" class="btn btn-complete btn-xs text-uppercase">Add New</a>
+                                    <%= link_to "Add New", new_admin_employee_path, class: "btn btn-info btn-xs text-uppercase" %>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-3 m-b-15">
-                        <div class="z-shad-1">
-                            <div class="bg-complete text-white p-15 clearfix">
-                                <span class="pull-left font-45 m-l-10"><i class="fa fa-bed"></i></span>
-                                <div class="pull-right text-right m-t-15">
-                                    <span class="small m-b-5 font-15">8 Leave Application</span>
+                        <div class="col-sm-3 m-b-15">
+                            <div class="bg-info text-white" style="height: 100px;">
+                                <span class="pull-left" style="font-size: x-large;"><i class="fa fa-bed"></i></span>
+                                <div class="pull-right text-right" style="font-size: 15px;">
+                                    <span class="small"> Leave Application</span>
                                     <br>
-                                    <a href="http://coderpixel.com/demo/advanced-hrm/leave" class="btn btn-success btn-xs text-uppercase">View All</a>
+                                    <%=link_to "View All", admin_leaves_path, class: "btn btn-success btn-xs text-uppercase" %>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-3 m-b-15">
-                        <div class="z-shad-1">
-                            <div class="bg-primary text-white p-15 clearfix">
-                                <span class="pull-left font-45 m-l-10"><i class="fa fa-bar-chart"></i></span>
-                                <div class="pull-right text-right m-t-15">
-                                    <span class="small m-b-5 font-15">2 Expense Request</span>
+                        <div class="col-sm-3 m-b-15">
+                            <div class="bg-primary text-white" style="height: 100px;">
+                                <span class="pull-left" style="font-size: x-large;"><i class="fa fa-bar-chart"></i></span>
+                                <div class="pull-right text-right" style="font-size: 15px;">
+                                    <span class="small">Expense Request</span>
                                     <br>
-                                    <a href="http://coderpixel.com/demo/advanced-hrm/expense" class="btn btn-complete btn-xs text-uppercase">View All</a>
+                                   <%=link_to "View All", admin_expenses_path, class: "btn btn-info btn-xs text-uppercase" %>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-3 m-b-15">
-                        <div class="z-shad-1">
-                            <div class="bg-complete-darker text-white p-15 clearfix">
-                                <span class="pull-left font-45 m-l-10"><i class="fa fa-envelope"></i></span>
-                                <div class="pull-right text-right m-t-15">
-                                    <span class="small m-b-5 font-15">0 Support Tickets</span>
+                        <div class="col-sm-3 m-b-15">
+                            <div class="bg-warning text-white " style="height: 100px;">
+                                <span class="pull-left" style="font-size: x-large;"><i class="fa fa-envelope"></i></span>
+                                <div class="pull-right text-right" style="font-size: 15px;">
+                                    <span class="small"> Support Tickets</span>
                                     <br>
-                                    <a href="http://coderpixel.com/demo/advanced-hrm/support-tickets/all"
-                                       class="btn btn-success btn-xs text-uppercase">View All</a>
+                                    <%=link_to "View All", admin_tickets_path, class: "btn btn-success btn-xs text-uppercase" %>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +50,7 @@
             </div>
         </div>
     </div>
-    <div class="p-15 p-t-none p-b-none">
+    <!-- <div class="p-15 p-t-none p-b-none">
         <div class="row">
             <div class="col-lg-6">
                 <div class="panel-body">
@@ -89,7 +81,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="p-15 p-t-none p-b-none">
         <div class="row">
             <div class="col-lg-6">
@@ -111,110 +103,25 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td data-label="SL">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/49">49</a></p>
-                                            </td>
-                                            <td data-label="employee">
-                                                <p> <a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
-                                            </td>
-                                            <td data-label="leave type">
-                                                <p>Causal Leave</p>
-                                            </td>
-                                            <td data-label="leave from">
-                                                <p>15th Mar 18</p>
-                                            </td>
-                                            <td data-label="leave to">
-                                                <p>16th Mar 18</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="SL">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/48">48</a></p>
-                                            </td>
-                                            <td data-label="employee">
-                                                <p>
-                                                    <a href="http://coderpixel.com/demo/advanced-hrm/employees/view/28"> h1 student h1 student</a>
-                                                </p>
-                                            </td>
-                                            <td data-label="leave type">
-                                                <p>Causal Leave</p>
-                                            </td>
-                                            <td data-label="leave from">
-                                                <p>13th Mar 18</p>
-                                            </td>
-                                            <td data-label="leave to">
-                                                <p>13th Mar 18</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="SL">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/47">47</a></p>
-                                            </td>
-                                            <td data-label="employee">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
-                                            </td>
-                                            <td data-label="leave type">
-                                                <p>Sick Leave</p>
-                                            </td>
-                                            <td data-label="leave from">
-                                                <p>13th Mar 18</p>
-                                            </td>
-                                            <td data-label="leave to">
-                                                <p>13th Mar 18</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="SL">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/38">38</a></p>
-                                            </td>
-                                            <td data-label="employee">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
-                                            </td>
-                                            <td data-label="leave type">
-                                                <p>Causal Leave</p>
-                                            </td>
-                                            <td data-label="leave from">
-                                                <p>20th Mar 18</p>
-                                            </td>
-                                            <td data-label="leave to">
-                                                <p>6th Mar 18</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="SL">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/37">37</a></p>
-                                            </td>
-                                            <td data-label="employee">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
-                                            </td>
-                                            <td data-label="leave type">
-                                                <p>Causal Leave</p>
-                                            </td>
-                                            <td data-label="leave from">
-                                                <p>7th Mar 18</p>
-                                            </td>
-                                            <td data-label="leave to">
-                                                <p>7th Mar 18</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="SL">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/leave/edit/33">33</a></p>
-                                            </td>
-                                            <td data-label="employee">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
-                                            </td>
-                                            <td data-label="leave type">
-                                                <p>Causal Leave</p>
-                                            </td>
-                                            <td data-label="leave from">
-                                                <p>22nd Feb 18</p>
-                                            </td>
-                                            <td data-label="leave to">
-                                                <p>22nd Feb 18</p>
-                                            </td>
-                                        </tr>
+                                        <% @admin_leaves.each do |admin_leave| %>
+                                            <tr>
+                                                <td data-label="SL">
+                                                    <p>49</p>
+                                                </td>
+                                                <td data-label="employee">
+                                                    <p><%= admin_leave.admin_employee_id %></a></p>
+                                                </td>
+                                                <td data-label="leave type">
+                                                    <p><%= admin_leave.leave_type %></p>
+                                                </td>
+                                                <td data-label="leave from">
+                                                    <p><%= admin_leave.leave_from %></p>
+                                                </td>
+                                                <td data-label="leave to">
+                                                    <p><%= admin_leave.leave_to %></p>
+                                                </td>
+                                            </tr>
+                                        <% end %>
                                     </tbody>
                                 </table>
                             </div>
@@ -240,36 +147,22 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    	<tr>
-                                            <td data-label="item name">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/expense/edit/3">vv</a></p>
-                                            </td>
-                                            <td data-label="purchase by">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/31">Mr. k</a></p>
-                                            </td>
-                                            <td data-label="purchase date">
-                                                <p>6th Mar 18</p>
-                                            </td>
-                                            <td data-label="amount">
-                                                <p>USD 10.00</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="item name">
-                                                <p>
-                                                    <a href="http://coderpixel.com/demo/advanced-hrm/expense/edit/2"> Computer Monitor</a>
-                                                </p>
-                                            </td>
-                                            <td data-label="purchase by">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/employees/view/3"> Abul Kashem Shamim</a></p>
-                                            </td>
-                                            <td data-label="purchase date">
-                                                <p>23rd Feb 17</p>
-                                            </td>
-                                            <td data-label="amount">
-                                                <p>USD 500.00</p>
-                                            </td>
-                                        </tr>
+                                        <% @admin_expenses.each do |admin_expense| %>
+                                        	<tr>
+                                                <td data-label="item name">
+                                                    <p><%= admin_expense.item_name %></p>
+                                                </td>
+                                                <td data-label="purchase by">
+                                                    <p><%= admin_expense.purchase_from %></p>
+                                                </td>
+                                                <td data-label="purchase date">
+                                                    <p><%= admin_expense.purchase_date %></p>
+                                                </td>
+                                                <td data-label="amount">
+                                                    <p><%= admin_expense.amount %></p>
+                                                </td>
+                                            </tr>
+                                        <% end %>
                                     </tbody>
                                 </table>
                             </div>
@@ -299,47 +192,19 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td data-label="task">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/5"> K1106 </a></p>
-                                            </td>
-                                            <td data-label="CreatedDate"><p>7th Mar 18</p>
-                                            </td>
-                                            <td data-label="DueDate"><p>7th Mar 18</p></td>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="task">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/4"> yyy </a></p>
-                                            </td>
-                                            <td data-label="CreatedDate"><p>6th Mar 18</p>
-                                            </td>
-                                            <td data-label="DueDate"><p>6th Mar 18</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="task">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/3"> sdfd </a></p>
-                                            </td>
-                                            <td data-label="CreatedDate"><p>1st Jan 70</p>
-                                            </td>
-                                            <td data-label="DueDate"><p>1st Jan 70</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="task">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/2"> TEST 1  </a></p>
-                                            </td>
-                                            <td data-label="CreatedDate"><p>12th Feb 18</p>
-                                            </td>
-                                            <td data-label="DueDate"><p>14th Feb 18</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="task">
-                                                <p><a href="http://coderpixel.com/demo/advanced-hrm/task/view/1"> HR Project</a></p>
-                                            </td>
-                                            <td data-label="CreatedDate"><p>1st Apr 17</p>
-                                            </td>
-                                            <td data-label="DueDate"><p>22nd Apr 17</p></td>
-                                        </tr>
+                                        <% @admin_tasks.each do |admin_task| %>
+                                            <tr>
+                                                <td data-label="task">
+                                                    <p><%= admin_task.title %></p>
+                                                </td>
+                                                <td data-label="CreatedDate"><p><%= admin_task.start_date %></p>
+                                                </td>
+                                                <td data-label="DueDate"><p><%= admin_task.due_date %></p></td>
+                                                </td>
+                                                <td data-label="DueDate"><p><%= admin_task.status %></p></td>
+                                                </td>
+                                            </tr>
+                                        <% end %>
                                     </tbody>
                                 </table>
                             </div>
@@ -357,13 +222,20 @@
                             <div class="panel-body p-none">
                                 <table class="table table-hover table-ultra-responsive">
                                     <thead>
-                                        <tr>
-                                            <th style="width: 30px;">Email</th>
-                                            <th style="width: 50px;">Subject</th>
-                                            <th style="width: 20px;">Date</th>
-                                        </tr>
+                                            <tr>
+                                                <th style="width: 30px;">Email</th>
+                                                <th style="width: 50px;">Subject</th>
+                                                <th style="width: 20px;">Date</th>
+                                            </tr>
                                     </thead>
                                     <tbody>
+                                        <% @admin_tickets.each do |admin_ticket| %>
+                                        <tr>
+                                        <td>employee@coderpixel.com</td>
+                                        <td><%= admin_ticket.subject %></td>
+                                        <td><%= admin_ticket.created_at %></td>
+                                    </tr>
+                                        <% end %>
                                     </tbody>
                                 </table>
                             </div>

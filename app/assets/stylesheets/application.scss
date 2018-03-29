@@ -34,6 +34,10 @@
 
 body,html{
     height: 100%;
+    .p-b-none>row {
+     margin: -18px -45px 17px;
+    margin-left: -15px;
+    }
   }
 
   /* remove outer padding */
@@ -225,4 +229,11 @@ body,html{
   body {
     background: #FFF;
  }
+}
+
+.shad{
+    border: 1px solid #EFEFEF;
+    box-shadow: 0px 1px 2px #EFEFEF;
+    
+    height: 20px;
 }
