@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @admin_task_discussion.comment %>
+</p>
+
+<p>
+  <strong>Admin employee:</strong>
+  <%= @admin_task_discussion.admin_employee_id %>
+</p>
+
+<%= link_to 'Edit', edit_admin_task_discussion_path(@admin_task_discussion) %> |
+<%= link_to 'Back', admin_task_discussions_path %>

@@ -34,8 +34,6 @@
                                         </td>
                                         <td data-label="Status"><p class="btn btn-success btn-xs"><%= admin_fund.status %></p></td>
                                         <td data-label="Actions">
-                                            <a href="http://coderpixel.com/demo/advanced-hrm/provident-fund/view-payslip/1" class="btn btn-complete btn-xs"><i class="fa fa-print"></i> Payslip</a>
-
                                             <%= link_to edit_admin_fund_path(admin_fund), class: "btn btn-success btn-xs" do %><i class="fa fa-edit"></i> Edit<% end %>
                                             <%= link_to admin_fund,class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } do %><i class="fa fa-trash"></i> Delete<% end %>
                                         </td>

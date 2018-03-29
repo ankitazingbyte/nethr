@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   namespace :admin do
+    resources :task_files
+  end
+  namespace :admin do
+    resources :task_discussions
+  end
+  namespace :admin do
     resources :documents
   end
   namespace :admin do

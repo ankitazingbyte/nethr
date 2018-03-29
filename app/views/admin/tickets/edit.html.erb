@@ -34,41 +34,41 @@
                                     <div role="tabpanel" class="tab-pane active" id="ticket_details">
                                         <div class="clearfix ticket-de-pane">
                                             <span class="ticket-status-title">Ticket For:</span>
-                                            <span class="ticket-status-content">Abul Kashem Shamim</span>
+                                            <span class="ticket-status-content"><%= @admin_ticket.admin_employee_id %></span>
                                         </div>
 
                                         <div class="clearfix ticket-de-pane">
                                             <span class="ticket-status-title">Email:</span>
-                                            <span class="ticket-status-content">employee@coderpixel.com</span>
+                                            <span class="ticket-status-content"><%= @admin_ticket.admin_employee_id %></span>
                                         </div>
 
                                         <div class="clearfix ticket-de-pane">
                                             <span class="ticket-status-title">Created Date:</span>
-                                            <span class="ticket-status-content">1st Apr 17</span>
+                                            <span class="ticket-status-content"><%= @admin_ticket.created_at %></span>
                                         </div>
 
                                         <div class="clearfix ticket-de-pane">
                                             <span class="ticket-status-title">Created By:</span>
-                                            <span class="ticket-status-content">Coder</span>
+                                            <span class="ticket-status-content"><%= @admin_ticket.admin_employee_id %></span>
                                         </div>
 
                                         <div class="clearfix ticket-de-pane">
                                             <span class="ticket-status-title">Department:</span>
-                                            <span class="ticket-status-content">rt</span>
+                                            <span class="ticket-status-content"><%= @admin_ticket.admin_department_id %></span>
                                         </div>
 
                                         <div class="clearfix ticket-de-pane">
                                             <span class="ticket-status-title">Status:</span>
-                                                 class="label label-success">Answered</span>
+                                            <span class="label label-success"><%= @admin_ticket.status %></span>
                                         </div>
                                         <div class="m-t-30"></div>
                                         <div class="clearfix">
                                             <span class="ticket-status-title">Subject:</span>
-                                            <span class="ticket-status-content">Billing Transaction </span>
+                                            <span class="ticket-status-content"><%= @admin_ticket.subject %></span>
                                         </div>
                                         <div class="clearfix">
                                             <span class="ticket-status-title">Message:</span>
-                                            <div class="ticket-status-content"><div><h2>What is Lorem Ipsum?</h2><p>Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting indds etc.</p></div></div>
+                                            <div class="ticket-status-content"><div><p><%= @admin_ticket.message %></p></div></div>
                                         </div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="ticket_discussion">

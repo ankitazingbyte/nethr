@@ -1,0 +1,15 @@
+<%= form_for Admin::TaskDiscussion.new do |form| %>
+  
+  <div class="row">
+      <div class="form-group">
+          <label>Leave Comment</label>
+          <%= form.text_area :comment, class: "form-control" %>
+      </div>
+
+
+      <div class="col-md-12">
+          <%= form.submit"submit", class: "btn btn-success pull-right" %>
+      </div>
+  </div>
+
+<% end %>

@@ -45,6 +45,6 @@ class Admin::TrainingsController < ApplicationController
     end
 
     def admin_training_params
-      params.require(:admin_training).permit(:admin_employee_id, :training_type, :training_subject, :nature, :title, :admin_trainer_id)
+      params.require(:admin_training).permit(:admin_employee_id, :training_from, :training_to, :location , :sponsored_by, :organized_by, :description, :training_type, :training_subject, :nature, :title, :admin_trainer_id)
     end
 end

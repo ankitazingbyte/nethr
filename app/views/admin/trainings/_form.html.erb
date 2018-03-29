@@ -11,34 +11,64 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :admin_employee_id %>
+    <label>Employee</label>
     <%= form.select :admin_employee_id, Admin::Employee.all.map{|e| [e.first_name, e.id]}, class: "btn dropdown-toggle btn-default" %>
   </div>
 
   <div class="field">
-    <%= form.label :training_type %>
+    <label>Training Type</label>
     <%= form.select :training_type, %w{Online Seminar Workshop}, :prompt => 'Select', required: true, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :training_subject %>
+    <label>Training Subject</label>
     <%= form.select :training_subject, %w{Employee-Development IT-Training Finance-Training}, :prompt => 'Select', required: true, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :nature %>
-    <%= form.select :nature_of_training, %w{Internal External}, :prompt => 'Select', required: true, class: 'form-control' %>
+    <label>Nature Of Training</label>
+    <%= form.select :nature, %w{Internal External}, :prompt => 'Select', required: true, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :title %>
+    <label>Training Title</label>
     <%= form.text_field :title, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :admin_trainer_id %>
+    <label>Trainer</label>
     <%= form.select :admin_trainer_id, Admin::Trainer.all.map{|e| [e.first_name, e.id]}, class: "btn dropdown-toggle btn-default" %>
   </div><br>
+
+  <div class="field">
+    <label>Training Location</label>
+    <%= form.text_field :location, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label>Sponsored By</label>
+    <%= form.text_field :sponsored_by, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label>Organized By</label>
+    <%= form.text_field :organized_by, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label>Training From</label>
+    <%= form.text_field :training_from, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <label>Training To</label>
+    <%= form.text_field :training_to, class: "form-control" %>
+  </div>
+
+  <div class="field">
+      <label>Training Description</label>
+      <%= form.cktext_area :description, class: "form-control" %>
+  </div>
 
   <div class="field">
     <%= form.submit "update", class: "btn btn-primary" %>

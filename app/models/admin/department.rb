@@ -1,3 +1,3 @@
 class Admin::Department < ApplicationRecord
-	has_many :admin_designations
+	# has_many :admin_designations
 end

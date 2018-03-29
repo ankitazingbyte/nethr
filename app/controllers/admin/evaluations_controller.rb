@@ -18,26 +18,23 @@ class Admin::EvaluationsController < ApplicationController
   def create
     @admin_evaluation = Admin::Evaluation.new(admin_evaluation_params)
       if @admin_evaluation.save
-        redirect_to @admin_evaluation
+        redirect_to action: "index"
       else
         render 'new'
       end
-    end
   end
 
   def update
       if @admin_evaluation.update(admin_evaluation_params)
-        redirect_to @admin_evaluation
+        redirect_to action: "index"
       else
         render 'edit' 
       end
-    end
   end
 
   def destroy
     @admin_evaluation.destroy
     redirect_to admin_evaluations_url
-    end
   end
 
   private

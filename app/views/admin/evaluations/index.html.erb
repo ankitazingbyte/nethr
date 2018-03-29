@@ -35,7 +35,7 @@
                               <td data-label="SL">1</td>
                               <td data-label="Title"><p><%= admin_evaluation.title %></p></td>
                               <td>
-                                  <%= link_to edit_admin_evaluation_path(admin_evaluation), class: "btn btn-success btn-xs evaluation", remote: true do %><i class="fa fa-edit"></i>Edit<% end %>
+                                  <%= link_to 'EDIT', edit_admin_evaluation_path(admin_evaluation), class: "btn btn-success btn-xs bottom", remote: true %>
                                   <%= link_to admin_evaluation, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" do %><i class="fa fa-trash"></i>Delete <% end %>
                               </td>
                             </tr>
@@ -50,11 +50,11 @@
 <!-- EDIT MODAL  -->
     <div id="status-modal" tabindex="-1" role="dialog" class="modal fade"></div>
     <script type="text/javascript">
-      $(document).ready(function () {
-        $('.evaluation').click(function() {
-          $('#status-modal').modal("show");
-        });
+    $(document).ready(function () {
+      $('.bottom').click(function() {
+        $('#status-modal').modal("show");
       });
+    });
     </script>
-<!-- END -->
+    <!-- END -->
 </section>

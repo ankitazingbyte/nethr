@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Attachment:</strong>
+  <%= @admin_task_file.attachment %>
+</p>
+
+<p>
+  <strong>Admin employee:</strong>
+  <%= @admin_task_file.admin_employee_id %>
+</p>
+
+<%= link_to 'Edit', edit_admin_task_file_path(@admin_task_file) %> |
+<%= link_to 'Back', admin_task_files_path %>

@@ -45,6 +45,6 @@ class Admin::TicketsController < ApplicationController
     end
 
     def admin_ticket_params
-      params.require(:admin_ticket).permit(:admin_employee_id, :subject, :message)
+      params.require(:admin_ticket).permit(:admin_employee_id, :admin_department_id, :subject, :message, :status)
     end
 end

@@ -46,6 +46,6 @@ class Admin::AwardsController < Admin::AdminController
     end
 
     def admin_award_params
-      params.require(:admin_award).permit(:name, :employee_id, :gift_item, :cash_price, :month, :year)
+      params.require(:admin_award).permit(:name, :admin_employee_id, :gift_item, :cash_price, :month, :year)
     end
 end

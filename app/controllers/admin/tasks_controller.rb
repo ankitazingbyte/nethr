@@ -6,6 +6,8 @@ class Admin::TasksController < ApplicationController
   end
 
   def show
+    @admin_task_discussions = Admin::TaskDiscussion.all
+    @admin_task_files = Admin::TaskFile.all
   end
 
   def new
@@ -44,6 +46,6 @@ class Admin::TasksController < ApplicationController
     end
 
     def admin_task_params
-      params.require(:admin_task).permit(:title, :assign_to, :start_date, :due_date, :estimated_hour, :progress, :status, :description)
+      params.require(:admin_task).permit(:title, :assign_to, :start_date, :due_date, :estimated_hour, :progress, :status, :description, :admin_employee_id )
     end
 end

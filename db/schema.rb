@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180328072946) do
+ActiveRecord::Schema.define(version: 20180329083116) do
 
   create_table "admin_assessments", force: :cascade do |t|
     t.integer "admin_department_id"
@@ -251,6 +251,21 @@ ActiveRecord::Schema.define(version: 20180328072946) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "admin_task_discussions", force: :cascade do |t|
+    t.string "comment"
+    t.integer "admin_employee_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_task_files", force: :cascade do |t|
+    t.string "title"
+    t.string "attachment"
+    t.integer "admin_employee_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "admin_tasks", force: :cascade do |t|
     t.string "title"
     t.string "assign_to"
@@ -260,6 +275,7 @@ ActiveRecord::Schema.define(version: 20180328072946) do
     t.string "progress"
     t.string "status"
     t.string "description"
+    t.integer "admin_employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

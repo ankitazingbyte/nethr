@@ -14,8 +14,8 @@
         </div>
         <div class="field">
           <label class="control-label">Select Department</label>
-          <%#= form.select :admin_department_id, Admin::Department.all.map{|d| [d.name, d.id]}, class: "btn dropdown-toggle btn-default" %>
-          <%= form.collection_select(:admin_department_id, Admin::Department.all, :id, :name, {:prompt => "Select a Model"}, {:id => 'models_select'}) %>
+          <%= form.select :admin_department_id, Admin::Department.all.map{|d| [d.name, d.id]}, class: "btn dropdown-toggle btn-default" %>
+          <%#= form.collection_select(:admin_department_id, Admin::Department.all, :id, :name, {:prompt => "Select a Model"}, {:id => 'models_select'}) %>
         </div><br>
           <%= form.submit "Update", class: "btn btn-success btn-sm pull-right" %>
           <%= link_to "Cancel", "#", class: "btn", data: { dismiss: "modal" } %>

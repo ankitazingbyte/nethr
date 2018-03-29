@@ -28,7 +28,7 @@
                                         <td data-label="SL"><%= admin_employee.id %></td>
                                         <td data-label="Name"><p><%= admin_employee.first_name %><%= admin_employee.last_name %></p></td>
                                         <td data-label="Username"><p><%= admin_employee.user_name %></p></td>
-                                        <td data-label="Designation"><p><%#= admin_employee.admin_designation.name %></p></td>
+                                        <td data-label="Designation"><p><%= admin_employee.admin_designation_id %></p></td>
                                         <td data-label="Status"><p class="btn btn-success btn-xs">Active</p></td>
                                         <td data-label="Actions">
                                             <%= link_to 'Edit', edit_admin_employee_path(admin_employee), class: "btn btn-success btn-xs" %>

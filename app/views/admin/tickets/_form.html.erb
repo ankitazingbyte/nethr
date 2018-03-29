@@ -1,11 +1,11 @@
-<%= form_for @admin_job do |form| %>
+<%= form_for @admin_ticket do |form| %>
   <div class="form-group m-none">
       <label for="e20">Change Department</label>
-      <%= form.select :admin_department_id, Admin::Department.all.map{|d| [d.user_name, d.id]}, class: "form-control selectpicker" %>
+      <%= form.select :admin_department_id, Admin::Department.all.map{|d| [d.name, d.id]}, class: "form-control selectpicker" %>
   </div>
   <div class="form-group m-none">
       <label for="e20">Status</label>
-      <%= form.select :job_type, %w{Pending Answered Customer-Reply Closed}, :prompt => 'Select', required: true, placeholder: 'Job Type', class: 'form-control' %>
+      <%= form.select :status, %w{Pending Answered Closed}, :prompt => 'Select', required: true, placeholder: 'status', class: 'form-control' %>
   </div>
   <br>
   <%= form.submit "Update", class: "btn btn-success btn-sm pull-right" %>

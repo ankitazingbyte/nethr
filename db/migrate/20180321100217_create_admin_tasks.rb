@@ -9,7 +9,8 @@ class CreateAdminTasks < ActiveRecord::Migration[5.1]
       t.string :progress
       t.string :status
       t.string :description
-
+      t.integer :admin_employee_id
+      
       t.timestamps
     end
   end
