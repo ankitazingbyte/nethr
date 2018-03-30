@@ -22,13 +22,12 @@
 
         <div class="form-group m-none">
             <label for="e20">Month</label>
-            <%= form.select :month, 1..12 %>
+            <%= select_month(Date.today, {}, {:name => 'buddy[dob(2i)]', :id => 'buddy_dob_2i', :class => 'form-control'}) %>
         </div>
 
         <div class="form-group">
             <label>Year</label>
-            <%= form.select :year, Date.today.year..8.years.from_now.year %>
-
+            <%= select_year(Date.today, {:start_year => DateTime.now.year, :end_year => DateTime.now.year - 117}, {:name => 'buddy[dob(1i)]', :id => 'buddy_dob_1i', :class => 'form-control'}) %>
         </div>
     </div>
     <div class="modal-footer">

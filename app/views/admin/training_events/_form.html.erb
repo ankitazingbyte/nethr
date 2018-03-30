@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :subject %>
-    <%= form.select :training_subject, %w{Employee-Development IT-Training Finance-Training}, :prompt => 'Select', required: true, class: 'form-control' %>
+    <%= form.select :subject, %w{Employee-Development IT-Training Finance-Training}, :prompt => 'Select', required: true, class: 'form-control' %>
   </div>
 
   <div class="field">
@@ -48,12 +48,12 @@
 
   <div class="field">
     <%= form.label :training_from %>
-    <%= form.text_field :training_from, class: "form-control" %>
+    <%= form.text_field :training_from, class: "form-control", "data-provide" => 'datepicker' %>
   </div>
 
   <div class="field">
     <%= form.label :training_to %>
-    <%= form.text_field :training_to, class: "form-control" %>
+    <%= form.text_field :training_to, class: "form-control", "data-provide" => 'datepicker' %>
   </div>
 
   <div class="field">

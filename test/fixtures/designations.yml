@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  department: one
+  admin_department_id: 1
 
 two:
   name: MyString
-  department: two
+  admin_department_id: 1

@@ -1,0 +1,55 @@
+<section class="wrapper-bottom-sec">
+    <div class="p-30">
+        <h2 class="page-title">Tax Rules</h2>
+    </div>
+    <div class="p-30 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Tax Rules</h3>
+                        <button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#add-new-award"><i class="fa fa-plus"></i> Add Tax Rule</button>
+                        <br>
+                    </div>
+                    <div class="panel-body p-none">
+                        <table class="table data-table table-hover table-ultra-responsive">
+                            <thead>
+                                <tr>
+                                    <th style="width: 10%;">SL#</th>
+                                    <th style="width: 40%;">Tax Rules</th>
+                                    <th style="width: 20%;">Status</th>
+                                    <th style="width: 30%;">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% @admin_tax_rules.each do |admin_tax_rule| %>
+                                <tr>
+                                    <td data-label="SL">1</td>
+                                    <td data-label="Tax Rules"><p><%= admin_tax_rule.name %></p></td>
+                                    <td data-label="Status"><p class="btn btn-success btn-xs"><%= admin_tax_rule.status %></p></td>
+                                    <td data-label="Actions">
+                                       <%= link_to 'Edit', edit_admin_tax_rule_path(admin_tax_rule), class: "btn btn-success" %>
+                                       <%= link_to 'Destroy', admin_tax_rule, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+                                    </td>
+                                </tr>
+                                <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="add-new-award" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add Tax Rule</h4>
+                    </div>
+                    <%= render "admin/tax_rules/new" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

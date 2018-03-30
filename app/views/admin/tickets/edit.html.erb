@@ -68,7 +68,7 @@
                                         </div>
                                         <div class="clearfix">
                                             <span class="ticket-status-title">Message:</span>
-                                            <div class="ticket-status-content"><div><p><%= @admin_ticket.message %></p></div></div>
+                                            <div class="ticket-status-content"><div><p><%= @admin_ticket.message.html_safe %></p></div></div>
                                         </div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="ticket_discussion">

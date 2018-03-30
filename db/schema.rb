@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180329083116) do
+ActiveRecord::Schema.define(version: 20180330125505) do
 
   create_table "admin_assessments", force: :cascade do |t|
     t.integer "admin_department_id"
@@ -195,6 +195,14 @@ ActiveRecord::Schema.define(version: 20180329083116) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "admin_languages", force: :cascade do |t|
+    t.string "name"
+    t.string "status"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "admin_leaves", force: :cascade do |t|
     t.integer "admin_employee_id"
     t.string "leave_type"
@@ -280,6 +288,13 @@ ActiveRecord::Schema.define(version: 20180329083116) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "admin_tax_rules", force: :cascade do |t|
+    t.string "name"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "admin_tickets", force: :cascade do |t|
     t.integer "admin_employee_id"
     t.string "subject"
@@ -353,6 +368,19 @@ ActiveRecord::Schema.define(version: 20180329083116) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["type"], name: "index_ckeditor_assets_on_type"
+  end
+
+  create_table "departments", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "designations", force: :cascade do |t|
+    t.string "name"
+    t.integer "admin_department_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "roles", force: :cascade do |t|

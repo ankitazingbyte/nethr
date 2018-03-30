@@ -1,0 +1,21 @@
+<%= form_for Admin::Language.new do |form| %>
+  <div class="form-group">
+      <label>Language Name</label>
+      <span class="help">e.g. "English"</span>
+      <%= form.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+      <label>Status</label>
+      <%= form.select :status, %w{Active Inactive}, :prompt => 'Select', required: true, placeholder: 'status', class: 'form-control' %>
+  </div>
+  <div class="form-group">
+      <label>Flag</label>
+      <div class="input-group input-group-file">
+          <span class="input-group-btn">
+              <%= form.file_field :image, class: "btn btn-primary btn-file" %>
+          </span>
+      </div>
+  </div>
+  <p class="text-uppercase text-complete help">It will take few minutes. Please don't reload the page</p>
+  <%= form.submit "Add", class: "btn btn-success btn-sm pull-right"%>
+<% end %>

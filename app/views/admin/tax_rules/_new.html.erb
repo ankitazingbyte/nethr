@@ -1,0 +1,19 @@
+<%= form_for Admin::TaxRule.new do |form| %>
+  <div class="modal-body">
+    <div class="form-group">
+        <label>Tax Rule Name</label>
+        <%= form.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="form-group m-none">
+        <label for="e20">Status</label>
+        <%= form.select :status, %w{Active Inactive}, :prompt => 'Select', required: true, placeholder: 'status', class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+      <input type="hidden" name="_token" value="SELmVDAPAv5cj2J1RIOizeIjjDsw8WR0Eov9r6sS">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <%= form.submit "Add", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @admin_language.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @admin_language.status %>
+</p>
+
+<p>
+  <strong>Attachment:</strong>
+  <%= @admin_language.attachment %>
+</p>
+
+<%= link_to 'Edit', edit_admin_language_path(@admin_language) %> |
+<%= link_to 'Back', admin_languages_path %>

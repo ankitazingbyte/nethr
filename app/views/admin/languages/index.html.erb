@@ -1,0 +1,47 @@
+ <section class="wrapper-bottom-sec">
+    <div class="p-30">
+        <h2 class="page-title">Language</h2>
+    </div>
+    <div class="p-30 p-t-none p-b-none">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Add Language</h3>
+                    </div>
+                    <div class="panel-body">
+                        <%= render 'form' %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">All Languages</h3>
+                    </div>
+                    <div class="panel-body p-none">
+                        <table class="table data-table table-hover table-ultra-responsive">
+                            <thead>
+                            <tr>
+                                <th style="width: 15%;">Flag</th>
+                                <th style="width: 35%;">Language Name</th>
+                                <th style="width: 25%;">Status</th>
+                                <th style="width: 25%;">Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <% @admin_languages.each do |admin_language| %>
+                                    <tr>
+                                        <td data-label="flag"><%= image_tag admin_language.image.url %></td>
+                                        <td data-label="language"><p><%= admin_language.name %></p></td>
+                                        <td data-label="Status"><p class="btn btn-success btn-xs"><%= admin_language.status %></p></td>
+                                    </tr>
+                                <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
