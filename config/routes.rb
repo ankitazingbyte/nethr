@@ -1,22 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    resources :languages
-  end
-  namespace :admin do
-    resources :tax_rules
-  end
-  namespace :admin do
-    resources :task_files
-  end
-  namespace :admin do
-    resources :task_discussions
-  end
-  namespace :admin do
-    resources :documents
-  end
-  namespace :admin do
-    resources :banks
-  end
     root 'home#index'
     get 'home/index'
     devise_for :users
@@ -26,6 +8,8 @@ Rails.application.routes.draw do
         get 'home/profile'
         get 'home/payroll_summery'
         get 'home/salary_statement'
+        get 'home/job_applicant'
+        get 'home/system'
         resources :departments
         resources :designations
         resources :jobs
@@ -49,6 +33,12 @@ Rails.application.routes.draw do
         resources :notices
         resources :expenses
         resources :holidays
+        resources :banks
+        resources :documents
+        resources :task_discussions
+        resources :task_files
+        resources :tax_rules
+        resources :languages
         resources :events do 
           collection do 
             get :get_events

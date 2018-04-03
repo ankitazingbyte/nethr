@@ -406,6 +406,8 @@ ActiveRecord::Schema.define(version: 20180330125505) do
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.string "image"
+    t.string "first_name"
+    t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

@@ -25,9 +25,9 @@
                             <tbody>
                                 <% @admin_tickets.each do |admin_ticket| %>
                                     <tr>
-                                        <td>1</td>
-                                        <td><%= admin_ticket.admin_employee_id %></td>
-                                        <td>employee@coderpixel.com</td>
+                                        <td><%= admin_ticket.id %></td>
+                                        <td><%= Admin::Employee.where(id: admin_ticket.admin_employee_id)[0].first_name if admin_ticket.admin_employee_id %></td>
+                                        <td><%#= Admin::Employee.where(id: admin_ticket.admin_employee_id)[0].email if admin_ticket.admin_employee_id %></td>
                                         <td><%= admin_ticket.subject %></td>
                                         <td><%= admin_ticket.created_at %></td>
                                         <td><span class="label label-success"><%= admin_ticket.status %></span></td>

@@ -18,7 +18,7 @@ class Admin::TaskDiscussionsController < ApplicationController
   def create
     @admin_task_discussion = Admin::TaskDiscussion.new(admin_task_discussion_params)
       if @admin_task_discussion.save
-        redirect_to @admin_task
+        redirect_to @admin_task_discussion
       else
         render 'new'
       end
@@ -26,7 +26,7 @@ class Admin::TaskDiscussionsController < ApplicationController
 
   def update
       if @admin_task_discussion.update(admin_task_discussion_params)
-        redirect_to @admin_task
+        redirect_to @admin_task_discussion
       else
         render 'edit'
       end

@@ -29,7 +29,7 @@
                                     <% @admin_loans.each do |admin_loan| %>
                                         <tr>
                                             <td data-label="Title"><%= admin_loan.title %></td>
-                                            <td data-label="Employee Name"><%= admin_loan.admin_employee_id %></td>
+                                            <td data-label="Employee Name"><%= admin_loan.admin_employee_id %><%= Admin::Employee.where(id: admin_loan.admin_employee_id)[0].first_name if admin_loan.admin_employee_id %></td>
                                             <td data-label="Loan Date"><p><%= admin_loan.loan_date %></p></td>
                                             <td data-label="Repayment Start Date"><%= admin_loan.repayment_start_date %></td>
                                             <td data-label="Amount">$ 50000.00</td>

@@ -26,7 +26,8 @@
                                         <td data-label="SL"><%= admin_employee.id %></td>
                                         <td data-label="Name"><p><%= admin_employee.first_name %><%= admin_employee.last_name %></p></td>
                                         <td data-label="Username"><p><%= admin_employee.user_name %></p></td>
-                                        <td data-label="Designation"><p><%= admin_employee.admin_designation_id %></p></td>
+                                        <td data-label="Designation"><p><%= Admin::Designation.where(id: admin_employee.admin_designation_id)[0].name if admin_employee.admin_designation_id %></p></td>
+                                <% end %>
                                         <td data-label="Actions">
                                             <a class="btn btn-success btn-xs" href="#" data-toggle="modal" data-target=".modal_get_salary_statement_3"><i class="fa fa-line-chart"></i>Salary Statement</a>
                                             <div class="modal fade modal_get_salary_statement_3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -36,26 +37,39 @@
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                             <h4 class="modal-title" id="myModalLabel">Salary Statement</h4>
                                                         </div>
-                                                        <%# form_tag admin_home_payroll_summery_path, :method => 'get' do %>
-                                                            <%#= text_field_tag :search, params[:search] %>
+                                                        <% form_for Admin::Increment.new do |f|%>
                                                             <div class="modal-body">
                                                                 <div class="form-group">
-                                                                    <label>Date From :</label>
-                                                                    <%#= text_field_tag 'search[date_form]', @search.date_form %>
-                                                                </div>
-                                                                <br>
-                                                                <br>
-                                                                <div class="form-group">
-                                                                    <label>Date To :</label>
-                                                                    <%#= text_field_tag 'search[date_to]', @search.date_to %>
+                                                                    <%= text_field_tag :search, params[:search] %>
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <input type="hidden" name="_token" value="rzT06BX1CL0PzIecaUvAQT3VnoQvkn4SpksAA3A1">
                                                                 <input type="hidden" name="cmd" value="3">
                                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                                <%#= submit_tag "submit", class: "btn btn-primary" %>
+                                                                <%= f.submit "Search", :name => nil %>
                                                             </div>
+                                                        <% end %>
+                                                        <%# form_tag admin_home_payroll_summery_path, :method => 'get' do %>
+                                                            <%#= text_field_tag :search, params[:search] %>
+                                                            <!-- <div class="modal-body">
+                                                                <div class="form-group">
+                                                                    <label>Date From :</label> -->
+                                                                    <%#= text_field_tag 'search[date_form]', @search.date_form %>
+                                                               <!--  </div>
+                                                                <br>
+                                                                <br>
+                                                                <div class="form-group">
+                                                                    <label>Date To :</label> -->
+                                                                    <%#= text_field_tag 'search[date_to]', @search.date_to %>
+                                                                <!-- </div>
+                                                            </div> -->
+                                                            <!-- <div class="modal-footer">
+                                                                <input type="hidden" name="_token" value="rzT06BX1CL0PzIecaUvAQT3VnoQvkn4SpksAA3A1">
+                                                                <input type="hidden" name="cmd" value="3">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                                                                <%#= submit_tag "submit", class: "btn btn-primary" %>
+                                                            <!-- </div> -->
                                                         <%# end %>
                                                     </div>
                                                 </div>
@@ -63,7 +77,6 @@
                                            <!--  <a class="btn btn-complete btn-xs" href="http://coderpixel.com/demo/advanced-hrm/reports/employee-summery/3" ><i class="fa fa-bar-chart"></i> Employee Summery</a> -->
                                         </td>
                                     </tr>
-                                <% end %>
                             </tbody>
                         </table>
                     </div>

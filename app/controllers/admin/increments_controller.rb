@@ -3,6 +3,7 @@ class Admin::IncrementsController < ApplicationController
 
   def index
     @admin_increments = Admin::Increment.all
+    @admin_increments = Admin::Increment.search(params[:name])
   end
 
   def show

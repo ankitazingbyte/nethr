@@ -28,6 +28,7 @@
         <div class="form-group">
             <label>Year</label>
             <%= select_year(Date.today, {:start_year => DateTime.now.year, :end_year => DateTime.now.year - 117}, {:name => 'buddy[dob(1i)]', :id => 'buddy_dob_1i', :class => 'form-control'}) %>
+            <%#= form.text_field :year,id: "datepicker" %>
         </div>
     </div>
     <div class="modal-footer">

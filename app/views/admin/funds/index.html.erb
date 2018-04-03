@@ -26,7 +26,7 @@
                             <tbody>
                                 <% @admin_funds.each do |admin_fund| %>
                                     <tr>
-                                        <td data-label="Employee Name"><%= admin_fund.admin_employee_id %></td>
+                                        <td data-label="Employee Name"><%= Admin::Employee.where(id: admin_fund.admin_employee_id)[0].first_name if admin_fund.admin_employee_id %></td>
                                         <td data-label="Fund Type"><p><%= admin_fund.fund_type %></p></td>
                                         <td data-label="Employee Share"><p><%= admin_fund.employee_share %></p>
                                         </td>

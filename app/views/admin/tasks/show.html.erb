@@ -45,7 +45,7 @@
 
                                         <h3>Task Members:</h3>
                                         <hr>
-                                           <%= @admin_task.admin_employee_id %><br>
+                                           <%= Admin::Employee.where(id: @admin_task.admin_employee_id)[0].first_name if @admin_task.admin_employee_id %><br>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="task_discussion">
                                         <%= render 'admin/task_discussions/form'%>

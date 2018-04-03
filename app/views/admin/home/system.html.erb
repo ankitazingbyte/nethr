@@ -1,0 +1,569 @@
+<section class="wrapper-bottom-sec">
+        <div class="p-30">
+            <h2 class="page-title">System Settings</h2>
+        </div>
+        <div class="p-30 p-t-none p-b-none">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab"><i class="fa fa-cog"></i> General</a></li>
+                        <li role="presentation"><a href="#officeTime" aria-controls="officeTime" role="tab" data-toggle="tab"><i class="fa fa-clock-o"></i> Office Time</a></li>
+                        <li role="presentation"><a href="#expense" aria-controls="expense" role="tab" data-toggle="tab"><i class="fa fa-bar-chart"></i> Expense</a></li>
+                        <li role="presentation"><a href="#leave" aria-controls="leave" role="tab" data-toggle="tab"><i class="fa fa-bed"></i> Leave</a></li>
+                        <li role="presentation"><a href="#award" aria-controls="award" role="tab" data-toggle="tab"><i class="fa fa-trophy"></i> Award</a></li>
+                        <li role="presentation"><a href="#job" aria-controls="job" role="tab" data-toggle="tab"><i class="fa fa-briefcase"></i> Job</a></li>
+                    </ul>
+                    <div class="tab-content panel p-20">
+                        <div role="tabpanel" class="tab-pane active" id="general">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <form class="" role="form" action="http://coderpixel.com/demo/advanced-hrm/settings/post-general-setting" method="post" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label>Application Name</label>
+                                            <input type="text" class="form-control" required name="app_name" value="Advanced HRM">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Application Title</label>
+                                            <input type="text" class="form-control" name="app_title" required="" value="Advanced HRM">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Address</label>
+                                            <textarea class="form-control textarea-wysihtml5" name="address">&lt;br&gt;4th Floor, House #11, Block #B, Rampura, Banasree Project.&lt;br&gt;Dhaka &ndash; 1219, Bangladesh</textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>System Email</label>
+                                            <span class="help">Remember: All Email Going to the Receiver from this Email</span>
+                                            <input type="email" class="form-control" required name="email" value="support@coderpixel.com">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Footer Text</label>
+                                            <input type="text" class="form-control" required name="footer" value="Copyright &copy; Coder Pixel 2017">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Application Logo</label>
+                                            <div class="input-group input-group-file">
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-primary btn-file">
+                                                Browse <input type="file" class="form-control" name="app_logo">
+                                            </span>
+                                        </span>
+                                                <input type="text" class="form-control" readonly="">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Application Favicon</label>
+                                            <div class="input-group input-group-file">
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-primary btn-file">
+                                                Browse <input type="file" class="form-control" name="app_fav">
+                                            </span>
+                                        </span>
+                                                <input type="text" class="form-control" readonly="">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Email Gateway</label>
+                                            <select class="selectpicker form-control gateway" name="email_gateway">
+                                                <option value="default" selected >Server Default </option>
+                                                <option value="smtp" >SMTP</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="show-smtp">
+                                            <div class="form-group">
+                                                <label for="fname">SMTP Host Name</label>
+                                                <input type="text" class="form-control" required="" name="host_name" value="smtp.gmail.com">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="fname">SMTP User Name</label>
+                                                <input type="text" class="form-control" required="" name="user_name" value="user@example.com">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="fname">SMTP Password</label>
+                                                <input type="text" class="form-control" required="" name="password" value="testpassword">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="fname">SMTP Port</label>
+                                                <input type="text" class="form-control" required="" name="port" value="587">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="Default Gateway">SMTP Secure</label>
+                                                <select name="secure" class="selectpicker form-control">
+                                                    <option value="tls" selected >TLS</option>
+                                                    <option value="ssl">SSL</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                        <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-edit"></i> Update</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="officeTime">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <form class="" role="form" action="http://coderpixel.com/demo/advanced-hrm/settings/post-office-time" method="post">
+                                        <div class="form-group">
+                                            <label for="officetime">Office In Time</label>
+                                            <input type='text' class="form-control timePicker" name="office_in_time" value="09:25 AM"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="officetime">Office Out Time</label>
+                                            <input type='text' class="form-control timePicker" name="office_out_time" value="05:25 PM"/>
+                                        </div>
+                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                        <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-edit"></i> Update</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="expense">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <form class="" role="form" method="post"
+                                          action="http://coderpixel.com/demo/advanced-hrm/settings/post-expense-title">
+                                        <h3 class="panel-title"> Add New Expense Title</h3>
+
+                                        <div class="form-group">
+                                            <label>Expense Title</label>
+                                            <span class="help">e.g. "Employee Salary"</span>
+                                            <input type="text" class="form-control" required name="expense">
+                                        </div>
+
+                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                        <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add </button>
+                                    </form>
+                                </div>
+                                <div class="col-lg-8">
+                                    <h3 class="panel-title">Expense Title List</h3>
+                                    <table class="table data-table table-hover table-ultra-responsive">
+                                        <thead>
+                                        <tr>
+                                            <th style="width: 10%;">SL#</th>
+                                            <th style="width: 65%;">Expense Title</th>
+                                            <th style="width: 25%;">Actions</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-label="SL">1</td>
+                                                <td data-label="Expense"><p>Employee Salary</p></td>
+                                                <td>
+                                                    <a class="btn btn-success btn-xs" href="#" data-toggle="modal" data-target=".modal_edit_expense_type_1"><i class="fa fa-edit"></i> Edit</a>
+                                                    <div class="modal fade modal_edit_expense_type_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                <h4 class="modal-title" id="myModalLabel">Edit Expense Title</h4>
+                                                            </div>
+                                                            <form class="form-some-up form-block" role="form" action="http://coderpixel.com/demo/advanced-hrm/settings/update-expense-title" method="post">
+                                                                <div class="modal-body">
+                                                                    <div class="form-group">
+                                                                        <label>Expense Title :</label>
+                                                                        <input type="text" class="form-control" required="" name="expense" value="Employee Salary">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                                                    <input type="hidden" name="cmd" value="1">
+                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                    <button type="submit" class="btn btn-primary">Update</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <a href="#" class="btn btn-danger btn-xs deleteExpense" id="1"><i class="fa fa-trash"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="SL">2</td>
+                                                <td data-label="Expense"><p>TADA Bill</p></td>
+                                                <td>
+                                                    <a class="btn btn-success btn-xs" href="#" data-toggle="modal" data-target=".modal_edit_expense_type_2"><i class="fa fa-edit"></i> Edit</a>
+                                                    <div class="modal fade modal_edit_expense_type_2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                    <h4 class="modal-title" id="myModalLabel">Edit Expense Title</h4>
+                                                                </div>
+                                                                <form class="form-some-up form-block" role="form" action="http://coderpixel.com/demo/advanced-hrm/settings/update-expense-title" method="post">
+                                                                    <div class="modal-body">
+                                                                        <div class="form-group">
+                                                                            <label>Expense Title :</label>
+                                                                            <input type="text" class="form-control" required="" name="expense" value="TADA Bill">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                                                        <input type="hidden" name="cmd" value="2">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="btn btn-danger btn-xs deleteExpense" id="2"><i class="fa fa-trash"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="SL">3</td>
+                                                <td data-label="Expense"><p>Marketing</p></td>
+                                                <td>
+                                                    <a class="btn btn-success btn-xs" href="#" data-toggle="modal" data-target=".modal_edit_expense_type_3"><i class="fa fa-edit"></i> Edit</a>
+                                                    <div class="modal fade modal_edit_expense_type_3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                    <h4 class="modal-title" id="myModalLabel">Edit Expense Title</h4>
+                                                                </div>
+                                                                <form class="form-some-up form-block" role="form" action="http://coderpixel.com/demo/advanced-hrm/settings/update-expense-title" method="post">
+                                                                    <div class="modal-body">
+                                                                        <div class="form-group">
+                                                                            <label>Expense Title :</label>
+                                                                            <input type="text" class="form-control" required="" name="expense" value="Marketing">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                                                        <input type="hidden" name="cmd" value="3">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="btn btn-danger btn-xs deleteExpense" id="3"><i class="fa fa-trash"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="leave">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <form class="" role="form" method="post"
+                                          action="http://coderpixel.com/demo/advanced-hrm/settings/post-leave-type">
+                                        <h3 class="panel-title"> Leave Type</h3>
+                                        <div class="form-group">
+                                            <label>Leave Title</label>
+                                            <span class="help">e.g. "Sick Leave"</span>
+                                            <input type="text" class="form-control" required name="leave">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Leave Quota</label>
+                                            <span class="help">e.g. "12" Days/Year</span>
+                                            <input type="number" class="form-control" required name="leave_quota">
+                                        </div>
+                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                        <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add </button>
+                                    </form>
+                                </div>
+                                <div class="col-lg-8">
+                                    <h3 class="panel-title">Leave Title List</h3>
+                                    <table class="table data-table table-hover table-ultra-responsive">
+                                        <thead>
+                                        <tr>
+                                            <th style="width: 10%;">SL#</th>
+                                            <th style="width: 40%;">Leave Type</th>
+                                            <th style="width: 20%;">Leave Quota</th>
+                                            <th style="width: 25%;">Actions</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-label="SL">1</td>
+                                                <td data-label="Leave"><p>Sick Leave</p></td>
+                                                <td data-label="LeaveQuota"><p>12</p></td>
+                                                <td>
+                                                    <a class="btn btn-success btn-xs" href="#" data-toggle="modal" data-target=".modal_edit_leave_type_1"><i class="fa fa-edit"></i> Edit</a>
+                                                    <div class="modal fade modal_edit_leave_type_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                    <h4 class="modal-title" id="myModalLabel">Edit Leave Type</h4>
+                                                                </div>
+                                                                <form class="form-some-up form-block" role="form" action="http://coderpixel.com/demo/advanced-hrm/settings/update-leave-type" method="post">
+                                                                    <div class="modal-body">
+                                                                        <div class="form-group">
+                                                                            <label>Leave Title :</label>
+                                                                            <input type="text" class="form-control" required="" name="leave" value="Sick Leave">
+                                                                        </div>
+
+                                                                        <div class="form-group">
+                                                                            <label>Leave Quota</label>
+                                                                            <input type="number" class="form-control" required name="leave_quota" value="12">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                                                        <input type="hidden" name="cmd" value="1">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="btn btn-danger btn-xs deleteLeave" id="1"><i class="fa fa-trash"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="SL">2</td>
+                                                <td data-label="Leave"><p>Causal Leave</p></td>
+                                                <td data-label="LeaveQuota"><p>12</p></td>
+                                                <td>
+                                                    <a class="btn btn-success btn-xs" href="#" data-toggle="modal" data-target=".modal_edit_leave_type_2"><i class="fa fa-edit"></i> Edit</a>
+                                                    <div class="modal fade modal_edit_leave_type_2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                    <h4 class="modal-title" id="myModalLabel">Edit Leave Type</h4>
+                                                                </div>
+                                                                <form class="form-some-up form-block" role="form" action="http://coderpixel.com/demo/advanced-hrm/settings/update-leave-type" method="post">
+                                                                    <div class="modal-body">
+                                                                        <div class="form-group">
+                                                                            <label>Leave Title :</label>
+                                                                            <input type="text" class="form-control" required="" name="leave" value="Causal Leave">
+                                                                        </div>
+
+                                                                        <div class="form-group">
+                                                                            <label>Leave Quota</label>
+                                                                            <input type="number" class="form-control" required name="leave_quota" value="12">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                                                        <input type="hidden" name="cmd" value="2">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="btn btn-danger btn-xs deleteLeave" id="2"><i class="fa fa-trash"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="SL">3</td>
+                                                <td data-label="Leave"><p>EMERGENCY LEAVE</p></td>
+                                                <td data-label="LeaveQuota"><p>8</p></td>
+                                                <td>
+                                                    <a class="btn btn-success btn-xs" href="#" data-toggle="modal" data-target=".modal_edit_leave_type_3"><i class="fa fa-edit"></i> Edit</a>
+                                                    <div class="modal fade modal_edit_leave_type_3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                    <h4 class="modal-title" id="myModalLabel">Edit Leave Type</h4>
+                                                                </div>
+                                                                <form class="form-some-up form-block" role="form" action="http://coderpixel.com/demo/advanced-hrm/settings/update-leave-type" method="post">
+                                                                    <div class="modal-body">
+                                                                        <div class="form-group">
+                                                                            <label>Leave Title :</label>
+                                                                            <input type="text" class="form-control" required="" name="leave" value="EMERGENCY LEAVE">
+                                                                        </div>
+
+                                                                        <div class="form-group">
+                                                                            <label>Leave Quota</label>
+                                                                            <input type="number" class="form-control" required name="leave_quota" value="8">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                                                        <input type="hidden" name="cmd" value="3">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                                    </div>
+
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="btn btn-danger btn-xs deleteLeave" id="3"><i class="fa fa-trash"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="award">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <form class="" role="form" method="post"
+                                          action="http://coderpixel.com/demo/advanced-hrm/settings/post-award-name">
+                                        <h3 class="panel-title"> Award Name</h3>
+                                        <div class="form-group">
+                                            <label>Award Name</label>
+                                            <span class="help">e.g. "Best Employee"</span>
+                                            <input type="text" class="form-control" required name="award">
+                                        </div>
+                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                        <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add </button>
+                                    </form>
+                                </div>
+                                <div class="col-lg-8">
+                                    <h3 class="panel-title">Award Name List</h3>
+                                    <table class="table data-table table-hover table-ultra-responsive">
+                                        <thead>
+                                        <tr>
+                                            <th style="width: 10%;">SL#</th>
+                                            <th style="width: 65%;">Award Name</th>
+                                            <th style="width: 25%;">Actions</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-label="SL">1</td>
+                                                <td data-label="Expense"><p>Best Employee</p></td>
+                                                <td>
+                                                    <a class="btn btn-success btn-xs" href="#" data-toggle="modal" data-target=".modal_edit_award_type_1"><i class="fa fa-edit"></i> Edit</a>
+                                                    <div class="modal fade modal_edit_award_type_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                    <h4 class="modal-title" id="myModalLabel">Edit Award Name</h4>
+                                                                </div>
+                                                                <form class="form-some-up form-block" role="form" action="http://coderpixel.com/demo/advanced-hrm/settings/update-award-name" method="post">
+                                                                    <div class="modal-body">
+                                                                        <div class="form-group">
+                                                                            <label>Award Name :</label>
+                                                                            <input type="text" class="form-control" required="" name="award" value="Best Employee">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                                                        <input type="hidden" name="cmd" value="1">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <a href="#" class="btn btn-danger btn-xs deleteAward" id="1"><i class="fa fa-trash"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="SL">2</td>
+                                                <td data-label="Expense"><p>Employee of the Year</p></td>
+                                                <td>
+                                                    <a class="btn btn-success btn-xs" href="#" data-toggle="modal" data-target=".modal_edit_award_type_2"><i class="fa fa-edit"></i> Edit</a>
+                                                    <div class="modal fade modal_edit_award_type_2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                    <h4 class="modal-title" id="myModalLabel">Edit Award Name</h4>
+                                                                </div>
+                                                                <form class="form-some-up form-block" role="form" action="http://coderpixel.com/demo/advanced-hrm/settings/update-award-name" method="post">
+
+                                                                    <div class="modal-body">
+
+                                                                        <div class="form-group">
+                                                                            <label>Award Name :</label>
+                                                                            <input type="text" class="form-control" required="" name="award" value="Employee of the Year">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                                                        <input type="hidden" name="cmd" value="2">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                                    </div>
+
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="btn btn-danger btn-xs deleteAward" id="2"><i class="fa fa-trash"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="SL">3</td>
+                                                <td data-label="Expense"><p>Employee of the Month</p></td>
+                                                <td>
+                                                    <a class="btn btn-success btn-xs" href="#" data-toggle="modal" data-target=".modal_edit_award_type_3"><i class="fa fa-edit"></i> Edit</a>
+                                                    <div class="modal fade modal_edit_award_type_3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                    <h4 class="modal-title" id="myModalLabel">Edit Award Name</h4>
+                                                                </div>
+                                                                <form class="form-some-up form-block" role="form" action="http://coderpixel.com/demo/advanced-hrm/settings/update-award-name" method="post">
+                                                                    <div class="modal-body">
+                                                                        <div class="form-group">
+                                                                            <label>Award Name :</label>
+                                                                            <input type="text" class="form-control" required="" name="award" value="Employee of the Month">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                                                        <input type="hidden" name="cmd" value="3">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" class="btn btn-danger btn-xs deleteAward" id="3"><i class="fa fa-trash"></i> Delete</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="job">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form class="" role="form" method="post"
+                                          action="http://coderpixel.com/demo/advanced-hrm/settings/post-job-file-extension">
+                                        <h3 class="panel-title"> Job File Extension</h3>
+                                        <div class="form-group">
+                                            <label>Supported File Extension</label>
+                                            <span class="help">e.g. "Doc,PDF" (Remember: File Extension Separated By Comma
+                                                )</span>
+                                            <input type="text" class="form-control" required name="file_extension"
+                                                   value="doc,pdf,docx">
+                                        </div>
+                                        <input type="hidden" name="_token" value="KIGblwl91EYbRnrDJa62FmjNvXGCvyairRDQxG9E">
+                                        <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-save"></i> Save </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>

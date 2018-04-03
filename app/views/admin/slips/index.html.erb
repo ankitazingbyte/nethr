@@ -26,7 +26,7 @@
                                 <% @admin_slips.each do |admin_slip| %>
                                     <tr>
                                         <td data-label="SL">1</td>
-                                        <td><%= admin_slip.admin_employee_id %></td>
+                                        <td><%= Admin::Employee.where(id: admin_slip.admin_employee_id)[0].first_name if admin_slip.admin_employee_id %></td>
                                         <td><%= admin_slip.payment_by %></td>
                                         <td><%= admin_slip.basic_salary %></td>
                                         <td data-label="Actions" class="text-right">

@@ -17,25 +17,24 @@ class Admin::TaskFilesController < ApplicationController
 
   def create
     @admin_task_file = Admin::TaskFile.new(admin_task_file_params)
-
       if @admin_task_file.save
-        redirect_to admin_task_path(@admin_task)
+        redirect_to @admin_task_file
       else
         render 'new' 
       end
   end
 
   def update
-      if @admin_task_file.update(admin_task_file_params)
-        redirect_to admin_task_path(@admin_task)
-      else
-        render 'edit' 
-      end
+    if @admin_task_file.update(admin_task_file_params)
+      redirect_to @admin_task_file
+    else
+      render 'edit' 
+    end
   end
 
   def destroy
     @admin_task_file.destroy
-      redirect_to admin_task_url(@admin_task)
+      redirect_to admin_task_file(@admin_task_file)
   end
 
   private

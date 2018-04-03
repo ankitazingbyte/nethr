@@ -28,7 +28,7 @@
                         <% @admin_trainers.each do |admin_trainer| %>
                           <tr>
                               <td data-label="Name"><p><%= admin_trainer.first_name %><%= admin_trainer.lastname %></p></td>
-                              <td data-label="Email"><p>trainer@coderpixel.com</p></td>
+                              <td data-label="Email"><p><%= admin_trainer.email %></p></td>
                               <td data-label="Designation"><p><%= admin_trainer.designation %></p></td>
                               <td data-label="Organization"><p><%= admin_trainer.organization %></p></td>
                               <td data-label="Actions" class="text-right">
