@@ -27,7 +27,8 @@
 
         <div class="form-group">
             <label>Year</label>
-            <%= select_year(Date.today, {:start_year => DateTime.now.year, :end_year => DateTime.now.year - 117}, {:name => 'buddy[dob(1i)]', :id => 'buddy_dob_1i', :class => 'form-control'}) %>
+            <%#= select_year(Date.today, {:start_year => DateTime.now.year, :end_year => DateTime.now.year - 117}, {:name => 'buddy[dob(1i)]', :id => 'buddy_dob_1i', :class => 'form-control'}) %>
+            <%= form.select :year, (Time.zone.now.year - 100)..(Time.zone.now.year + 1) %>
             <%#= form.text_field :year,id: "datepicker" %>
         </div>
     </div>

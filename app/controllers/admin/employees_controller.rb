@@ -5,14 +5,12 @@ class Admin::EmployeesController < Admin::AdminController
     @admin_employees = Admin::Employee.all
   end
 
-
   def show
   end
 
-
   def new
     @admin_employee = Admin::Employee.new
-
+    @user = User.new
   end
 
   def edit
@@ -30,11 +28,11 @@ class Admin::EmployeesController < Admin::AdminController
   end
 
   def update
-      if @admin_employee.update(admin_employee_params)
-        redirect_to action: "index"
-      else
-        render 'edit'
-      end
+    if @admin_employee.update(admin_employee_params)
+      redirect_to action: "index"
+    else
+      render 'edit'
+    end
   end
 
   def destroy

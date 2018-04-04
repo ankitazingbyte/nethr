@@ -5,18 +5,15 @@
                 <label>First Name</label>
                 <%= form.text_field :first_name,class: "form-control" %>
             </div>
-
             <div class="form-group">
                 <label>Last Name</label>
                 <%= form.text_field :last_name, class: "form-control" %>
             </div>
-
             <div class="form-group">
                 <label>Employee Code</label>
                 <span class="help">e.g. "546814" (Unique For every User)</span>
                 <%= form.text_field :employee_code, class: "form-control" %>
             </div>
-
             <div class="form-group">
                 <label>Username</label>
                 <span class="help">e.g. "employee" (Unique For every User)</span>
@@ -32,13 +29,11 @@
                     <span class="help">e.g. "coderpixel@gmail.com" (Unique For every User)</span>
                     <%= user.email_field :email, class: "form-control" %>
                 </div>
-
                 <div class="form-group">
                     <label>Password</label>
                     <span class="help">Leave blank if you no need to change password</span>
                     <%= user.password_field :password, class: "form-control" %>
                 </div>
-
                 <div class="form-group">
                     <label>Confirm Password</label>
                     <span class="help">Leave blank if you no need to change password</span>
@@ -50,43 +45,35 @@
                 </div>
             <% end %>
         </div>
-
         <div class="col-md-4">
             <div class="form-group">
                 <label for="el3">Department</label>
                 <%= form.select :admin_department_id, Admin::Department.all.map{|d| [d.name, d.id]}, class: "btn dropdown-toggle btn-default" %>
             </div>
-
             <div class="form-group">
                 <label for="el3">Designation</label>
                 <%= form.select :admin_designation_id, Admin::Designation.all.map{|d| [d.name, d.id]}, class: "btn dropdown-toggle btn-default" %>
             </div>
-
             <div class="form-group">
                 <label>Tax Template</label>
                 <%= form.select :tax_example, %w{TaxRule1 15000 PPn}, :prompt => 'Select', required: true, placeholder: 'Tax', class: 'form-control' %>
             </div>
-
             <div class="form-group">
                 <label>Date Of Join</label>
                 <%= form.text_field :date_of_join, class: "form-control", "data-provide" => 'datepicker' %>
             </div>
-
             <div class="form-group">
                 <label>Date Of Leave</label>
                 <%= form.text_field :date_of_leave, class: "form-control", "data-provide" => 'datepicker' %>
             </div>
-
             <div class="form-group">
                 <label>Phone Number</label>
                 <%= form.text_field :phone, class: "form-control" %>
             </div>
-
             <div class="form-group">
                 <label>Alternative Phone</label>
                 <%= form.text_field :alternative_phone, class: "form-control" %>
             </div>
-
             <div class="form-group">
                 <label>Status</label>
                 <%= form.select :status, %w{Active Inactive}, :prompt => 'Select', required: true, placeholder: 'Gender', class: 'form-control' %>
@@ -97,33 +84,27 @@
                 <label>Father Name</label>
                 <%= form.text_field :mother, class: "form-control" %>
             </div>
-
             <div class="form-group">
                 <label>Mother Name</label>
                 <%= form.text_field :father, class: "form-control" %>
             </div>
-
             <div class="form-group">
                 <label>Date Of Birth</label>
                 <%= form.text_field :date_of_birth, class: "form-control", "data-provide" => 'datepicker' %>
             </div>
-
             <div class="form-group">
                 <label>Gender</label>
                 <%= form.select :gender, %w{male Female}, :prompt => 'Select', required: true, placeholder: 'Gender', class: 'form-control' %>
             </div>
-
             <div class="form-group">
                 <label>Present Address</label>
                 <%= form.text_area :present_address, class: "form-control" %>
             </div>
-
             <div class="form-group">
                 <label>Permanent Address</label>
                 <%= form.text_area :permanent_address, class: "form-control" %>
             </div>
         </div>
-
         <div class="col-md-12">
             <%= form.submit  "submit", class: "btn btn-success pull-right" %>
         </div>
