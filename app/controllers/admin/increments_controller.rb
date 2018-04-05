@@ -1,4 +1,4 @@
-class Admin::IncrementsController < ApplicationController
+class Admin::IncrementsController < Admin::AdminController
   before_action :set_admin_increment, only: [:show, :edit, :update, :destroy]
 
   def index

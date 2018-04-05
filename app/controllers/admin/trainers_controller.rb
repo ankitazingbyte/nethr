@@ -1,4 +1,4 @@
-class Admin::TrainersController < ApplicationController
+class Admin::TrainersController < Admin::AdminController
   before_action :set_admin_trainer, only: [:show, :edit, :update, :destroy]
 
   def index

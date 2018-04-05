@@ -1,4 +1,4 @@
-class Admin::SlipsController < ApplicationController
+class Admin::SlipsController < Admin::AdminController
   before_action :set_admin_slip, only: [:show, :edit, :update, :destroy]
 
 

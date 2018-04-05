@@ -1,4 +1,4 @@
-class Admin::FundsController < ApplicationController
+class Admin::FundsController < Admin::AdminController
   before_action :set_admin_fund, only: [:show, :edit, :update, :destroy]
 
   def index

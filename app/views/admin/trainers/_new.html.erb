@@ -42,8 +42,8 @@
 
 	    <div class="form-group">
 	        <label for="Country">Country</label>
-            <%#= form.text_field :country, class: "form-control" %>
-            <%= form.collection_select :country, Country.find(:all), :id, :name, :prompt => "Select a Country" %>
+            <%= form.text_field :country, class: "form-control" %>
+            <%#= form.collection_select :country, Country.find(:all), :id, :name, :prompt => "Select a Country" %>
             <%#= form.country_select :ship_country, priority_countries = ["United States"], options = {}, html_options = {:class => "input-lg", :id => "payment_country"} %>
 	    </div>
 

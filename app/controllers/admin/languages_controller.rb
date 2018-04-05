@@ -1,4 +1,4 @@
-class Admin::LanguagesController < ApplicationController
+class Admin::LanguagesController < Admin::AdminController
   before_action :set_admin_language, only: [:show, :edit, :update, :destroy]
 
   def index

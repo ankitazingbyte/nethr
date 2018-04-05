@@ -1,4 +1,4 @@
-class Admin::DocumentsController < ApplicationController
+class Admin::DocumentsController < Admin::AdminController
   before_action :set_admin_document, only: [:show, :edit, :update, :destroy]
 
   def index

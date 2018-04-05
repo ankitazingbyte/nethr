@@ -1,4 +1,4 @@
-class Admin::BanksController < ApplicationController
+class Admin::BanksController < Admin::AdminController
   before_action :set_admin_bank, only: [:show, :edit, :update, :destroy]
 
   def index

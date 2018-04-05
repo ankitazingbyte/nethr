@@ -1,4 +1,4 @@
-class Admin::TaskDiscussionsController < ApplicationController
+class Admin::TaskDiscussionsController < Admin::AdminController
   before_action :set_admin_task_discussion, only: [:show, :edit, :update, :destroy]
 
   def index

@@ -1,4 +1,4 @@
-class Admin::HolidaysController < ApplicationController
+class Admin::HolidaysController < Admin::AdminController
   before_action :set_admin_holiday, only: [:show, :edit, :update, :destroy]
 
   def index

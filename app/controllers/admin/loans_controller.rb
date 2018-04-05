@@ -1,4 +1,4 @@
-class Admin::LoansController < ApplicationController
+class Admin::LoansController < Admin::AdminController
   before_action :set_admin_loan, only: [:show, :edit, :update, :destroy]
 
 

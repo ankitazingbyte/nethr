@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
     root 'home#index'
     get 'home/index'
-    devise_for :users
+    devise_for :users, controllers:{
+        sessions: 'users/sessions'
+      }
+
+    devise_scope :users do
+        get "/register", :to => "devise/registrations#new", :as => "new_registration"
+    end
+      # devise_scope :user do
+      #   get "user/sign_up", to: "users/registrations#new", as: :new_user_registration
+      #   post "user/sign_up", to: "users/registrations#create", as: :user_registration
+      # end
     namespace :admin do
 	    root 'home#index'
 		get 'home/index'

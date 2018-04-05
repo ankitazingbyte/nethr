@@ -1,4 +1,4 @@
-class Admin::SupportDepartmentsController < ApplicationController
+class Admin::SupportDepartmentsController < Admin::AdminController
   before_action :set_admin_support_department, only: [:show, :edit, :update, :destroy]
 
   def index

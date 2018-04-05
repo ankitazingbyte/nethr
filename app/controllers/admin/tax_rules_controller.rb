@@ -1,4 +1,4 @@
-class Admin::TaxRulesController < ApplicationController
+class Admin::TaxRulesController < Admin::AdminController
   before_action :set_admin_tax_rule, only: [:show, :edit, :update, :destroy]
 
   def index

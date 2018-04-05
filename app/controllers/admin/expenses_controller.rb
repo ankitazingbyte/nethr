@@ -1,4 +1,4 @@
-class Admin::ExpensesController < ApplicationController
+class Admin::ExpensesController < Admin::AdminController
   before_action :set_admin_expense, only: [:show, :edit, :update, :destroy]
 
   def index

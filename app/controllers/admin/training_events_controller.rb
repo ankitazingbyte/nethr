@@ -1,4 +1,4 @@
-class Admin::TrainingEventsController < ApplicationController
+class Admin::TrainingEventsController < Admin::AdminController
   before_action :set_admin_training_event, only: [:show, :edit, :update, :destroy]
 
   def index

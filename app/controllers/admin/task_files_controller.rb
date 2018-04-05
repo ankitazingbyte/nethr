@@ -1,4 +1,4 @@
-class Admin::TaskFilesController < ApplicationController
+class Admin::TaskFilesController < Admin::AdminController
   before_action :set_admin_task_file, only: [:show, :edit, :update, :destroy]
 
   def index

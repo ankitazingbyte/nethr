@@ -1,4 +1,4 @@
-class Admin::TasksController < ApplicationController
+class Admin::TasksController < Admin::AdminController
   before_action :set_admin_task, only: [:show, :edit, :update, :destroy]
 
   def index

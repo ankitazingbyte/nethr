@@ -1,4 +1,4 @@
-class Admin::TicketsController < ApplicationController
+class Admin::TicketsController < Admin::AdminController
   before_action :set_admin_ticket, only: [:show, :edit, :update, :destroy]
 
   def index

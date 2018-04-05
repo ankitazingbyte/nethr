@@ -1,4 +1,4 @@
-class Admin::EvaluationsController < ApplicationController
+class Admin::EvaluationsController < Admin::AdminController
   before_action :set_admin_evaluation, only: [:show, :edit, :update, :destroy]
 
   def index
