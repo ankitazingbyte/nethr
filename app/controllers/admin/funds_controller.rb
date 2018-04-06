@@ -20,6 +20,7 @@ class Admin::FundsController < Admin::AdminController
   def create
     @admin_fund = Admin::Fund.new(admin_fund_params)
       if @admin_fund.save
+        flash[:success] = "Department successfully created"
         redirect_to action: "index"
       else
         render 'new'
@@ -28,6 +29,7 @@ class Admin::FundsController < Admin::AdminController
 
   def update
     if @admin_fund.update(admin_fund_params)
+      flash[:success] = "Department successfully updated"
       redirect_to action: "index"
     else
       render 'edit'
@@ -36,6 +38,7 @@ class Admin::FundsController < Admin::AdminController
 
   def destroy
     @admin_fund.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_funds_url
   end
 

@@ -20,6 +20,7 @@ class Admin::DocumentsController < Admin::AdminController
     @admin_document = Admin::Document.new(admin_document_params)
 
       if @admin_document.save
+        flash[:success] = "Department successfully created"
         redirect_to @admin_document
         render 'new'
       end
@@ -27,6 +28,7 @@ class Admin::DocumentsController < Admin::AdminController
 
   def update
       if @admin_document.update(admin_document_params)
+        flash[:success] = "Department successfully updated"
         redirect_to @admin_document
       else
         render 'edit' 
@@ -36,6 +38,7 @@ class Admin::DocumentsController < Admin::AdminController
 
   def destroy
     @admin_document.destroy
+    flash[:success] = "Department successfully deleted"
      redirect_to admin_documents_url
   end
 

@@ -18,6 +18,7 @@ class Admin::HolidaysController < Admin::AdminController
   def create
     @admin_holiday = Admin::Holiday.new(admin_holiday_params)
       if @admin_holiday.save
+        flash[:success] = "Department successfully created"
         redirect_to @admin_holiday
       else
         render 'new'
@@ -26,6 +27,7 @@ class Admin::HolidaysController < Admin::AdminController
 
   def update
       if @admin_holiday.update(admin_holiday_params)
+        flash[:success] = "Department successfully updated"
         redirect_to @admin_holiday
       else
         render 'edit' 
@@ -34,6 +36,7 @@ class Admin::HolidaysController < Admin::AdminController
 
   def destroy
     @admin_holiday.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_holidays_url
   end
 

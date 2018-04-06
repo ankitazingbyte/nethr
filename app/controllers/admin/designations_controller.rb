@@ -20,6 +20,7 @@ class Admin::DesignationsController < Admin::AdminController
     @admin_designation = Admin::Designation.new(admin_designation_params)
 
     if @admin_designation.save
+      flash[:success] = "Department successfully created"
       redirect_to action: "index"
     else
        render 'new' 
@@ -28,6 +29,7 @@ class Admin::DesignationsController < Admin::AdminController
 
   def update
     if @admin_designation.update(admin_designation_params)
+      flash[:success] = "Department successfully updated"
       redirect_to @admin_designation
     else
       render 'edit'
@@ -36,6 +38,7 @@ class Admin::DesignationsController < Admin::AdminController
 
   def destroy
     @admin_designation.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_designations_url
   end
 

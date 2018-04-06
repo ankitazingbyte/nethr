@@ -21,6 +21,7 @@ class Admin::EmployeesController < Admin::AdminController
   def create
     @admin_employee = Admin::Employee.new(admin_employee_params)
       if @admin_employee.save
+        flash[:success] = "Department successfully created"
         redirect_to action: "index"
       else
         render 'new'
@@ -29,6 +30,7 @@ class Admin::EmployeesController < Admin::AdminController
 
   def update
     if @admin_employee.update(admin_employee_params)
+      flash[:success] = "Department successfully updated"
       redirect_to action: "index"
     else
       render 'edit'
@@ -37,6 +39,7 @@ class Admin::EmployeesController < Admin::AdminController
 
   def destroy
     @admin_employee.destroy
+    flash[:success] = "Department successfully deleted"
       redirect_to admin_employees_url
   end
 

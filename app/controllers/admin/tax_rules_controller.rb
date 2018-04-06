@@ -18,6 +18,7 @@ class Admin::TaxRulesController < Admin::AdminController
   def create
     @admin_tax_rule = Admin::TaxRule.new(admin_tax_rule_params)
       if @admin_tax_rule.save
+        flash[:success] = "Department successfully created"
         redirect_to @admin_tax_rule
       else
         render "new" 
@@ -26,6 +27,7 @@ class Admin::TaxRulesController < Admin::AdminController
 
   def update
       if @admin_tax_rule.update(admin_tax_rule_params)
+        flash[:success] = "Department successfully updated"
         redirect_to @admin_tax_rule
       else
         render "edit" 
@@ -34,6 +36,7 @@ class Admin::TaxRulesController < Admin::AdminController
 
   def destroy
     @admin_tax_rule.destroy
+    flash[:success] = "Department successfully deleted"
       redirect_to admin_tax_rules_url
   end
 

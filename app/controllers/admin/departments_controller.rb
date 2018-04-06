@@ -19,6 +19,7 @@ class Admin::DepartmentsController < Admin::AdminController
     @admin_department = Admin::Department.new(admin_department_params)
 
     if @admin_department.save
+      flash[:success] = "Department successfully created"
       redirect_to action: "index"
     else
       render 'new' 
@@ -27,6 +28,7 @@ class Admin::DepartmentsController < Admin::AdminController
 
   def update
     if @admin_department.update(admin_department_params)
+      flash[:success] = "Department successfully updated"
       redirect_to action: "index"
     else
       render 'edit'
@@ -35,6 +37,7 @@ class Admin::DepartmentsController < Admin::AdminController
 
   def destroy
     @admin_department.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_departments_url
   end
 

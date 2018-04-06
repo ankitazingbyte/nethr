@@ -19,6 +19,7 @@ class Admin::TicketsController < Admin::AdminController
     @admin_ticket = Admin::Ticket.new(admin_ticket_params)
 
       if @admin_ticket.save
+        flash[:success] = "Department successfully created"
         redirect_to action: "index"
       else
         render 'new'
@@ -27,6 +28,7 @@ class Admin::TicketsController < Admin::AdminController
 
   def update
       if @admin_ticket.update(admin_ticket_params)
+        flash[:success] = "Department successfully updated"
         redirect_to action: "index"
       else
         render :edit 
@@ -35,6 +37,7 @@ class Admin::TicketsController < Admin::AdminController
 
   def destroy
     @admin_ticket.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_tickets_url
   end
 

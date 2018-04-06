@@ -20,6 +20,7 @@ class Admin::TasksController < Admin::AdminController
   def create
     @admin_task = Admin::Task.new(admin_task_params)
       if @admin_task.save
+        flash[:success] = "Department successfully created"
         redirect_to action: "index"
       else
         render 'new'
@@ -28,6 +29,7 @@ class Admin::TasksController < Admin::AdminController
 
   def update
       if @admin_task.update(admin_task_params)
+        flash[:success] = "Department successfully updated"
         redirect_to action: "index"
       else
         render 'edit'
@@ -36,6 +38,7 @@ class Admin::TasksController < Admin::AdminController
 
   def destroy
     @admin_task.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_tasks_url
   end
 

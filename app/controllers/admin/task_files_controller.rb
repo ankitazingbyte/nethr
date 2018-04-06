@@ -17,6 +17,7 @@ class Admin::TaskFilesController < Admin::AdminController
 
   def create
     @admin_task_file = Admin::TaskFile.new(admin_task_file_params)
+    flash[:success] = "Department successfully created"
       if @admin_task_file.save
         redirect_to @admin_task_file
       else
@@ -26,6 +27,7 @@ class Admin::TaskFilesController < Admin::AdminController
 
   def update
     if @admin_task_file.update(admin_task_file_params)
+      flash[:success] = "Department successfully updated"
       redirect_to @admin_task_file
     else
       render 'edit' 
@@ -34,6 +36,7 @@ class Admin::TaskFilesController < Admin::AdminController
 
   def destroy
     @admin_task_file.destroy
+    flash[:success] = "Department successfully deleted"
       redirect_to admin_task_file(@admin_task_file)
   end
 

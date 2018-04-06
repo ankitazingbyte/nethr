@@ -18,6 +18,7 @@ class Admin::ExpensesController < Admin::AdminController
   def create
     @admin_expense = Admin::Expense.new(admin_expense_params)
       if @admin_expense.save
+        flash[:success] = "Department successfully created"
         redirect_to action: "index"
       else
         render 'new'
@@ -26,6 +27,7 @@ class Admin::ExpensesController < Admin::AdminController
 
   def update
       if @admin_expense.update(admin_expense_params)
+        flash[:success] = "Department successfully updated"
         redirect_to action: "index"
       else
         render 'edit' 
@@ -34,6 +36,7 @@ class Admin::ExpensesController < Admin::AdminController
 
   def destroy
     @admin_expense.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_expenses_url
   end
 

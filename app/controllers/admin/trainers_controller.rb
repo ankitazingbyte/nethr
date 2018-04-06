@@ -19,6 +19,7 @@ class Admin::TrainersController < Admin::AdminController
     @admin_trainer = Admin::Trainer.new(admin_trainer_params)
 
       if @admin_trainer.save
+        flash[:success] = "Department successfully created"
         redirect_to action: "index"
       else
         render 'new'
@@ -27,6 +28,7 @@ class Admin::TrainersController < Admin::AdminController
 
   def update
       if @admin_trainer.update(admin_trainer_params)
+        flash[:success] = "Department successfully updated"
         redirect_to action: "index"
       else
         render 'edit'
@@ -35,6 +37,7 @@ class Admin::TrainersController < Admin::AdminController
 
   def destroy
     @admin_trainer.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_trainers_url
   end
 

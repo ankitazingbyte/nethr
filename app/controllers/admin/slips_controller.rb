@@ -20,6 +20,7 @@ class Admin::SlipsController < Admin::AdminController
     @admin_slip = Admin::Slip.new(admin_slip_params)
 
     if @admin_slip.save
+      flash[:success] = "Department successfully created"
       redirect_to action: "index"
     else
       render 'new '
@@ -28,6 +29,7 @@ class Admin::SlipsController < Admin::AdminController
 
   def update
     if @admin_slip.update(admin_slip_params)
+      flash[:success] = "Department successfully updated"
       redirect_to action: "index"
     else
       render 'edit'
@@ -36,6 +38,7 @@ class Admin::SlipsController < Admin::AdminController
 
   def destroy
     @admin_slip.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_slips_url
   end
 

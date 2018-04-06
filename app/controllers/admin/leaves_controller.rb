@@ -18,6 +18,7 @@ class Admin::LeavesController < Admin::AdminController
   def create
     @admin_leave = Admin::Leave.new(admin_leave_params)
     if @admin_leave.save
+      flash[:success] = "Department successfully created"
       redirect_to action: "index"
     else
       render 'new' 
@@ -26,6 +27,7 @@ class Admin::LeavesController < Admin::AdminController
 
   def update
     if @admin_leave.update(admin_leave_params)
+      flash[:success] = "Department successfully updated"
       redirect_to action: "index"
     else
       render 'edit'
@@ -34,6 +36,7 @@ class Admin::LeavesController < Admin::AdminController
 
   def destroy
     @admin_leave.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_leaves_url
   end
 

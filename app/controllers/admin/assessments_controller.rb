@@ -19,14 +19,16 @@ class Admin::AssessmentsController < Admin::AdminController
     @admin_assessment = Admin::Assessment.new(admin_assessment_params)
 
       if @admin_assessment.save
+        flash[:success] = "Department successfully deleted"
         redirect_to action: "index"
       else
         render 'new'
       end
   end
 
-  def updatet
+  def update
       if @admin_assessment.update(admin_assessment_params)
+        flash[:success] = "Department successfully updated"
         redirect_to action: "index"
       else
         render 'edit'
@@ -35,6 +37,7 @@ class Admin::AssessmentsController < Admin::AdminController
 
   def destroy
     @admin_assessment.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_assessments_url
   end
 

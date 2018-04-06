@@ -19,6 +19,7 @@ class Admin::IncrementsController < Admin::AdminController
   def create
     @admin_increment = Admin::Increment.new(admin_increment_params)
       if @admin_increment.save
+        flash[:success] = "Department successfully created"
         redirect_to action: "index"
       else
         render 'new'
@@ -27,6 +28,7 @@ class Admin::IncrementsController < Admin::AdminController
 
   def update
     if @admin_increment.update(admin_increment_params)
+      flash[:success] = "Department successfully updated"
       redirect_to action: "index"
     else
       render 'edit'
@@ -35,6 +37,7 @@ class Admin::IncrementsController < Admin::AdminController
 
   def destroy
     @admin_increment.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_increments_url
   end
 

@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
     root 'home#index'
     get 'home/index'
-    devise_for :users, controllers:{
-        sessions: 'users/sessions'
-      }
+    devise_for :users
 
     devise_scope :users do
         get "/register", :to => "devise/registrations#new", :as => "new_registration"

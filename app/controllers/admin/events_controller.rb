@@ -18,6 +18,7 @@ class Admin::EventsController < Admin::AdminController
   def create
     @admin_event = Admin::Event.new(admin_event_params)
     if @admin_event.save
+      flash[:success] = "Department successfully created"
       redirect_to @admin_event
     else
       render 'new'
@@ -26,6 +27,7 @@ class Admin::EventsController < Admin::AdminController
 
   def update
       if @admin_event.update(admin_event_params)
+        flash[:success] = "Department successfully updated"
         redirect_to @admin_event
       else
         render :edit 
@@ -34,6 +36,7 @@ class Admin::EventsController < Admin::AdminController
 
   def destroy
     @admin_event.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_events_url
   end
 

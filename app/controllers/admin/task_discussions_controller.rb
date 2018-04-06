@@ -17,6 +17,7 @@ class Admin::TaskDiscussionsController < Admin::AdminController
 
   def create
     @admin_task_discussion = Admin::TaskDiscussion.new(admin_task_discussion_params)
+    flash[:success] = "Department successfully created"
       if @admin_task_discussion.save
         redirect_to @admin_task_discussion
       else
@@ -26,6 +27,7 @@ class Admin::TaskDiscussionsController < Admin::AdminController
 
   def update
       if @admin_task_discussion.update(admin_task_discussion_params)
+        flash[:success] = "Department successfully updated"
         redirect_to @admin_task_discussion
       else
         render 'edit'
@@ -34,6 +36,7 @@ class Admin::TaskDiscussionsController < Admin::AdminController
 
   def destroy
     @admin_task_discussion.destroy
+    flash[:success] = "Department successfully deleted"
       redirect_to admin_task_discussions_url
 
   end

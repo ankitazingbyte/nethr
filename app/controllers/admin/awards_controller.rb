@@ -19,6 +19,7 @@ class Admin::AwardsController < Admin::AdminController
     @admin_award = Admin::Award.new(admin_award_params)
 
     if @admin_award.save
+      flash[:success] = "Department successfully created"
       redirect_to action: "index"
     else
       render 'new'
@@ -28,6 +29,7 @@ class Admin::AwardsController < Admin::AdminController
   def update
 
     if @admin_award.update(admin_award_params)
+      flash[:success] = "Department successfully updated"
       redirect_to action: "index"
     else
       render 'edit'
@@ -36,6 +38,7 @@ class Admin::AwardsController < Admin::AdminController
 
   def destroy
     @admin_award.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_awards_url
   end
 

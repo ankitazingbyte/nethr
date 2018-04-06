@@ -20,6 +20,7 @@ class Admin::NoticesController < Admin::AdminController
     @admin_notice = Admin::Notice.new(admin_notice_params)
 
     if @admin_notice.save
+      flash[:success] = "Department successfully created"
       redirect_to action: "index"
     else
       render 'new'
@@ -28,6 +29,7 @@ class Admin::NoticesController < Admin::AdminController
 
   def update
     if @admin_notice.update(admin_notice_params)
+      flash[:success] = "Department successfully updated"
       redirect_to action: "index"
     else
       render 'edit'
@@ -36,6 +38,7 @@ class Admin::NoticesController < Admin::AdminController
 
   def destroy
     @admin_notice.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_notices_url
   end
 

@@ -18,6 +18,7 @@ class Admin::EvaluationsController < Admin::AdminController
   def create
     @admin_evaluation = Admin::Evaluation.new(admin_evaluation_params)
       if @admin_evaluation.save
+        flash[:success] = "Department successfully created"
         redirect_to action: "index"
       else
         render 'new'
@@ -26,6 +27,7 @@ class Admin::EvaluationsController < Admin::AdminController
 
   def update
       if @admin_evaluation.update(admin_evaluation_params)
+        flash[:success] = "Department successfully updated"
         redirect_to action: "index"
       else
         render 'edit' 
@@ -34,6 +36,7 @@ class Admin::EvaluationsController < Admin::AdminController
 
   def destroy
     @admin_evaluation.destroy
+    flash[:success] = "Department successfully deleted"
     redirect_to admin_evaluations_url
   end
 

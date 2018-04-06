@@ -19,6 +19,7 @@ class Admin::LoansController < Admin::AdminController
   def create
     @admin_loan = Admin::Loan.new(admin_loan_params)
     if @admin_loan.save
+      flash[:success] = "Department successfully created"
       redirect_to action: "index"
     else
       render 'new'
@@ -27,6 +28,7 @@ class Admin::LoansController < Admin::AdminController
 
   def update
     if @admin_loan.update(admin_loan_params)
+      flash[:success] = "Department successfully updated"
       redirect_to action: "index"
     else
       render 'edit' 
@@ -35,6 +37,7 @@ class Admin::LoansController < Admin::AdminController
 
   def destroy
     @admin_loan.destroy
+    flash[:success] = "Department successfully deleted"
       redirect_to admin_loans_url
   end
 

@@ -19,6 +19,7 @@ class Admin::BanksController < Admin::AdminController
     @admin_bank = Admin::Bank.new(admin_bank_params)
 
       if @admin_bank.save
+        flash[:success] = "Department successfully created"
         redirect_to @admin_bank
       else
         render 'new' 
@@ -27,6 +28,7 @@ class Admin::BanksController < Admin::AdminController
 
   def update
       if @admin_bank.update(admin_bank_params)
+        flash[:success] = "Department successfully updated"
         redirect_to @admin_bank
       else
         render 'edit' 
@@ -35,6 +37,7 @@ class Admin::BanksController < Admin::AdminController
 
   def destroy
     @admin_bank.destroy
+    flash[:success] = "Department successfully deleted"
       redirect_to admin_banks_url
   end
 

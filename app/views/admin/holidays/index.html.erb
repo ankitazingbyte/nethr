@@ -4,6 +4,12 @@
 <script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery.min.js'></script>
 <script src="http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery-ui.custom.min.js"></script>
 <script src='http://fullcalendar.io/js/fullcalendar-2.1.1/fullcalendar.min.js'></script>
+
+<% @admin_holidays.each do |admin_holiday| %>
+  <%= admin_holiday.date %>
+  <%= admin_holiday.occasion %>
+<% end %>
+
 <script>
   $(document).ready(function() {
     $('#calendar').fullCalendar({
@@ -12,7 +18,7 @@
         center: 'title',
         right: 'month,agendaWeek,agendaDay'
       },
-      defaultDate: '2018-04-12',
+      defaultDate: '2014-06-01',
       defaultView: 'month',
       editable: true,
       events: [
